@@ -1,13 +1,13 @@
 {
-  "name": "Rubik",
+  "name": "i-rubik",
   "version": "0.0.1",
   "description": "A Vue.js 2.0 UI Components Framework",
   "author": "cc <ccking@foxmail.com>",
   "main": "dist/rubik.min.js",
   "scripts": {
     "dev": "node build/dev-server.js",
-    "build:demo": "node build/build.example.js",
-    "build": "node build/build.dist.js"
+    "build": "node build/build.dist.js",
+    "build:demo": "node build/build.example.js"
   },
   "repository": {
     "type": "git",

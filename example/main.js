@@ -5,7 +5,7 @@ import App from './App'
 import rubik from '../src/index.js'
 
 Vue.use(rubik)
-/* eslint-disable no-new */
+
 new Vue({
   el: '#app',
   template: '<App/>',

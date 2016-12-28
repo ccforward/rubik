@@ -1,5 +1,5 @@
 var path = require('path')
-var config = require('../config')
+var config = require('./config')
 var utils = require('./utils')
 var webpack = require('webpack')
 var merge = require('webpack-merge')
@@ -32,6 +32,9 @@ var webpackConfig = merge(baseWebpackConfig, {
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
+      },
+      output: {
+        comments: false
       }
     }),
     new webpack.optimize.OccurrenceOrderPlugin(),
