@@ -19,7 +19,7 @@
     "UI Components"
   ],
   "dependencies": {
-    "vue": "^2.1.0"
+    "vue": "^2.1.8"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
@@ -40,15 +40,19 @@
     "html-webpack-plugin": "^2.8.1",
     "http-proxy-middleware": "^0.17.2",
     "json-loader": "^0.5.4",
+    "nib": "^1.1.2",
     "opn": "^4.0.2",
     "ora": "^0.3.0",
     "semver": "^5.3.0",
     "shelljs": "^0.7.4",
+    "style-loader": "^0.13.1",
     "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
     "url-loader": "^0.5.7",
     "vue-loader": "^10.0.0",
+    "vue-router": "^2.1.1",
     "vue-style-loader": "^1.0.0",
-    "vue-template-compiler": "^2.1.0",
+    "vue-template-compiler": "^2.1.8",
     "webpack": "^1.13.2",
     "webpack-dev-middleware": "^1.8.3",
     "webpack-hot-middleware": "^2.12.2",

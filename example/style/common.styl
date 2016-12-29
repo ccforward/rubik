@@ -1,0 +1,36 @@
+@import './variable.styl'
+
+*, :after, :before {
+  box-sizing border-box
+  -webkit-tap-highlight-color rgba(0, 0, 0, 0)
+}
+html {
+  background #eee
+}
+a {
+  -webkit-text-decoration-skip objects
+  color $txt-green
+  background 0 0
+  cursor pointer
+  transition color .2s ease
+  text-decoration none
+  &:active, 
+  &:hover {
+    outline 0
+    text-decoration none
+  }
+}
+
+ol, ul {
+  list-style none
+}
+
+
+
+.fade-enter-active,
+.fade-leave-active {
+  transition all .2s ease
+}
+.fade-enter, .fade-leave-active {
+  opacity 0
+}

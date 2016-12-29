@@ -1,6 +1,8 @@
 const webpack = require('webpack')
+const nib = require('nib')
 const path = require('path')
 const projectRoot = path.resolve(__dirname, '../')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 
 
 module.exports = {
@@ -28,7 +30,16 @@ module.exports = {
         include: projectRoot,
         exclude: /node_modules/
       },
+      {
+        test: /\.styl$/,
+        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!stylus-loader')
+      }
     ]
+  },
+  stylus: {
+    use: [nib()],
+    import: ['~nib/lib/nib/index.styl'],
+    "include css": true
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({
@@ -36,10 +47,6 @@ module.exports = {
         warnings: false
       }
     }),
-    // new webpack.LoaderOptionsPlugin({
-    //   minimize: true,
-    //   progress: true,
-    //   hide_modules: true
-    // })
+    new ExtractTextPlugin('rubik.min.css')
   ]
 }

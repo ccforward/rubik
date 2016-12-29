@@ -1,22 +1,24 @@
 process.env.NODE_ENV = 'production'
 const webpack = require('webpack')
 const ora = require('ora')
-let builds  = require('./config.dist').getAllBuilds()
-// require('./stylus')
+const builds  = require('./config.dist').getAllBuilds()
+
+const spinner = ora('building for production...')
+
 
 // const stylus = require('stylus')
 // const fs = require('fs')
 // const path = require('path')
 // const resolve = file => path.resolve(__dirname, file)
-// let styles = fs.readFileSync(resolve('../src/stylus/main.styl'), 'utf8')
+// const styles = fs.readFileSync(resolve('../src/style/main.styl'), 'utf8')
 // stylus(styles)
-//   .include(resolve('../src/stylus'))
+//   .include(resolve('../src/style'))
 //   .set('compress', true)
 //   .render((err, css) => {
-//     fs.writeFileSync(resolve('../dist/vuetify.min.css'), css)
+//     fs.writeFileSync(resolve('../dist/rubik.min.css'), css)
 //   })
 
-var spinner = ora('building for production...')
+
 
 function build (builds) {
   builds.forEach(config => {
