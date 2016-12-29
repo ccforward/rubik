@@ -1,0 +1,269 @@
+// ============================================================
+// Vuetify variables
+// ============================================================
+
+
+
+// Theme
+// ============================================================
+$body-font-family := 'Roboto', san-serif
+$body-bg := #FFFFFF
+$color-root := $grey.darken-3
+$font-size-root := 14px
+$line-height-root := 20px
+$theme := {
+  primary: $blue.base,
+  secondary: $grey.darken-3,
+  info: $blue.base,
+  warning: $amber.base,
+  error: $red.base,
+  success: $green.base
+}
+
+$color-pack := true
+
+
+// Grid
+// ============================================================
+$grid-breakpoints := {
+  xs: 0
+  sm: 576px
+  md: 768px
+  lg: 992px
+}
+$container-max-widths := {
+  sm: $grid-breakpoints.sm * .9,
+  md: $grid-breakpoints.md * .9,
+  lg: $grid-breakpoints.lg * .9
+}
+$grid-gutter := 2rem
+$grid-outer-margin := 2rem
+$grid-gutter-full := $grid-gutter * .25 * -1
+$grid-gutter-half := $grid-gutter * .25
+$grid-columns := 12
+
+
+// Spacing
+// ============================================================
+$spacer := 1rem
+$spacer-x := $spacer
+$spacer-y := $spacer
+$spacers := {
+  zero: {
+    x: 0,
+    y: 0
+  },
+  one: {
+    x: ($spacer-x * .25),
+    y: ($spacer-y * .25)
+  },
+  two: {
+    x: ($spacer-x * .5),
+    y: ($spacer-y * .5)
+  },
+  three: {
+    x: $spacer-x,
+    y: $spacer-y
+  },
+  four: {
+    x: ($spacer-x * 1.5),
+    y: ($spacer-y * 1.5)
+  },
+  five: {
+    x: ($spacer-x * 3),
+    y: ($spacer-y * 3)
+  }
+}
+
+
+// Headings
+// ============================================================
+$heading-color := $grey.darken-3
+$headings := {
+  h1: {
+    size: 7rem,
+    weight: 300
+  },
+  h2: {
+    size: 3.5rem,
+    weight: 400
+  },
+  h3: {
+    size: 3rem,
+    weight: 400
+  },
+  h4: {
+    size: 2.5rem,
+    weight: 400
+  },
+  h5: {
+    size: 2rem,
+    weight: 400
+  },
+  h6: {
+    size: 1.5rem,
+    weight: 500
+  }
+}
+$heading-base := 1rem
+$heading-growth := .6
+
+// Transitions
+$primary-transition := all 0.3s cubic-bezier(0, 0, .2, 1)
+$secondary-transition := all 0.2s ease-out
+
+// Components
+// ============================================================
+
+// Alerts
+$alert-color := inherit
+$alert-border-radius := 0
+$alert-border-width := 4px 0 0 0
+$alert-font-size := 1.1rem
+$alert-icon-color := rgba(#000000, .3)
+$alert-icon-font-size := 2rem
+$alert-padding := 1.5rem
+$alert-margin := $spacers.one.y auto
+
+// Badges
+$badge-border-radius := 50%
+$badge-color := #FFFFFF
+$badge-font-family := $body-font-family
+$badge-font-size := .9rem
+$badge-height := 22px
+$badge-top := 0
+$badge-right := 0
+$badge-width := 22px
+
+// Breadcrumbs
+$breadcrumbs-flex := 0 1 auto
+$breadcrumbs-height := 40px
+$breadcrumbs-item-font-size := 1rem
+$breadcrumbs-margin := 0
+$breadcrumbs-padding := 0 1rem
+
+/** Buttons */
+
+// Base
+$button-background := $grey.lighten-2
+$button-border := none
+$button-border-radius := 2px
+$button-color := inherit
+$button-disabled-opacity := .5
+$button-padding-left := 14px
+$button-padding-top := 0
+$button-min-height := 36px
+$button-text-transform := uppercase
+$button-transition := all .2s ease-out
+$button-font-size := 14px
+$button-font-weight := 500
+$button-content-letter-spacing := .5px
+$button-content-margin-right := -.5px
+
+// Flat
+$button-flat-hover := rgba(158, 158, 158, .2)
+
+// Floating
+$button-floating-padding := .4rem
+$button-floating-large-padding := .5rem
+
+// Small
+$button-small-min-height := 2rem
+$button-small-line-height := 2rem
+$button-small-floating-width := 2rem
+$button-small-floating-font-size := $button-min-height * .4
+$button-small-floating-padding := 0
+
+// Large
+$button-large-min-height := 3rem
+$button-large-line-height := 3rem
+$button-large-padding := 0 4rem
+$button-large-floating-font-size := $button-min-height * 0.7
+$button-large-floating-width := 4rem
+$button-large-floating-padding := 1rem
+
+// Icon
+$button-icon-hover-background := rgba($grey.lighten-1, .4)
+$button-icon-padding := $button-padding-left * .3
+$button-icon-font-size := $button-font-size * 1.5
+
+// Card
+$card-actions-border-top := 1px solid rgba(#000000, .1)
+$card-background := #FFFFFF
+$card-padding := 14px
+$card-border-radius := 2px
+$card-title-text-size := 1.5rem
+$card-title-text-letter-spacing := .1rem
+$card-title-text-font-weight := 400
+$card-row-min-height := 4rem
+$card-actions-font-size := .9rem
+$card-actions-button-padding := .7rem
+
+// Chip
+$chip-background := $grey.lighten-2
+$chip-background-active := $grey.lighten-3
+$chip-border := 1px solid $grey.lighten-2
+$chip-border-radius := 2rem
+$chip-font-size := .8rem
+$chip-label-border-radius := 0
+$chip-icon-font-size := 1.2rem
+$chip-padding := 0 $chip-font-size
+$chip-outline-background := transparent !important
+$chip-outline-color := $grey.base
+$chip-min-height := 25px
+$chip-small-min-height := 20px
+$chip-small-padding := 0 .2rem
+
+// Collapsible
+$collapsible-collapse-height := 3rem
+$collapsible-transition-height := 0.23s
+
+// Footer
+$footer-height := 3rem
+
+// Navbar
+$navbar-height := 5rem
+$navbar-item-padding := 0 1.2rem
+
+// Progress Circular
+$progress-circular-rotate-animation := progress-circular-rotate 1.4s linear infinite
+$progress-circular-rotate-dash := progress-circular-dash 1.4s ease-in-out infinite
+$process-circular-intermediate-svg-transition := all .2s ease-in-out
+$progress-circular-underlay-stroke := rgba(#000, 0.1)
+$progress-circular-overlay-transition := all .6s ease-in-out
+
+/* Sidebar */
+
+$sidebar-height := 100vh
+$sidebar-width := 260px
+
+// Sidebar Item
+$sidebar-item-color := #fff
+$sidebar-item-height := 2.8rem
+$sidebar-item-padding := .7rem 2rem
+$sidebar-item-active-color := #fff
+$sidebar-item-active-background-color := $theme.primary
+$sidebar-item-hover-background-color := rgba($theme.primary, .4)
+
+// Sidebar Item Header
+$sidebar-item-header-padding := .2rem .2rem .2rem 2rem
+$sidebar-item-header-color := #fff
+$sidebar-item-header-font-size := 90%
+$sidebar-item-header-letter-spacing := .1px
+
+// Sidebar Group
+$sidebar-group-items-background-color := darken($theme.secondary, 15%)
+$sidebar-group-header-active-sidebar-items-border := 1px solid rgba(#fff, .1)
+$sidebar-group-header-active-sidebar-item-active-background-color := rgba($theme.primary, .4)
+
+// Slider
+$slider-arrow-size := 2rem
+
+// Directives
+// ============================================================
+
+// Ripple animation
+$ripple-container-color := #fff
+$ripple-animation-background := currentColor
+$ripple-animation-transition := .7s transform cubic-bezier(.2, .4, .4, .9), .3s opacity cubic-bezier(.2, .4, .4, .1)
+$ripple-animation-visible-opacity := .3

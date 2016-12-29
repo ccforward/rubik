@@ -1,0 +1,10 @@
+for heading, options in $headings
+  {heading}
+    color: $heading-color
+    font-size: options.size
+    font-weight: options.weight
+    line-height: 110%
+    margin-bottom: $spacers.three.y
+    
+    @media screen and (max-width: $grid-breakpoints.sm)
+      font-size: options.size * .6

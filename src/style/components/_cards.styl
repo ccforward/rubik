@@ -1,0 +1,60 @@
+.card
+  @extend .z-depth-1
+  background: $card-background
+  position: relative
+  display: flex
+  flex-flow: column nowrap
+  border-radius: $card-border-radius
+  
+  &-horizontal
+    flex-flow: row nowrap
+    
+    > .card-row
+      flex: 0 1 30%
+      
+  &-column, &-row
+    display: flex
+    
+    &:first-child
+      border-top-left-radius: inherit
+      border-top-right-radius: inherit
+      
+    &:last-child
+      border-bottom-left-radius: inherit
+      border-bottom-right-radius: inherit
+      
+  &-column
+    flex: 1
+    flex-flow: column nowrap
+    
+  &-row
+    align-items: center
+    margin-top: auto
+    flex: 1 1 auto
+    flex-flow: row nowrap
+    min-height: $card-row-min-height
+    
+    &-actions
+      border-top: $card-actions-border-top
+      padding: ($card-padding / 2)
+      min-height: ($card-row-min-height / 2)
+      flex: 0 0 auto
+      
+      > .btn
+        padding: 0 ($card-padding / 2)
+        
+      > .icon
+        padding: 0 ($card-padding / 2)
+  
+  &-title
+    font-size: $card-title-text-size
+    font-weight: $card-title-text-font-weight
+    letter-spacing: $card-title-text-letter-spacing
+    display: flex
+    flex: 1
+    align-self: center
+    align-items: center
+    padding: $card-padding
+      
+  &-text
+    padding: $card-padding
