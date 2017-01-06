@@ -29,6 +29,6 @@ export default {
 
 <style scoped lang="stylus">
   a {
-    font-size 1.3rem
+    font-size 1.15rem
   }
 </style>

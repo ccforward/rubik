@@ -5,6 +5,47 @@
       颜色规范直接采用 Material Design 官方提供的
       <a href="https://material.io/guidelines/style/color.html#color-color-palette" target="_blank">调色板</a>
     </p>
+    <h3>背景色</h3>
+    <p>
+      使用背景色需要在 class 中添加颜色名和深浅(light/darkness)
+    </p>
+    <section class="card-item default">
+      <r-card class="green accent-3">
+        <r-card-text>
+          <p>{{txt}}</p>
+        </r-card-text>
+      </r-card>
+      <r-card class="red lighten-3">
+        <r-card-text>
+          <p>{{txt}}</p>
+        </r-card-text>
+      </r-card>
+    </section>
+    <code>
+      &lt;div class="green accent-3"&gt;this is background-color&lt;/div&gt;
+      &lt;div class="red lighten-3"&gt;this is background-color&lt;/div&gt;
+    </code>
+
+    <h3>文字颜色</h3>
+    <p>文字添加颜色需要在 class 中添加文字的颜色名和深浅(light/darkness)</p>
+    
+    <section class="card-item default">
+      <r-card class="blue-text text-accent-3">
+        <r-card-text>
+          <p>{{txt}}</p>
+        </r-card-text>
+      </r-card>
+      <r-card class="orange-text text-lighten-1">
+        <r-card-text>
+          <p>{{txt}}</p>
+        </r-card-text>
+      </r-card>
+    </section>
+    <code class="z-depth-1">
+      &lt;div class="blue-text text-accent-3"&gt;this is text-color&lt;/div&gt;
+      &lt;div class="orange-text text-lighten-1"&gt;this is text-color&lt;/div&gt;
+    </code>
+    <h2>调色板</h2>
     <div class="color-palette">
       <section class="color-group">
         <ul>
@@ -443,20 +484,36 @@
 
 <script>
 export default {
-  name: 'color'
+  name: 'color',
+  data(){
+    return {
+      txt: 'I have to remind myself that some birds don’t mean to be caged . Their feathers are just too bright. And when they fly away, the part of you that knows it was a sin to lock them up. DOES rejoice. Still, the place you live in is that much more drab and empty that they’re gone. I guess I just miss my friend. '
+
+    }
+  }
 }
 </script>
 
 <style scoped lang="stylus">
+.card-item {
+  display flex
+  margin-bottom 30px
+  .card {
+    flex 1
+  }
+  .card:first-child {
+    margin-right 50px
+  }
+}
 .color-palette {
   padding-bottom 60px
   line-height 1
   overflow hidden
   .color-group {
     float left
-    margin-left 40px
+    margin-left 5%
     padding-bottom 40px
-    width 300px
+    width 28%
     &:nth-child(3n+1){
       clear left
       margin-left 0

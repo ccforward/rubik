@@ -3,7 +3,6 @@ export function createSimpleFunctional (c, el = 'div') {
     functional: true,
 
     render: (h, { data, children }) => {
-      console.log(data, children)
       data.staticClass = data.staticClass ? `${c} ${data.staticClass}` : c
 
       return h(el, data, children)

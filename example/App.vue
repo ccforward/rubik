@@ -3,6 +3,9 @@
     <div class="logo">
       <img src="./assets/rubik-256.png" :class="loaded && loadClass">
     </div>
+    <p class="ui-name">
+      <i>R</i><i>U</i><i>B</i><i>I</i><i>K</i> <i>U</i><i>I</i>
+    </p>
     <div class="wrapper-container">
       <div class="wrapper-navigate">
         <Navigator />
@@ -59,8 +62,31 @@ export default {
     }
   }
 }
+.ui-name {
+  font-size 3rem
+  text-align center
+  i {
+    font-style normal
+    &:nth-child(1){
+      color #f06
+    }
+    &:nth-child(2){
+      color #0089ce
+    }
+    &:nth-child(3){
+      color #f1d800
+    }
+    &:nth-child(4){
+      color #00d39a
+    }
+    &:nth-child(5){
+      color #94e827
+    }
+    
+  }
+}
 .wrapper-container {
-  background #fff
+  background #fcfcfc
   width 90%
   margin 30px auto 20px
   border-radius 6px
@@ -109,8 +135,12 @@ export default {
   code {
     width 100%
     margin-bottom 20px
-    background #f7f7f7
+    background #e1e1e1
     font-size 1rem
+    transition all .5s ease
+    &:hover {
+      box-shadow 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3)
+    }
   }
 }
 
@@ -121,6 +151,9 @@ export default {
     img {
       width 40px
     }
+  }
+  .ui-name {
+    font-size 1.7rem
   }
   .wrapper-container {
     width 98%
