@@ -27,9 +27,14 @@
   &-reverse
     flex-direction row-reverse
     
+  &.no-gutter
+    .col
+      padding-right 0
+      padding-left 0
   .col
     padding-right $grid-gutter-half
     padding-left $grid-gutter-half
+    
         
     for size, width in $grid-breakpoints
       &.{size}

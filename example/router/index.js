@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import About from '../views/About.vue'
 import Color from '../views/Color.vue'
+import Grid from '../views/Grid.vue'
 import Shadow from '../views/Shadow.vue'
 import Table from '../views/Table.vue'
 import Card from '../views/Card.vue'
@@ -16,6 +17,7 @@ export default new Router({
     { name: 'home', path: '/', component: About},
     { name: 'about', path: '/about', component: About},
     { name: 'color', path: '/color', component: Color},
+    { name: 'grid', path: '/grid', component: Grid},
     { name: 'shadow', path: '/shadow', component: Shadow},
     { name: 'table', path: '/table', component: Table},
     { name: 'card', path: '/card', component: Card},
