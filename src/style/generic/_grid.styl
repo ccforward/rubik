@@ -31,10 +31,34 @@
     .col
       padding-right 0
       padding-left 0
+  
+  &.row-flex-start
+    justify-content flex-start
+      
+  &.row-flex-end
+    justify-content flex-end
+    
+  &.row-flex-center
+    justify-content center
+    
+  &.row-flex-space-between
+    justify-content space-between
+   
+  &.row-flex-space-around
+    justify-content space-around
+
+  &.row-flex-top
+    align-items flex-start
+  
+  &.row-flex-bottom
+    align-items flex-end
+
+  &.row-flex-middle
+    align-items center
+
   .col
     padding-right $grid-gutter-half
     padding-left $grid-gutter-half
-    
         
     for size, width in $grid-breakpoints
       &.{size}

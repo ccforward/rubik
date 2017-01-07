@@ -18,7 +18,7 @@
       </r-card>
     </section>
 
-    <h3>header footer</h3>
+    <h3>Header Footer</h3>
     <section class="card-item">
       <r-card>
         <r-card-row class="green darken-1">

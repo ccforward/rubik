@@ -1,4 +1,5 @@
-import Card from './Card/index'
+import Grid from './Grid'
+import Card from './Card'
 import Slider from './Slider'
 import Button from './Button'
 import Icon from './Icon'
@@ -17,6 +18,7 @@ function bootstrap (...components) {
 }
 
 export default bootstrap(
+  Grid,
   Card,
   Slider,
   Button,

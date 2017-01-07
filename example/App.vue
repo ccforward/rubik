@@ -120,10 +120,8 @@ export default {
     font-size 1.4rem
     margin 10px 0
   }
-  a, p {
-    font-size 1rem
-  }
   a {
+    font-size 1rem
     color $txt-green
     &:hover {
       text-decoration underline

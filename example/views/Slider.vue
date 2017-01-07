@@ -7,7 +7,7 @@
     </r-slider>
     <h2>API</h2>
     <h3>props</h3>
-    <table class="bordered striped responsive-table">
+    <table class="bordered responsive-table">
       <thead>
         <th>属性</th>
         <th>说明</th>
