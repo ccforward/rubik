@@ -18,6 +18,8 @@
     mixins: [Toggle],
 
     props: {
+      top: Boolean,
+
       bottom: Boolean,
 
       id: {
@@ -28,7 +30,11 @@
 
     computed: {
       classes () {
+        if(this.top && this.bottom){
+          this.top = this.bottom = false
+        }
         return {
+          'modal-top': this.top,
           'modal-bottom': this.bottom
         }
       }

@@ -3,7 +3,6 @@
     <h1>栅格 Grid</h1>
     <p>
       这里采用比较灵活的12栅格系统，支持常见的 1 2 3 4 6 列布局。
-
     </p>
     <ul>
       <li><p>使用 r-row 在水平方向建立一组 r-col </p></li>
@@ -104,8 +103,62 @@
       </r-col>
     </r-row>
 
+    <h2>组件</h2>
+    <table class="bordered responsive-table">
+      <thead>
+        <th>组件</th>
+        <th>说明</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>&lt;r-row&gt;</td>
+          <td>一行</td>
+        </tr>
+        <tr>
+          <td>&lt;r-col&gt;</td>
+          <td>一列</td>
+        </tr>
+        <tr>
+          <td>&lt;r-container&gt;</td>
+          <td>栅格根组件 默认居中并带有padding</td>
+        </tr>
+        <tr>
+          <td>&lt;r-content&gt;</td>
+          <td>栅格根组件 默认居中无padding</td>
+        </tr>
+        <tr>
+          <td>&lt;r-placeholder&gt;</td>
+          <td>水平占位符 占据当前方向的剩余空间</td>
+        </tr>
+        <tr>
+          <td>&lt;r-col-placeholder&gt;</td>
+          <td>垂直占位符 占据当前方向的剩余空间</td>
+        </tr>
+
+
+      </tbody> 
+    </table>
+    <p>一般情况下 r-row 和 r-col 两个组件基本能满足布局需求</p>
+
     <h2>API</h2>
 
+    <h3>Container props</h3>
+    <table class="bordered responsive-table">
+      <thead>
+        <th>属性</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>fluid</td>
+          <td>流式布局: &lt;r-container fluid&gt;&lt;/r-container&gt; </td>
+          <td>Boolean</td>
+          <td>false</td>
+        </tr>
+      </tbody> 
+    </table>
     <h3>Row props</h3>
     <table class="bordered responsive-table">
       <thead>

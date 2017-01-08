@@ -4,8 +4,8 @@
     
     <h2>例子</h2>
 
-    <r-btn class="primary white-text" v-modal:modal="">Regular</r-btn>
-    <r-modal id="modal">
+    <r-btn class="blue white-text" v-modal:modalA="">中间弹出</r-btn>
+    <r-modal id="modalA">
       <r-card>
         <r-card-text>
           <p class="txt">
@@ -14,81 +14,46 @@
         </r-card-text>
         <r-card-row actions="actions">
           <r-placeholder/>
-          <r-btn v-on:click.native="modal('modal')">Cancel</r-btn>
-          <r-btn class="green white-text" v-on:click.native="modal('modal')">Submit</r-btn>
+          <r-btn v-on:click.native="modal('modalA')">取消</r-btn>
+          <r-btn class="blue white-text" v-on:click.native="modal('modalA')">确认</r-btn>
         </r-card-row>
       </r-card>
     </r-modal>
 
-    <h2>组件说明</h2>
-    <table class="bordered responsive-table">
-      <thead>
-        <th>组件</th>
-        <th>说明</th>
-        <th>属性</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>&lt;r-tabs&gt;</td>
-          <td>Tabs 根组件</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>&lt;r-tabs-nav&gt;</td>
-          <td>Tabs导航 根组件</td>
-          <td>-</td> 
-        </tr>
-        <tr>
-          <td>&lt;r-tab&gt;</td>
-          <td>Tabs导航 列表组件</td>
-          <td>
-            href: 和 r-tabs-item 的 id 一一对应 <br>
-            selected: 手动选中当前导航
-          </td>
-        </tr>
-        <tr>
-          <td>&lt;r-tabs-content&gt;</td>
-          <td>Tabs内容 根组件</td>
-          <td>-</td>
-        </tr>
-        <tr>
-          <td>&lt;r-tabs-item&gt;</td>
-          <td>Tabs内容 列表组件</td>
-          <td>id: 和 r-tab 的 href 一一对应</td>
-        </tr>
+    <r-btn class="red white-text" v-modal:modalB="">顶部弹出</r-btn>
+    <r-modal id="modalB" top>
+      <r-card class="red white-text">
+        <r-card-row actions="actions">
+          <div class="modal-txt">顶部对话框</div>
+          <r-btn class="blue white-text" large @click.native="modal('modalB')">知道了</r-btn>
+        </r-card-row>
+      </r-card>
+    </r-modal>
 
-      </tbody> 
-    </table>
+    <r-btn class="green white-text" v-modal:modalC="">底部弹出</r-btn>
+    <r-modal id="modalC" bottom>
+      <r-card class="green white-text">
+        <r-card-row actions="actions">
+          <div class="modal-txt">底部对话框</div>
+          <r-btn class="blue white--text" @click.native="modal('modalC')">知道了</r-btn>
+        </r-card-row>
+      </r-card>
+    </r-modal>
 
     <h2>API</h2>
     
 
     <code>
-      &lt;r-tabs&gt; 
-        &lt;!-- 标签页导航 --&gt;
-        &lt;r-tabs-nav &gt;
-          &lt;r-tab href="tab1" selected&gt;Tab 1&lt;/r-tab&gt;
-          &lt;r-tab href="tab2"&gt;Tab 2&lt;/r-tab&gt;
-          &lt;r-tab href="tab3"&gt;Tab 3&lt;/r-tab&gt;
-          &lt;r-tab href="tab4"&gt;Tab 4&lt;/r-tab&gt;
-        &lt;/r-tabs-nav&gt;
-
-        &lt;!-- 标签页内容 --&gt;
-        &lt;r-tabs-content&gt;
-          &lt;r-tabs-item id="tab1"&gt;
-            &lt;p&gt;...&lt;/p&gt;
-            &lt;p&gt;...&lt;/p&gt;
-            &lt;p&gt;...&lt;/p&gt;
-          &lt;/r-tabs-item&gt;
-          &lt;r-tabs-item id="tab2"&gt;...&lt;/r-tabs-item&gt;
-          &lt;r-tabs-item id="tab3"&gt;
-            &lt;p&gt;...&lt;/p&gt;
-            &lt;p&gt;...&lt;/p&gt;
-            &lt;p&gt;...&lt;/p&gt;
-          &lt;/r-tabs-item&gt;
-          &lt;r-tabs-item id="tab4"&gt;...&lt;/r-tabs-item&gt;
-        &lt;/r-tabs-content&gt;
-      &lt;/r-tabs&gt;
+      &lt;r-btn class="green white-text" v-modal:modal=""&gt;底部弹出&lt;/r-btn&gt;
+      &lt;r-modal id="modal" bottom&gt;
+        &lt;r-card class="green white-text"&gt;
+          &lt;r-card-row actions="actions"&gt;
+            &lt;div&gt;底部对话框&lt;/div&gt;
+            &lt;r-placeholder/&gt;
+            &lt;r-btn class="blue white--text" @click.native="modal('modal')"&gt;知道了&lt;/r-btn&gt;
+          &lt;/r-card-row&gt;
+        &lt;/r-card&gt;
+      &lt;/r-modal&gt;
     </code>
   </article>
 </template>
@@ -112,5 +77,10 @@ export default {
 <style scoped lang="stylus">
   .btn {
     margin 10px
+  }
+  .modal-txt {
+    flex auto
+    text-align center
+    font-size 1.5rem
   }
 </style>

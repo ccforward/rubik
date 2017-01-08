@@ -12,10 +12,10 @@
     <span>右侧划出</span>
     <r-btn class="green white-text" v-dropdown:dropdownB>下拉菜单<r-icon>arrow_drop_down</r-icon></r-btn>
     <r-dropdown id="dropdownB" right hover>
-      <li><a class="dropdown-item" href="">吃饭</a></li>
-      <li><a class="dropdown-item" href="">睡觉</a></li>
-      <li><a class="dropdown-item" href="">打豆豆</a></li>
-      <li><a class="dropdown-item" href=""><span v-badge:2>好消息</span></a></li>
+      <li><a class="dropdown-item" href="javascript:;">吃饭</a></li>
+      <li><a class="dropdown-item" href="javascript:;">睡觉</a></li>
+      <li><a class="dropdown-item" href="javascript:;">打豆豆</a></li>
+      <li><a class="dropdown-item" href="javascript:;"><span class="red-after" v-badge:2>好消息</span></a></li>
     </r-dropdown>
 
     <h3>Click</h3>
@@ -35,10 +35,10 @@
     <r-dropdown id="dropdown" :items="list"></r-dropdown>
 
     <h2>API</h2>
-    <h3>参数: id</h3>
+    <h3>参数: <strong>id</strong></h3>
     <p>
-      r-dropdown 指令的 value 和下拉菜单元素的 id 一一对应 <br>
-      如下面的API的 dropdownA  dropdownC
+      v-dropdown 指令的 value 和下拉菜单触发元素的 id 一一对应 <br>
+      如下面的API的 dropdownA dropdownB dropdownC
     </p>
     <h3>props</h3>
     <table class="bordered responsive-table">
