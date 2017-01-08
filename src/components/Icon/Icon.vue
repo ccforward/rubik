@@ -23,11 +23,11 @@
     computed: {
       clazz(){
         return {
-          'medium':  this.medium,
-          'large':  this.large,
-          'xLarge':  this.xLarge,
-          'left':  this.left,
-          'right': this.right
+          'icon-medium':  this.medium,
+          'icon-large':  this.large,
+          'icon-x-large':  this.xLarge,
+          'icon-left':  this.left,
+          'icon-right': this.right
         }
       }
     }

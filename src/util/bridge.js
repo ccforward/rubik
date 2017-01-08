@@ -8,7 +8,7 @@ class Bridge extends EventEmitter {
 
   sub (event, cb) {
     const type = typeof event
-    
+
     if (type !== 'object' && type !== 'array') {
       return this.on(event, cb)
     }

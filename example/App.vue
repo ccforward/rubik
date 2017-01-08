@@ -32,6 +32,7 @@ export default {
     Navigator
   },
   mounted(){
+    this.$rubik.init()
     setTimeout(()=>{
       this.loaded = true
     }, 150)
@@ -47,7 +48,7 @@ export default {
   padding 1px
 }
 .logo {
-  margin 20px auto
+  margin 10px auto
   height 80px
   text-align center
   img {
@@ -63,7 +64,7 @@ export default {
   }
 }
 .ui-name {
-  font-size 3rem
+  font-size 2.2rem
   text-align center
   i {
     font-style normal
@@ -88,7 +89,7 @@ export default {
 .wrapper-container {
   background #fcfcfc
   width 90%
-  margin 30px auto 20px
+  margin 10px auto 20px
   border-radius 6px
   box-shadow 0 1px 1px 0 rgba(0,0,0,.1)
   overflow hidden
@@ -118,7 +119,7 @@ export default {
   
   h3 {
     font-size 1.4rem
-    margin 10px 0
+    margin 1rem 0
   }
   a {
     font-size 1rem

@@ -7,8 +7,10 @@ import Shadow from '../views/Shadow.vue'
 import Table from '../views/Table.vue'
 import Card from '../views/Card.vue'
 import Slider from '../views/Slider.vue'
+import Dropdown from '../views/Dropdown.vue'
 import Icon from '../views/Icon.vue'
 import Button from '../views/Button.vue'
+import Badge from '../views/Badge.vue'
 
 Vue.use(Router)
 
@@ -22,7 +24,9 @@ export default new Router({
     { name: 'table', path: '/table', component: Table},
     { name: 'card', path: '/card', component: Card},
     { name: 'slider', path: '/slider', component: Slider},
+    { name: 'dropdown', path: '/dropdown', component: Dropdown},
     { name: 'icon', path: '/icon', component: Icon},
-    { name: 'button', path: '/button', component: Button}
+    { name: 'button', path: '/button', component: Button},
+    { name: 'badge', path: '/badge', component: Badge}
   ]
 })

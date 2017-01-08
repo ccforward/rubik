@@ -29,6 +29,18 @@
           </li>
         </ul>
       </li>
+      <li>
+        <div>指令</div>
+        <ul>
+          <li v-for="item in directives">
+            <router-link :class="active == item.name && activeClass" :to="{path: '/'+item.name}">
+              <r-icon>{{item.icon}}</r-icon>
+              <span>{{item.txt}}</span>
+            </router-link>
+          </li>
+        </ul>
+      </li>
+
     </ul>
     
   </nav>
@@ -40,40 +52,55 @@ export default {
   data() {
     return {
       activeClass: 'active',
-      css: [{
-        name: 'color',
-        icon: 'palette',
-        txt: '颜色 Color'
-      },{
-        name: 'grid',
-        icon: 'grid_on',
-        txt: '栅格 Grid'
-      },{
-        name: 'shadow',
-        icon: 'movie',
-        txt: '阴影 Shadow'
-      },{
-        name: 'table',
-        icon: 'border_all',
-        txt: '表格 Table'
-      }],
-      components: [{
-        name: 'card',
-        icon: 'book',
-        txt: '卡片 Card'
-      },{
-        name: 'slider',
-        icon: 'play_circle_outline',
-        txt: '轮播 Slider'
-      },{
-        name: 'icon',
-        icon: 'toys',
-        txt: '图标 Icon'
-      },{
-        name: 'button',
-        icon: 'credit_card',
-        txt: '按钮 Button'
-      }]
+      css: [
+        {
+          name: 'color',
+          icon: 'palette',
+          txt: '颜色 Color'
+        },{
+          name: 'grid',
+          icon: 'grid_on',
+          txt: '栅格 Grid'
+        },{
+          name: 'shadow',
+          icon: 'movie',
+          txt: '阴影 Shadow'
+        },{
+          name: 'table',
+          icon: 'border_all',
+          txt: '表格 Table'
+        }
+      ],
+      components: [
+        {
+          name: 'card',
+          icon: 'book',
+          txt: '卡片 Card'
+        },{
+          name: 'slider',
+          icon: 'play_circle_outline',
+          txt: '轮播 Slider'
+        },{
+          name: 'dropdown',
+          icon: 'arrow_drop_down_circle',
+          txt: '下拉菜单 Dropdown'
+        },{
+          name: 'icon',
+          icon: 'toys',
+          txt: '图标 Icon'
+        },{
+          name: 'button',
+          icon: 'credit_card',
+          txt: '按钮 Button'
+        }
+      ],
+      directives: [
+        {
+          name: 'badge',
+          icon: 'fiber_manual_record',
+          txt: '徽标 Badge'
+        }
+      ]
     }
   },
   computed: {
