@@ -14,6 +14,7 @@ import Icon from '../views/Icon.vue'
 import Button from '../views/Button.vue'
 import Badge from '../views/Badge.vue'
 import Tooltip from '../views/Tooltip.vue'
+import Waves from '../views/Waves.vue'
 
 Vue.use(Router)
 
@@ -33,6 +34,7 @@ export default new Router({
     { name: 'icon', path: '/icon', component: Icon},
     { name: 'button', path: '/button', component: Button},
     { name: 'badge', path: '/badge', component: Badge},
-    { name: 'tooltil', path: '/tooltip', component: Tooltip}
+    { name: 'tooltip', path: '/tooltip', component: Tooltip},
+    { name: 'waves', path: '/waves', component: Waves}
   ]
 })

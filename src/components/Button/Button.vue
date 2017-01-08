@@ -31,10 +31,6 @@
         type: Boolean,
         default: true
       },
-      ripple: {
-        type: [Boolean, Object],
-        default: false
-      },
       type: {
         type: String,
         default: 'button'

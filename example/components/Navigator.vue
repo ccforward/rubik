@@ -104,11 +104,15 @@ export default {
       ],
       directives: [
         {
+          name: 'waves',
+          icon: 'leak_add',
+          txt: '水波 Waves'
+        },
+        {
           name: 'badge',
           icon: 'fiber_manual_record',
           txt: '徽标 Badge'
-        },
-        {
+        },{
           name: 'tooltip',
           icon: 'swap_vert',
           txt: '提示框 Tooltip'

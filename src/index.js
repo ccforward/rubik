@@ -1,10 +1,10 @@
 require('./style/main.styl')
-
-import Components from './components'
 import Bridge from './util/bridge'
-import Directives from './directives'
 import Init from './util/init'
 import Load from './util/load'
+
+import Components from './components'
+import Directives from './directives'
 // import Toast from './functions/toast'
 
 function Rubik(Vue) {

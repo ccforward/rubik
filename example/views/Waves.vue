@@ -1,19 +1,12 @@
 <template>
   <article>
-    <h1>提示框 Tooltip</h1>
+    <h1>水波 Waves</h1>
     
     <h2>例子</h2>
     
-    <h3>四向</h3>
-    <div class="tooltip-container">
-      <div class="tt-top green white-text z-depth-1" v-tooltip:top="{ text: '提示在上边' }">上</div>
-      <div class="tt-right green white-text z-depth-1" v-tooltip:right="{ text: '提示在右边' }">右</div>
-      <div class="tt-bottom green white-text z-depth-1" v-tooltip:bottom="{ text: '提示在下边' }">下</div>
-      <div class="tt-left green white-text z-depth-1" v-tooltip:left="{ text: '提示在左边' }">左</div>
-    </div>
-
     <h3>按钮</h3>
-    <r-btn class="grey white-text" v-tooltip:right="{ text: '我真的是个按钮' }">我是按钮</r-btn>
+    <r-btn class="grey black-text" large v-wave="{clazz:'purple-text'}">紫色 Waves</r-btn>
+    <r-btn class="grey black-text" large v-wave="{clazz:'red-text'}">红色 Waves</r-btn>
     
     
     <h2>API</h2>
