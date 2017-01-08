@@ -3,61 +3,63 @@
     <h1>水波 Waves</h1>
     
     <h2>例子</h2>
-    
     <h3>按钮</h3>
-    <r-btn class="grey black-text" large v-wave="{clazz:'purple-text'}">紫色 Waves</r-btn>
-    <r-btn class="grey black-text" large v-wave="{clazz:'red-text'}">红色 Waves</r-btn>
+    <r-btn class="white black-text z-depth-2" large v-wave="{color:'purple'}">紫色 Waves</r-btn>
+    <r-btn class="white black-text z-depth-2" large v-wave="{color:'red'}">红色 Waves</r-btn>
+    <br><br>
+    <r-btn class="blue white-text" large v-wave.light>浅色 Light Waves</r-btn>
+    <r-btn class="blue white-text" large v-wave="{color:'white'}">白色 Waves</r-btn>
     
+    <h3>其他元素</h3>
+    
+    <div class="wave-demo z-depth-1 grey white-text" v-wave="{color:'green'}">div 绿色 Waves</div>
+    <br><br>
+    <p class="wave-demo z-depth-1 red lighten-1 white-text" v-wave="{color:'white'}">p 白色 Waves</p>
     
     <h2>API</h2>
+    <h3>指令说明</h3>
+    <table class="bordered responsive-table">
+      <thead>
+        <th>指令</th>
+        <th>说明</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>v-wave="{color:'purple'}"</td>
+          <td>指令 value 对象的 color 对应水波颜色</td>
+        </tr>
+        <tr>
+          <td>v-wave.light</td>
+          <td>浅色水波 此时 value 对象的 color 无效</td>
+        </tr>
+
+      </tbody> 
+    </table>
+    <p>
+      注意：元素在显示水波时会添加样式 position: relative !important 
+    </p>
     <code>
-      &lt;span class="green white-text" v-tooltip:top="{ text: '提示在上边' }"&gt;上&lt;/span&gt;
-      &lt;r-btn class="grey white-text" v-tooltip:right="{ text: '来自按钮的提示文字' }"&gt;我是按钮&lt;/r-btn&gt;
+      &lt;r-btn class="white black-text" large v-wave="{color:'purple'}"&gt;紫色 Waves&lt;/r-btn&gt;
+      &lt;r-btn class="blue white-text" large v-wave.light&gt;浅色 Light Waves&lt;/r-btn&gt;
+      &lt;div class="grey white-text" v-wave="{color:'green'}"&gt;div 绿色 Waves&lt;/div&gt;
     </code>
   </article>
 </template>
 
 <script>
 export default {
-  name: 'tooltips'
+  name: 'waves'
 }
 </script>
 
 <style scoped lang="stylus">
-  .tooltip-container {
-    position relative
-    width 200px
-    height 200px
-    margin 10px 0
-    div {
-      position absolute
-      width 4.5rem
-      height 1.8rem
-      line-height 1.8rem
-      font-size 1.3rem
-      text-align center
-      border-radius 5px
-      cursor pointer
-    }
-  }
-  .tt-top {
-    top 0
-    left 50%
-    transform translateX(-50%)
-  }
-  .tt-right {
-    right 0
-    top 50%
-    transform translateY(-50%)
-  }
-  .tt-bottom {
-    bottom 0
-    left 50%
-    transform translateX(-50%)
-  }
-  .tt-left {
-    left 0
-    top 50%
-    transform translateY(-50%)
+  .wave-demo {
+    display inline-block
+    padding 0 3rem
+    min-height 3rem
+    line-height 3rem
+    font-size 1.1rem
+    border-radius 3px
+    cursor pointer
   }
 </style>
