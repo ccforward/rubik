@@ -96,6 +96,10 @@ export default {
           name: 'button',
           icon: 'credit_card',
           txt: '按钮 Button'
+        },{
+          name: 'modal',
+          icon: 'chat',
+          txt: '对话框 Modal'
         }
       ],
       directives: [

@@ -3,28 +3,30 @@ import Card from './Card'
 import Slider from './Slider'
 import Dropdown from './Dropdown'
 import Tabs from './Tabs'
+import Modal from './Modal'
 import Button from './Button'
 import Icon from './Icon'
 
 
-function bootstrap (...components) {
-  const entries = {}
+function init (...components) {
+  const com = {}
 
-  components.forEach(component => {
-    Object.keys(component).forEach(key => {
-      entries[`R${key}`] = component[key]
+  components.forEach(c => {
+    Object.keys(c).forEach(key => {
+      com[`R${key}`] = c[key]
     })
   })
 
-  return entries
+  return com
 }
 
-export default bootstrap(
+export default init(
   Grid,
   Card,
   Slider,
   Dropdown,
   Tabs,
+  Modal,
   Button,
   Icon
 )

@@ -1,32 +1,24 @@
 <template>
   <article>
-    <h1>标签页 Tabs</h1>
+    <h1>对话框 Modal</h1>
     
     <h2>例子</h2>
 
-    <r-tabs> 
-      <r-tabs-nav >
-        <r-tab href="tab1" class="black-after" selected>Tab 1</r-tab>
-        <r-tab href="tab2" class="black-after">Tab 2</r-tab>
-        <r-tab href="tab3" class="black-after">Tab 3</r-tab>
-        <r-tab href="tab4" class="black-after">Tab 4</r-tab>
-      </r-tabs-nav>
-
-      <r-tabs-content class="white">
-        <r-tabs-item id="tab1">
-          <p>{{txt}}</p>
-          <p>{{txt}}</p>
-          <p>{{txt}}</p>
-        </r-tabs-item>
-        <r-tabs-item id="tab2">{{txt}}</r-tabs-item>
-        <r-tabs-item id="tab3">
-          <p>{{txt}}</p>
-          <p>{{txt}}</p>
-          <p>{{txt}}</p>
-        </r-tabs-item>
-        <r-tabs-item id="tab4">{{txt}}</r-tabs-item>
-      </r-tabs-content>
-    </r-tabs>
+    <r-btn class="primary white-text" v-modal:modal="">Regular</r-btn>
+    <r-modal id="modal">
+      <r-card>
+        <r-card-text>
+          <p class="txt">
+            {{txt}}
+          </p>
+        </r-card-text>
+        <r-card-row actions="actions">
+          <r-placeholder/>
+          <r-btn v-on:click.native="modal('modal')">Cancel</r-btn>
+          <r-btn class="green white-text" v-on:click.native="modal('modal')">Submit</r-btn>
+        </r-card-row>
+      </r-card>
+    </r-modal>
 
     <h2>组件说明</h2>
     <table class="bordered responsive-table">
@@ -103,19 +95,22 @@
 
 <script>
 export default {
-  name: 'tab',
+  name: 'modals',
   data(){
     return {
       txt: 'I have to remind myself that some birds don’t mean to be caged . Their feathers are just too bright. And when they fly away, the part of you that knows it was a sin to lock them up. DOES rejoice. Still, the place you live in is that much more drab and empty that they’re gone. I guess I just miss my friend. '
     }
+  },
+  methods:{
+    modal (id) {
+        this.$rubik.bridge.pub(`modal:close:${id}`)
+      }
   }
 }
 </script>
 
 <style scoped lang="stylus">
-  .tabs {
-    a {
-      color #fff
-    }
+  .btn {
+    margin 10px
   }
 </style>

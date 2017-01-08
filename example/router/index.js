@@ -9,6 +9,7 @@ import Card from '../views/Card.vue'
 import Slider from '../views/Slider.vue'
 import Dropdown from '../views/Dropdown.vue'
 import Tab from '../views/Tab.vue'
+import Modal from '../views/Modal.vue'
 import Icon from '../views/Icon.vue'
 import Button from '../views/Button.vue'
 import Badge from '../views/Badge.vue'
@@ -27,6 +28,7 @@ export default new Router({
     { name: 'slider', path: '/slider', component: Slider},
     { name: 'dropdown', path: '/dropdown', component: Dropdown},
     { name: 'tab', path: '/tab', component: Tab},
+    { name: 'modal', path: '/modal', component: Modal},
     { name: 'icon', path: '/icon', component: Icon},
     { name: 'button', path: '/button', component: Button},
     { name: 'badge', path: '/badge', component: Badge}

@@ -33,15 +33,15 @@ const Container = {
 }
 
 const Content = createSimpleFunctional('content')
-const ColSpacer = createSimpleFunctional('col-spacer')
-const Spacer = createSimpleFunctional('spacer')
+const ColPlaceholder = createSimpleFunctional('col-placeholder')
+const Placeholder = createSimpleFunctional('placeholder')
 
 
 export default {
   Col,
-  ColSpacer,
+  ColPlaceholder,
   Container,
   Content,
-  Spacer,
+  Placeholder,
   Row
 }
