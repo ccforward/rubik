@@ -77,6 +77,10 @@ export default {
           icon: 'book',
           txt: '卡片 Card'
         },{
+          name: 'icon',
+          icon: 'toys',
+          txt: '图标 Icon'
+        },{
           name: 'slider',
           icon: 'play_circle_outline',
           txt: '轮播 Slider'
@@ -85,9 +89,9 @@ export default {
           icon: 'arrow_drop_down_circle',
           txt: '下拉菜单 Dropdown'
         },{
-          name: 'icon',
-          icon: 'toys',
-          txt: '图标 Icon'
+          name: 'tab',
+          icon: 'tab',
+          txt: '标签页 Tabs'
         },{
           name: 'button',
           icon: 'credit_card',

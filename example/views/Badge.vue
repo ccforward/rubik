@@ -10,7 +10,7 @@
 
     <h3>放在普通元素上</h3>
     <p>数字</p>
-    <span class="badge-demo" v-badge:star.icon.left></span>
+    <span class="badge-demo" v-badge:55.left></span>
     <span class="badge-demo pink-after" v-badge:20.inner.right></span>
     <p>小圆点</p>
     <span class="badge-demo red-after" v-badge:dot></span>
