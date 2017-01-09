@@ -39,6 +39,46 @@
 
     <h2>API</h2>
     
+    <h3>props</h3>
+    <table class="bordered responsive-table">
+      <thead>
+        <th>属性</th>
+        <th>说明</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>info</td>
+          <td>蓝色 普通通知</td>
+        </tr>
+        <tr>
+          <td>success</td>
+          <td>绿色 好消息通知</td>
+        </tr>
+        <tr>
+          <td>warning</td>
+          <td>橙色 警告通知</td>
+        </tr>
+        <tr>
+          <td>error</td>
+          <td>红色 错误通知</td>
+        </tr>
+        <tr>
+          <td>no-icon</td>
+          <td>不显示左侧的 icon</td>
+        </tr>
+        <tr>
+          <td>close</td>
+          <td>显示关闭的 icon</td>
+        </tr>
+
+        <tr>
+          <td>icon</td>
+          <td>自定义 icon</td>
+        </tr>
+
+      </tbody> 
+    </table>
+
     <code>
       &lt;r-alert info&gt;...&lt;/r-alert&gt;
       &lt;r-alert warning no-icon &gt;...&lt;/r-alert&gt;
