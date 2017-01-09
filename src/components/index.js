@@ -1,4 +1,5 @@
 import Grid from './Grid'
+import Alert from './Alert'
 import Breadcrumb from './Breadcrumb'
 import Tag from './Tag'
 import Card from './Card'
@@ -23,6 +24,7 @@ function init (...components) {
 }
 
 export default init(
+  Alert,
   Grid,
   Breadcrumb,
   Tag,

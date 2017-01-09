@@ -84,6 +84,10 @@ export default {
       ],
       components: [
         {
+          name: 'alert',
+          icon: 'add_alert',
+          txt: '警告框 Alert'
+        },{
           name: 'breadcrumb',
           icon: 'arrow_forward',
           txt: '面包屑 Breadcrumb'
@@ -126,15 +130,7 @@ export default {
         },{
           name: '',
           icon: 'chat',
-          txt: '列表 List'
-        },{
-          name: '',
-          icon: 'chat',
           txt: '导航 Nav'
-        },{
-          name: '',
-          icon: 'chat',
-          txt: '加载 Spin'
         },{
           name: '',
           icon: 'chat',

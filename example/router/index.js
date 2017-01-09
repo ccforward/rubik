@@ -6,6 +6,7 @@ import Tag from '../views/Tag.vue'
 import Grid from '../views/Grid.vue'
 import Shadow from '../views/Shadow.vue'
 import Table from '../views/Table.vue'
+import Alert from '../views/Alert.vue'
 import Breadcrumb from '../views/Breadcrumb.vue'
 import Card from '../views/Card.vue'
 import Slider from '../views/Slider.vue'
@@ -28,6 +29,7 @@ export default new Router({
     { name: 'about', path: '/about', component: About},
     { name: 'color', path: '/color', component: Color},
     { name: 'grid', path: '/grid', component: Grid},
+    { name: 'alert', path: '/alert', component: Alert},
     { name: 'shadow', path: '/shadow', component: Shadow},
     { name: 'table', path: '/table', component: Table},
     { name: 'breadcrumb', path: '/breadcrumb', component: Breadcrumb},
