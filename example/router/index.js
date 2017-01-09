@@ -2,6 +2,7 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import About from '../views/About.vue'
 import Color from '../views/Color.vue'
+import Tag from '../views/Tag.vue'
 import Grid from '../views/Grid.vue'
 import Shadow from '../views/Shadow.vue'
 import Table from '../views/Table.vue'
@@ -34,6 +35,7 @@ export default new Router({
     { name: 'dropdown', path: '/dropdown', component: Dropdown},
     { name: 'tab', path: '/tab', component: Tab},
     { name: 'modal', path: '/modal', component: Modal},
+    { name: 'tag', path: '/tag', component: Tag},
     { name: 'icon', path: '/icon', component: Icon},
     { name: 'button', path: '/button', component: Button},
     { name: 'badge', path: '/badge', component: Badge},

@@ -3,7 +3,7 @@
     <h1>颜色 Color</h1>
     <p>
       颜色规范直接采用 Material Design 官方提供的
-      <a href="https://material.io/guidelines/style/color.html#color-color-palette" target="_blank">调色板</a>
+      <a class="demo-link" href="https://material.io/guidelines/style/color.html#color-color-palette" target="_blank">调色板</a>
     </p>
     <h3>背景色</h3>
     <p>

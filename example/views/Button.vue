@@ -39,7 +39,7 @@
 
 <script>
 export default {
-  name: 'button',
+  name: 'buttons',
   data () {
     return {
       

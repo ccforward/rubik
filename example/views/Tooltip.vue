@@ -53,9 +53,9 @@ export default {
 <style scoped lang="stylus">
   .tooltip-container {
     position relative
-    width 200px
-    height 200px
-    margin 10px 0
+    width 140px
+    height 100px
+    margin 4rem 2rem
     div {
       position absolute
       width 4.5rem

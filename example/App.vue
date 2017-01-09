@@ -121,7 +121,7 @@ export default {
     font-size 1.4rem
     margin 1rem 0
   }
-  a {
+  .demo-link {
     font-size 1rem
     color $txt-green
     &:hover {

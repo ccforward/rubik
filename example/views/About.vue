@@ -13,10 +13,10 @@
 
     <p>Rubik 部分组件和样式代码参考了以下项目：</p>
     <ul>
-      <li><a href="https://www.iviewui.com/" target="_blank">iview</a></li>
-      <li><a href="http://materializecss.com/" target="_blank">materializecss</a></li>
-      <li><a href="http://www.material-ui.com/" target="_blank">material-ui</a></li>
-      <li><a href="https://vuetifyjs.com/" target="_blank">vuetify</a></li>
+      <li><a class="demo-link" href="https://www.iviewui.com/" target="_blank">iview</a></li>
+      <li><a class="demo-link" href="http://materializecss.com/" target="_blank">materializecss</a></li>
+      <li><a class="demo-link" href="http://www.material-ui.com/" target="_blank">material-ui</a></li>
+      <li><a class="demo-link" href="https://vuetifyjs.com/" target="_blank">vuetify</a></li>
     </ul>
   </article>
 </template>

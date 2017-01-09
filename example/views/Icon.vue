@@ -2,7 +2,7 @@
   <article>
     <h1>图标 ICON</h1>
     <p>
-      图标直接采用 Material Design 官方提供的 <a href="https://material.io/icons/" target="_blank">图标库</a>
+      图标直接采用 Material Design 官方提供的 <a class="demo-link" href="https://material.io/icons/" target="_blank">图标库</a>
     </p>
     <h2>例子</h2>
     <div class="icon-content">

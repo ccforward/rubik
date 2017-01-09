@@ -81,6 +81,10 @@ export default {
           icon: 'book',
           txt: '卡片 Card'
         },{
+          name: 'tag',
+          icon: 'beenhere',
+          txt: '标签 Tag'
+        },{
           name: 'icon',
           icon: 'toys',
           txt: '图标 Icon'
