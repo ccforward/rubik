@@ -1,4 +1,5 @@
 import Grid from './Grid'
+import Breadcrumb from './Breadcrumb'
 import Card from './Card'
 import Slider from './Slider'
 import Dropdown from './Dropdown'
@@ -22,6 +23,7 @@ function init (...components) {
 
 export default init(
   Grid,
+  Breadcrumb,
   Card,
   Slider,
   Dropdown,

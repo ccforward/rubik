@@ -17,7 +17,9 @@
     <p class="wave-demo z-depth-1 red lighten-1 white-text" v-wave="{color:'white'}">p 白色 Waves</p>
     
     <h2>API</h2>
+    
     <h3>指令说明</h3>
+
     <table class="bordered responsive-table">
       <thead>
         <th>指令</th>
@@ -32,9 +34,9 @@
           <td>v-wave.light</td>
           <td>浅色水波 此时 value 对象的 color 无效</td>
         </tr>
-
       </tbody> 
     </table>
+
     <p>
       注意：元素在显示水波时会添加样式 position: relative !important 
     </p>

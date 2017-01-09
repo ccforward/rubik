@@ -73,6 +73,10 @@ export default {
       ],
       components: [
         {
+          name: 'breadcrumb',
+          icon: 'arrow_forward',
+          txt: '面包屑 Breadcrumb'
+        },{
           name: 'card',
           icon: 'book',
           txt: '卡片 Card'
@@ -116,6 +120,10 @@ export default {
           name: 'tooltip',
           icon: 'swap_vert',
           txt: '提示框 Tooltip'
+        },{
+          name: 'img-lazy',
+          icon: 'image',
+          txt: '懒加载 Lazy'
         }
       ]
     }

@@ -5,6 +5,7 @@ import Color from '../views/Color.vue'
 import Grid from '../views/Grid.vue'
 import Shadow from '../views/Shadow.vue'
 import Table from '../views/Table.vue'
+import Breadcrumb from '../views/Breadcrumb.vue'
 import Card from '../views/Card.vue'
 import Slider from '../views/Slider.vue'
 import Dropdown from '../views/Dropdown.vue'
@@ -15,6 +16,7 @@ import Button from '../views/Button.vue'
 import Badge from '../views/Badge.vue'
 import Tooltip from '../views/Tooltip.vue'
 import Waves from '../views/Waves.vue'
+import Lazy from '../views/Lazy.vue'
 
 Vue.use(Router)
 
@@ -26,6 +28,7 @@ export default new Router({
     { name: 'grid', path: '/grid', component: Grid},
     { name: 'shadow', path: '/shadow', component: Shadow},
     { name: 'table', path: '/table', component: Table},
+    { name: 'breadcrumb', path: '/breadcrumb', component: Breadcrumb},
     { name: 'card', path: '/card', component: Card},
     { name: 'slider', path: '/slider', component: Slider},
     { name: 'dropdown', path: '/dropdown', component: Dropdown},
@@ -35,6 +38,7 @@ export default new Router({
     { name: 'button', path: '/button', component: Button},
     { name: 'badge', path: '/badge', component: Badge},
     { name: 'tooltip', path: '/tooltip', component: Tooltip},
-    { name: 'waves', path: '/waves', component: Waves}
+    { name: 'waves', path: '/waves', component: Waves},
+    { name: 'img-lazy', path: '/img-lazy', component: Lazy}
   ]
 })

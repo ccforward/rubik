@@ -1,7 +1,7 @@
 <template>
   <div class="modal-layer" :class="{ 'modal-layer-open': this.active }">
     <transition name="modal">
-      <div class="modal" :class="classes" :id="id" v-show="active" ref="modal">
+      <div class="modal" :class="clazz" :id="id" v-show="active" ref="modal">
         <slot></slot>
       </div>
     </transition>
@@ -29,7 +29,7 @@
     },
 
     computed: {
-      classes () {
+      clazz () {
         if(this.top && this.bottom){
           this.top = this.bottom = false
         }

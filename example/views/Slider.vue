@@ -45,7 +45,7 @@
       </tbody> 
     </table>
 
-    <code class="z-depth-1">
+    <code>
       &lt;r-slider :arrow="true" :cycle="false" :interval="1000" :icon="'ac_unit'"&gt;
         &lt;r-slider-item v-bind:src="'http://7xiblh.com1.z0.glb.clouddn.com/rubikui/img/1.jpg'"&gt;&lt;/r-slider-item&gt;
         &lt;r-slider-item v-bind:src="'http://7xiblh.com1.z0.glb.clouddn.com/rubikui/img/2.jpg'"&gt;&lt;/r-slider-item&gt;

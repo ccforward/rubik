@@ -4,7 +4,7 @@
     
     <h2>例子</h2>
 
-    <r-btn class="blue white-text" v-modal:modalA="">中间弹出</r-btn>
+    <r-btn class="blue white-text" v-modal:modalA>中间弹出</r-btn>
     <r-modal id="modalA">
       <r-card>
         <r-card-text>
@@ -14,13 +14,13 @@
         </r-card-text>
         <r-card-row actions="actions">
           <r-placeholder/>
-          <r-btn v-on:click.native="modal('modalA')">取消</r-btn>
-          <r-btn class="blue white-text" v-on:click.native="modal('modalA')">确认</r-btn>
+          <r-btn @click.native="modal('modalA')">取消</r-btn>
+          <r-btn class="blue white-text" @click.native="modal('modalA')">确认</r-btn>
         </r-card-row>
       </r-card>
     </r-modal>
 
-    <r-btn class="red white-text" v-modal:modalB="">顶部弹出</r-btn>
+    <r-btn class="red white-text" v-modal:modalB>顶部弹出</r-btn>
     <r-modal id="modalB" top>
       <r-card class="red white-text">
         <r-card-row actions="actions">
@@ -30,18 +30,75 @@
       </r-card>
     </r-modal>
 
-    <r-btn class="green white-text" v-modal:modalC="">底部弹出</r-btn>
+    <r-btn class="green white-text" v-modal:modalC>底部弹出</r-btn>
     <r-modal id="modalC" bottom>
       <r-card class="green white-text">
         <r-card-row actions="actions">
           <div class="modal-txt">底部对话框</div>
-          <r-btn class="blue white--text" @click.native="modal('modalC')">知道了</r-btn>
+          <r-btn class="blue white-text" @click.native="modal('modalC')">知道了</r-btn>
         </r-card-row>
       </r-card>
     </r-modal>
 
     <h2>API</h2>
     
+    <h3>指令说明</h3>
+    <p>
+      v-modal 作用在触发modal的元素上
+    </p>
+    <table class="bordered responsive-table">
+      <thead>
+        <th>指令</th>
+        <th>说明</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>v-modal:modalA</td>
+          <td>
+            指令的参数 arg (即 modalA) 对应 r-modal 组件的属性 id (modalA)
+          </td>
+        </tr>
+      </tbody> 
+    </table>
+
+    <h3>props</h3>
+    <table class="bordered responsive-table">
+      <thead>
+        <th>属性</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>id</td>
+          <td>modal 的 id 属性对应 v-modal 指令的 arg</td>
+          <td>String</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>top</td>
+          <td>modal 从顶部显示</td>
+          <td>Boolean</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>bottom</td>
+          <td>modal 从底部显示</td>
+          <td>Boolean</td>
+          <td>false</td>
+        </tr>
+        <tr>
+          <td>-</td>
+          <td>modal 从中间显示 (top 和 bottom 都为false)</td>
+          <td>Boolean</td>
+          <td>true</td>
+        </tr>
+        
+
+      </tbody> 
+    </table>
+
 
     <code>
       &lt;r-btn class="green white-text" v-modal:modal=""&gt;底部弹出&lt;/r-btn&gt;
