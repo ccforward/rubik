@@ -162,7 +162,8 @@ export default {
     li {
       text-align center
       div {
-        font-size 14px
+        font-size 13.5px
+        text-align left
       }
       a {
         padding-left 5px

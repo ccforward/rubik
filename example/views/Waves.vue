@@ -7,7 +7,7 @@
     <r-btn class="white black-text z-depth-2" large v-wave="{color:'purple'}">紫色 Waves</r-btn>
     <r-btn class="white black-text z-depth-2" large v-wave="{color:'red'}">红色 Waves</r-btn>
     <br><br>
-    <r-btn class="blue white-text" large v-wave.light>浅色 Light Waves</r-btn>
+    <r-btn class="blue white-text" large v-wave.light>浅色 Waves</r-btn>
     <r-btn class="blue white-text" large v-wave="{color:'white'}">白色 Waves</r-btn>
     
     <h3>其他元素</h3>
@@ -42,7 +42,7 @@
     </p>
     <code>
       &lt;r-btn class="white black-text" large v-wave="{color:'purple'}"&gt;紫色 Waves&lt;/r-btn&gt;
-      &lt;r-btn class="blue white-text" large v-wave.light&gt;浅色 Light Waves&lt;/r-btn&gt;
+      &lt;r-btn class="blue white-text" large v-wave.light&gt;浅色 Waves&lt;/r-btn&gt;
       &lt;div class="grey white-text" v-wave="{color:'green'}"&gt;div 绿色 Waves&lt;/div&gt;
     </code>
   </article>
@@ -55,6 +55,9 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+  button {
+    margin 0 1rem 1rem 0
+  }
   .wave-demo {
     display inline-block
     padding 0 3rem

@@ -2,10 +2,10 @@ require('./style/main.styl')
 import Bridge from './util/bridge'
 import Init from './util/init'
 import Load from './util/load'
+import Toast from './util/toast'
 
 import Components from './components'
 import Directives from './directives'
-// import Toast from './functions/toast'
 
 function Rubik(Vue) {
   Object.keys(Directives).forEach(key => {
@@ -23,7 +23,7 @@ function Rubik(Vue) {
 
     init: Init,
 
-  //   toast: Toast
+    toast: Toast
   }
 }
 

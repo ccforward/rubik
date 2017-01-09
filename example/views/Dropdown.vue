@@ -8,7 +8,7 @@
     <span>左侧划出</span>
     <r-btn class="green white-text" v-dropdown:dropdownA>下拉菜单<r-icon>arrow_drop_down</r-icon></r-btn>
     <r-dropdown id="dropdownA" :items="list" hover></r-dropdown>
-    
+    <br><br>
     <span>右侧划出</span>
     <r-btn class="green white-text" v-dropdown:dropdownB>下拉菜单<r-icon>arrow_drop_down</r-icon></r-btn>
     <r-dropdown id="dropdownB" right hover>

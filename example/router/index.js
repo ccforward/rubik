@@ -16,6 +16,7 @@ import Icon from '../views/Icon.vue'
 import Button from '../views/Button.vue'
 import Badge from '../views/Badge.vue'
 import Tooltip from '../views/Tooltip.vue'
+import Toast from '../views/Toast.vue'
 import Waves from '../views/Waves.vue'
 import Lazy from '../views/Lazy.vue'
 
@@ -40,6 +41,7 @@ export default new Router({
     { name: 'button', path: '/button', component: Button},
     { name: 'badge', path: '/badge', component: Badge},
     { name: 'tooltip', path: '/tooltip', component: Tooltip},
+    { name: 'toast', path: '/toast', component: Toast},
     { name: 'waves', path: '/waves', component: Waves},
     { name: 'img-lazy', path: '/img-lazy', component: Lazy}
   ]

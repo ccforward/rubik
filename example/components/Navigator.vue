@@ -30,6 +30,17 @@
         </ul>
       </li>
       <li>
+        <div>表单</div>
+        <ul>
+          <li v-for="item in forms">
+            <router-link :class="active == item.name && activeClass" :to="{path: '/'+item.name}">
+              <r-icon>{{item.icon}}</r-icon>
+              <span>{{item.txt}}</span>
+            </router-link>
+          </li>
+        </ul>
+      </li>
+      <li>
         <div>指令</div>
         <ul>
           <li v-for="item in directives">
@@ -89,9 +100,9 @@ export default {
           icon: 'toys',
           txt: '图标 Icon'
         },{
-          name: 'slider',
-          icon: 'play_circle_outline',
-          txt: '轮播 Slider'
+          name: 'button',
+          icon: 'credit_card',
+          txt: '按钮 Button'
         },{
           name: 'dropdown',
           icon: 'arrow_drop_down_circle',
@@ -101,14 +112,53 @@ export default {
           icon: 'tab',
           txt: '标签页 Tabs'
         },{
-          name: 'button',
-          icon: 'credit_card',
-          txt: '按钮 Button'
+          name: 'slider',
+          icon: 'play_circle_outline',
+          txt: '轮播 Slider'
         },{
           name: 'modal',
           icon: 'chat',
           txt: '对话框 Modal'
+        },{
+          name: 'toast',
+          icon: 'crop_landscape',
+          txt: '消息通知 Toast'
+        },{
+          name: '',
+          icon: 'chat',
+          txt: '列表 List'
+        },{
+          name: '',
+          icon: 'chat',
+          txt: '导航 Nav'
+        },{
+          name: '',
+          icon: 'chat',
+          txt: '加载 Spin'
+        },{
+          name: '',
+          icon: 'chat',
+          txt: '分页 Page'
         }
+      ],
+      forms: [
+        {
+          name: '',
+          icon: 'arrow_forward',
+          txt: '输入 Input'
+        },{
+          name: '',
+          icon: 'arrow_forward',
+          txt: '单选 Radio'
+        },{
+          name: '',
+          icon: 'arrow_forward',
+          txt: '多选 Checkbox'
+        },{
+          name: '',
+          icon: 'arrow_forward',
+          txt: '下拉框 Select'
+        },
       ],
       directives: [
         {

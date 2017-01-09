@@ -14,7 +14,7 @@
     <h3>带 icon</h3>
     <div class="tag-container">
       <r-tag>
-        <r-icon left="left">face</r-icon>笑
+        <r-icon left>face</r-icon>笑
       </r-tag>
 
       <r-tag>
@@ -22,7 +22,7 @@
       </r-tag>
 
       <r-tag class="pink white-text">
-        加油站<r-icon right>local_gas_station</r-icon>
+        <r-icon left>local_gas_station</r-icon>加油站
       </r-tag>
 
       <r-tag class="black white-text">
@@ -51,6 +51,7 @@
     </div>
 
     <h2>API</h2>
+
     <code>
       
     </code>
@@ -65,10 +66,9 @@ export default {
 
 <style scoped lang="stylus">
   .tag-container {
-    display flex
     margin 1rem 0
     .tag {
-      margin 0 .5rem 
+      margin .5rem 
       a {
         color #fff
       }
