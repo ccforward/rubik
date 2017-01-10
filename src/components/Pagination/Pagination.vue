@@ -1,16 +1,19 @@
 <template>
   <ul class="pagination" :class="clazz">
     <li>
-      <a class="pagination-nav" href="#" :class="{ 'pagination-nav-disabled': current === 1 }" @click.prevent="current = current - 1">
+      <!-- <a class="pagination-nav" href="#" :class="{ 'pagination-nav-disabled': current === 1 }" @click.prevent="current = current - 1"> -->
+      <a class="pagination-nav" href="#" :class="{ 'pagination-nav-disabled': current === 1 }" @click.prevent="fn(current-1)">
         <r-icon>chevron_left</r-icon>
       </a>
     </li>
     <li v-for="p in pages">
-      <a class="pagination-item" v-if="!isNaN(p)" v-wave="{color:'white'}" href="#" :class="{ 'pagination-item-active': p === sel }" @click.prevent="current = p" v-text="p"></a>
+      <!-- <a class="pagination-item" v-if="!isNaN(p)" href="#" :class="{ 'pagination-item-active': p === sel }" @click.prevent="current = p" v-text="p"></a> -->
+      <a class="pagination-item" v-if="!isNaN(p)" href="#" :class="{ 'pagination-item-active': p === sel }" @click.prevent="fn(p)" v-text="p"></a>
       <span class="pagination-dots" v-else v-text="p"></span>
     </li>
     <li>
-      <a class="pagination-nav" href="#" :class="{ 'pagination-nav-disabled': current === total }" @click.prevent="current = current + 1">
+      <!-- <a class="pagination-nav" href="#" :class="{ 'pagination-nav-disabled': current === total }" @click.prevent="current = current + 1"> -->
+      <a class="pagination-nav" href="#" :class="{ 'pagination-nav-disabled': current === total }" @click.prevent="fn(current + 1)">
         <r-icon>chevron_right</r-icon>
       </a>
     </li>
@@ -30,8 +33,6 @@
     },
 
     props: {
-      round: Boolean,
-
       total: {
         type: Number,
         default: 0
@@ -39,8 +40,14 @@
 
       cur: {
         type: Number,
-        default: 0
-      }
+        default: 1
+      },
+
+      cb:{
+        type: Function
+      },
+
+      round: Boolean,
     },
 
     watch: {
@@ -87,13 +94,18 @@
     },
 
     mounted () {
-      this.$rubik.load.call(this, this.init)
+      this.init()
     },
 
     methods: {
       init () {
         this.sel = null
         setTimeout(() => this.sel = this.current, 80)
+      },
+
+      fn (p) {
+        this.current = p
+        this.cb(p)
       },
 
       range (from, to) {
