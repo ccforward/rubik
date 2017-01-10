@@ -6,7 +6,7 @@
       
     <r-pagination :total="5" :cur="current1" :cb="cb1"></r-pagination>
     <r-pagination :total="100" :cur="current2" :cb="cb2"></r-pagination>
-    
+
     <h3>圆形 round</h3>
     <r-pagination :total="5" :cur="current3" :cb="cb3" round></r-pagination>
     <r-pagination :total="100" :cur="current4" :cb="cb4" round></r-pagination>
@@ -35,6 +35,12 @@
           <td>1</td>
         </tr>
         <tr>
+          <td>cb</td>
+          <td>点击页码后的回调函数, 回调函数参数为页码数</td>
+          <td>Function</td>
+          <td>-</td>
+        </tr>
+        <tr>
           <td>round</td>
           <td>是否展示为圆形</td>
           <td>Boolean</td>
@@ -59,6 +65,7 @@ export default {
   name: 'paginations',
   data(){
     return {
+      current: 1,
       current1: 1,
       current2: 2,
       current3: 3,
