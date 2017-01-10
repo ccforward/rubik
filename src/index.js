@@ -3,7 +3,6 @@ import Bridge from './util/bridge'
 import Init from './util/init'
 import Load from './util/load'
 import Toast from './util/toast'
-
 import Components from './components'
 import Directives from './directives'
 

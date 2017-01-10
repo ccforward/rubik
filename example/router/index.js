@@ -15,6 +15,8 @@ import Tab from '../views/Tab.vue'
 import Modal from '../views/Modal.vue'
 import Icon from '../views/Icon.vue'
 import Button from '../views/Button.vue'
+import Sidenav from '../views/Sidenav.vue'
+import Pagination from '../views/Pagination.vue'
 import Badge from '../views/Badge.vue'
 import Tooltip from '../views/Tooltip.vue'
 import Toast from '../views/Toast.vue'
@@ -41,6 +43,8 @@ export default new Router({
     { name: 'tag', path: '/tag', component: Tag},
     { name: 'icon', path: '/icon', component: Icon},
     { name: 'button', path: '/button', component: Button},
+    { name: 'sidenav', path: '/sidenav', component: Sidenav},
+    { name: 'pagination', path: '/pagination', component: Pagination},
     { name: 'badge', path: '/badge', component: Badge},
     { name: 'tooltip', path: '/tooltip', component: Tooltip},
     { name: 'toast', path: '/toast', component: Toast},

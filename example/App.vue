@@ -56,7 +56,7 @@ export default {
     transition all .7s cubic-bezier(0, 0.51, 0.69, 1.15)
     transform rotate(0) scale(10)
     transform-origin center center
-    opacity .1
+    opacity 0
     &.load {
       transform rotate(1080deg) scale(1)
       opacity 1

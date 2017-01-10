@@ -124,18 +124,19 @@ export default {
           icon: 'chat',
           txt: '对话框 Modal'
         },{
+          name: 'pagination',
+          icon: 'last_page',
+          txt: '分页 Pagination'
+        },{
           name: 'toast',
           icon: 'crop_landscape',
           txt: '消息通知 Toast'
-        },{
-          name: '',
-          icon: 'chat',
-          txt: '导航 Nav'
-        },{
-          name: '',
-          icon: 'chat',
-          txt: '分页 Page'
         }
+        // ,{
+        //   name: 'sidenav',
+        //   icon: 'menu',
+        //   txt: '侧边栏 SideNav'
+        // }
       ],
       forms: [
         {

@@ -9,11 +9,11 @@ import Tabs from './Tabs'
 import Modal from './Modal'
 import Button from './Button'
 import Icon from './Icon'
+import Pagination from './Pagination'
 
 
 function init (...components) {
   const com = {}
-
   components.forEach(c => {
     Object.keys(c).forEach(key => {
       com[`R${key}`] = c[key]
@@ -34,5 +34,6 @@ export default init(
   Tabs,
   Modal,
   Button,
-  Icon
+  Icon,
+  Pagination
 )
