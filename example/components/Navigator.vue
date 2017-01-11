@@ -153,8 +153,8 @@ export default {
           txt: '多选 Checkbox'
         },{
           name: 'select',
-          icon: 'arrow_forward',
-          txt: '选择框 Select'
+          icon: 'keyboard_arrow_down',
+          txt: '选择器 Select'
         },
       ],
       directives: [
