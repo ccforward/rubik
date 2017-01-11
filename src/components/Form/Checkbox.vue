@@ -1,7 +1,7 @@
 <template>
-  <div class="input-group">
-    <input type="checkbox" v-bind:class="classes" v-bind:disabled="disabled" v-bind:id="id" v-bind:name="name" v-bind:value="value" ref="input" />
-    <label v-bind:for="id" v-html="label"></label>
+  <div class="input-field">
+    <input type="checkbox" :checked="checked" :class="clazz" :disabled="disabled" :id="id" :name="name" :value="val" ref="checkbox" />
+    <label :for="id" v-html="label"></label>
   </div>
 </template>
 
@@ -19,8 +19,6 @@
       disabled: Boolean,
 
       filled: Boolean,
-
-      gap: Boolean,
 
       id: {
         type: String,
@@ -41,11 +39,17 @@
 
       value: {
         required: false
-      }
+      },
+
+      val: String,
+
+      list: [Array, String],
+
+      checked: Boolean
     },
 
     computed: {
-      classes () {
+      clazz () {
         return {
           'filled': this.filled
         }
@@ -55,39 +59,38 @@
     mounted () {
       const vm = this
 
-      this.$refs.input.indeterminate = this.indeterminate
+      this.$refs.checkbox.indeterminate = this.indeterminate
 
       this.state()
 
-      this.$refs.input.onchange = function () {
-        const c = this.checked,
-              v = this.value
+      this.$refs.checkbox.onchange = function () {
+        const c = this.checked
+        // const v = this.value
+        const v = vm.val
 
-        if (!vm.model
-            || typeof vm.model === 'string'
-        ) {
+        if (!vm.list || typeof vm.list === 'string') {
           return vm.$emit('input', c ? true : false)
         }
 
-        const i = vm.model.indexOf(v)
+        const i = vm.list.indexOf(v)
 
         if (c) {
-          vm.model.push(v)
+          vm.list.push(v)
         } else {
-          vm.model.splice(i, 1)
+          vm.list.splice(i, 1)
         }
 
-        vm.$emit('input', vm.model)
+        vm.$emit('input', v)
       }
     },
 
     methods: {
       state () {
-        if (typeof this.model === 'array' 
-            && this.model.includes(this.value)
-            || this.value
-        ) {
-          this.$refs.input.checked = true
+        if(this.checked){
+          this.$refs.checkbox.checked = true
+          this.list && this.list.push(this.val)
+        }else if (this.list && this.list.includes(this.val) ) {
+          this.$refs.checkbox.checked = true
         }
       }
     }

@@ -1,5 +1,5 @@
 <template>
-  <div class="input-field" :class="clazz">
+  <div class="input-field input-text" :class="clazz">
     <i v-if="icon" class="material-icons prefix" v-text="icon"></i>
     <div class="input-box">
       <label :for="id" v-html="label"></label>
