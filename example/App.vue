@@ -41,142 +41,142 @@ export default {
 </script>
 
 <style lang="stylus">
-@import './style/common.styl'
+  @import './style/common.styl'
 
-.wrapper {
-  background #eee
-  padding 1px
-}
-.logo {
-  margin 10px auto
-  height 80px
-  text-align center
-  img {
-    width 80px
-    transition all .7s cubic-bezier(0, 0.51, 0.69, 1.15)
-    transform rotate(0) scale(10)
-    transform-origin center center
-    opacity 0
-    &.load {
-      transform rotate(1080deg) scale(1)
-      opacity 1
-    }
+  .wrapper {
+    background #eee
+    padding 1px
   }
-}
-.ui-name {
-  font-size 2.2rem
-  text-align center
-  i {
-    font-style normal
-    &:nth-child(1){
-      color #f06
-    }
-    &:nth-child(2){
-      color #0089ce
-    }
-    &:nth-child(3){
-      color #f1d800
-    }
-    &:nth-child(4){
-      color #00d39a
-    }
-    &:nth-child(5){
-      color #94e827
-    }
-    
-  }
-}
-.wrapper-container {
-  background #fcfcfc
-  width 90%
-  margin 10px auto 20px
-  border-radius 6px
-  box-shadow 0 1px 1px 0 rgba(0,0,0,.1)
-  overflow hidden
-}
-.wrapper-navigate {
-  float left
-  flex 0 0 auto
-  display block
-  width 16.66666667%
-}
-
-.wrapper-content {
-  float left
-  flex 0 0 auto
-  display block
-  width 83.33333333%
-  padding 20px 25px
-  
-  h1 {
-    margin-bottom 15px
-    font-size 2.2rem
-  }
-  h2 {
-    font-size 1.8rem
-    margin 15px 0
-  }
-  
-  h3 {
-    font-size 1.4rem
-    margin 1rem 0
-  }
-  .demo-link {
-    font-size 1rem
-    color $txt-green
-    &:hover {
-      text-decoration underline
-    }
-  }
-  table {
-    margin-bottom 30px
-  }
-  code {
-    width 100%
-    margin-bottom 20px
-    background #e1e1e1
-    font-size 1rem
-    transition all .5s ease
-    &:hover {
-      box-shadow 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3)
-    }
-  }
-}
-
-@media (max-width: 600px) {
   .logo {
-    margin 10px 0
-    height 40px
+    margin 10px auto
+    height 80px
+    text-align center
     img {
-      width 40px
+      width 80px
+      transition all .7s cubic-bezier(0, 0.51, 0.69, 1.15)
+      transform rotate(0) scale(10)
+      transform-origin center center
+      opacity 0
+      &.load {
+        transform rotate(1080deg) scale(1)
+        opacity 1
+      }
     }
   }
   .ui-name {
-    font-size 1.7rem
+    font-size 2.2rem
+    text-align center
+    i {
+      font-style normal
+      &:nth-child(1){
+        color #f06
+      }
+      &:nth-child(2){
+        color #0089ce
+      }
+      &:nth-child(3){
+        color #f1d800
+      }
+      &:nth-child(4){
+        color #00d39a
+      }
+      &:nth-child(5){
+        color #94e827
+      }
+      
+    }
   }
   .wrapper-container {
-    width 98%
-    margin 15px 0 10px
+    background #fcfcfc
+    width 90%
+    margin 10px auto 20px
+    border-radius 6px
+    box-shadow 0 1px 1px 0 rgba(0,0,0,.1)
+    overflow hidden
   }
   .wrapper-navigate {
-    li {
-      text-align center
-      div {
-        font-size 13.5px
-        text-align left
+    float left
+    flex 0 0 auto
+    display block
+    width 16.66666667%
+  }
+
+  .wrapper-content {
+    float left
+    flex 0 0 auto
+    display block
+    width 83.33333333%
+    padding 20px 25px
+    
+    h1 {
+      margin-bottom 15px
+      font-size 2.2rem
+    }
+    h2 {
+      font-size 1.8rem
+      margin 15px 0
+    }
+    
+    h3 {
+      font-size 1.4rem
+      margin 1rem 0
+    }
+    .demo-link {
+      font-size 1rem
+      color $txt-green
+      &:hover {
+        text-decoration underline
       }
-      a {
-        padding-left 5px
-        font-size 12px
-        .icon {
-          width 20px
+    }
+    table {
+      margin-bottom 30px
+    }
+    code {
+      width 100%
+      margin-bottom 20px
+      background #e1e1e1
+      font-size 1rem
+      transition all .5s ease
+      &:hover {
+        box-shadow 0 6px 10px 0 rgba(0,0,0,0.14), 0 1px 18px 0 rgba(0,0,0,0.12), 0 3px 5px -1px rgba(0,0,0,0.3)
+      }
+    }
+  }
+
+  @media (max-width: 600px) {
+    .logo {
+      margin 10px 0
+      height 40px
+      img {
+        width 40px
+      }
+    }
+    .ui-name {
+      font-size 1.7rem
+    }
+    .wrapper-container {
+      width 98%
+      margin 15px 0 10px
+    }
+    .wrapper-navigate {
+      li {
+        text-align center
+        div {
+          font-size 13.5px
+          text-align left
         }
-        span {
-          display none
+        a {
+          padding-left 5px
+          font-size 12px
+          .icon {
+            width 20px
+          }
+          span {
+            display none
+          }
         }
       }
     }
   }
-}
 
 </style>

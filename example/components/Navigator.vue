@@ -140,21 +140,21 @@ export default {
       ],
       forms: [
         {
-          name: '',
-          icon: 'arrow_forward',
+          name: 'input',
+          icon: 'input',
           txt: '输入 Input'
         },{
-          name: '',
-          icon: 'arrow_forward',
+          name: 'radio',
+          icon: 'radio_button_checked',
           txt: '单选 Radio'
         },{
-          name: '',
-          icon: 'arrow_forward',
+          name: 'checkbox',
+          icon: 'check_box',
           txt: '多选 Checkbox'
         },{
-          name: '',
+          name: 'select',
           icon: 'arrow_forward',
-          txt: '下拉框 Select'
+          txt: '选择框 Select'
         },
       ],
       directives: [

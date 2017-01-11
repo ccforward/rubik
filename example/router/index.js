@@ -17,6 +17,9 @@ import Icon from '../views/Icon.vue'
 import Button from '../views/Button.vue'
 import Sidenav from '../views/Sidenav.vue'
 import Pagination from '../views/Pagination.vue'
+import Input from '../views/Input.vue'
+import Radio from '../views/Radio.vue'
+import Checkbox from '../views/Checkbox.vue'
 import Badge from '../views/Badge.vue'
 import Tooltip from '../views/Tooltip.vue'
 import Toast from '../views/Toast.vue'
@@ -25,7 +28,7 @@ import Lazy from '../views/Lazy.vue'
 
 Vue.use(Router)
 
-export default new Router({
+const router = new Router({
   routes:[
     { name: 'home', path: '/', component: About},
     { name: 'about', path: '/about', component: About},
@@ -45,6 +48,9 @@ export default new Router({
     { name: 'button', path: '/button', component: Button},
     { name: 'sidenav', path: '/sidenav', component: Sidenav},
     { name: 'pagination', path: '/pagination', component: Pagination},
+    { name: 'input', path: '/input', component: Input},
+    { name: 'radio', path: '/radio', component: Radio},
+    { name: 'checkbox', path: '/checkbox', component: Checkbox},
     { name: 'badge', path: '/badge', component: Badge},
     { name: 'tooltip', path: '/tooltip', component: Tooltip},
     { name: 'toast', path: '/toast', component: Toast},
@@ -52,3 +58,20 @@ export default new Router({
     { name: 'img-lazy', path: '/img-lazy', component: Lazy}
   ]
 })
+
+router.beforeEach((to, from, next) => {
+  let top = document.body.scrollTop
+  if(top > 0){
+    const timer = setInterval(()=>{
+      scrollTo(0, top)
+      top -= 100
+      if(top <= 0){
+        scrollTo(0, 0)
+        clearInterval(timer)
+      }
+    }, 20)
+  }
+  next()
+})
+
+export default router

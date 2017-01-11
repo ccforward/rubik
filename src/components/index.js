@@ -10,6 +10,7 @@ import Modal from './Modal'
 import Button from './Button'
 import Icon from './Icon'
 import Pagination from './Pagination'
+import Form from './Form'
 
 
 function init (...components) {
@@ -35,5 +36,6 @@ export default init(
   Modal,
   Button,
   Icon,
-  Pagination
+  Pagination,
+  Form
 )
