@@ -1,7 +1,7 @@
 <template>
-  <div class="input-group">
-    <input type="radio" v-bind:class="classes" v-bind:disabled="disabled" v-bind:id="id" v-bind:name="name" v-bind:value="value" ref="input" />
-    <label v-bind:for="id" v-html="label"></label>
+  <div class="input-field">
+    <input type="radio" :class="clazz" :disabled="disabled" :id="id" :name="name" :value="value" ref="radio" />
+    <label :for="id" v-html="label"></label>
   </div>
 </template>
 
@@ -9,16 +9,11 @@
 <script>
   export default {
     name: 'radio',
-    
-    props: {      
-      disabled: Boolean,
-
+    props: {
       label: {
         type: String,
         default: ''
       },
-
-      gap: Boolean,
 
       id: {
         type: String,
@@ -30,23 +25,40 @@
         default: ''
       },
 
-      value: [String, Number, Boolean]
+      checked: Boolean,
+
+      value: [String, Number, Boolean],
+
+      // 环形
+      dot: Boolean,
+
+      disabled: Boolean,
     },
 
     computed: {
-      classes () {
+      clazz () {
         return {
-          'gap': this.gap
+          'dot': this.dot
         }
+      }
+    },
+    watch: {
+      value (value) {
+        this.value = value
+        this.$refs.radio.checked = this.$el.value === this.value
       }
     },
 
     mounted () {
       const vm = this
 
-      this.$refs.input.checked = this.$el.value === this.value
+      this.$refs.radio.checked = this.$el.value === this.value
+      
+      if(this.checked){
+        this.$refs.radio.checked = true
+      }
 
-      this.$refs.input.onchange = function () {
+      this.$refs.radio.onchange = function () {
         vm.$emit('input', this.value)
       }
     }

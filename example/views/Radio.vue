@@ -1,36 +1,126 @@
 <template>
   <article>
-    <h1>Checkbox</h1>
+    <h1>单选 Radio</h1>
 
     <h2>例子</h2>
-    
-    <r-checkbox id="test7" name="test7" label="Testing 7"></r-checkbox>
-    <r-checkbox id="test8" name="test8" label="Testing 8" filled="filled"></r-checkbox>
-    <r-checkbox id="test9" name="test9" label="Testing 9" indeterminate="indeterminate"></r-checkbox>
-    <r-checkbox id="test10" name="test10" label="Testing 10" disabled="disabled"></r-checkbox>
-    <r-checkbox id="test10" name="test10" label="Testing 10" checked="checked" disabled="disabled"></r-checkbox>
-    
-    <r-input id="test2" name="test2" placeholder="Testing 3" label="Testing 2"></r-input>
-    
-    <r-radio id="test5" name="test5" label="Testing 5"></r-radio>
-    <r-radio id="test6" name="test5" label="Testing 6" gap="gap"></r-radio>
-    <r-radio id="test62" name="test52" label="Testing 62" gap="gap" checked="checked" disabled="disabled"></r-radio>
-    <r-radio id="test61" name="test54" label="Testing 61" disabled="disabled" checked="checked"></r-radio>
-    <r-radio id="test71" name="test5" label="Testing 71" disabled="disabled"></r-radio>
+      
+    <h3>Basic</h3>
+    <r-radio id="gender-male" name="gender" v-model="gender" value="男" label="男"></r-radio>
+    <r-radio id="gender-female" name="gender" v-model="gender" value="女" label="女"></r-radio>
 
+    <p>选中的性别：{{ gender }}</p>
 
-    <r-input id="test3" name="test3" label="Testing 3" placeholder="Testing 3"></r-input>
-    
+    <r-radio id="checked-yes" name="checked" label="默认选中" checked></r-radio>
+
+    <h3>圆点</h3>
+    <r-radio id="color-b" name="color" dot value="黑" v-model="color" label="黑色"></r-radio>
+    <r-radio id="color-w" name="color" dot value="白" v-model="color" label="白色"></r-radio>
+
+    <p>选中的颜色：{{ color }}</p>
+
+    <h3>disabled</h3>
+    <r-radio id="d1" name="d1" label="disabled 选中 圆点" dot checked ></r-radio>
+    <r-radio id="d2" name="d2" label="disabled 选中" disabled checked></r-radio>
+    <r-radio id="d3" name="d3" label="disabled 未选中" disabled></r-radio>
+
+    <h2>API</h2>
+
+    <h3>props</h3>
+    <table class="bordered responsive-table">
+      <thead>
+        <th>属性</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>label</td>
+          <td>label 标签</td>
+          <td>String</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>id</td>
+          <td>input[radio] id 属性，对应 label 标签 for 属性</td>
+          <td>String</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>name</td>
+          <td>input[radio] name 属性</td>
+          <td>String</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>checked</td>
+          <td>radio 是否选中</td>
+          <td>String</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>disabled</td>
+          <td>radio 是否可用</td>
+          <td>Boolean</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>value</td>
+          <td>input[radio] 的 value 属性</td>
+          <td>String</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>v-model 指令</td>
+          <td>和 input[radio] 的 value 双向绑定</td>
+          <td>String</td>
+          <td>-</td>
+        </tr>
+      </tbody> 
+    </table>
+
+    <code>
+      &lt;r-radio id="gender-male" name="gender" v-model="gender" value="男" label="男"&gt;&lt;/r-radio&gt;
+      &lt;r-radio id="gender-female" name="gender" v-model="gender" value="女" label="女"&gt;&lt;/r-radio&gt;
+      &lt;r-radio id="checked-yes" name="checked" label="默认选中" checked&gt;&lt;/r-radio&gt;
+
+      &lt;r-radio id="color-b" name="color" dot label="黑色"&gt;&lt;/r-radio&gt;
+      &lt;r-radio id="color-w" name="color" dot label="白色"&gt;&lt;/r-radio&gt;
+
+      &lt;r-radio id="d1" name="d1" label="disabled 选中 圆点" dot checked &gt;&lt;/r-radio&gt;
+      &lt;r-radio id="d2" name="d2" label="disabled 选中" disabled checked&gt;&lt;/r-radio&gt;
+      &lt;r-radio id="d3" name="d3" label="disabled 未选中" disabled&gt;&lt;/r-radio&gt;
+      
+      &lt;scrip&gt;
+        export default {
+          data(){
+            return {
+              gender: '男',
+              color: '',
+            }
+          }
+        }
+      &lt;/scrip&gt;
+
+    </code>
+
   </article>
 </template>
 
 <script>
 export default {
-  name: 'inputs',
+  name: 'radios',
   data(){
     return {
-      text: '11111'
+      gender: '男',
+      color: '',
     }
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+  h3 {
+    margin 2rem 0
+  }
+</style>

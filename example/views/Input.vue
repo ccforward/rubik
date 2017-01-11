@@ -2,6 +2,10 @@
   <article>
     <h1>输入 input</h1>
 
+    <p>
+      TODO: 添加错误提示
+    </p>
+
     <h2>例子</h2>
 
 
@@ -55,7 +59,7 @@
         </tr>
         <tr>
           <td>label</td>
-          <td>input 标签</td>
+          <td>label 标签</td>
           <td>String</td>
           <td>-</td>
         </tr>
@@ -86,7 +90,7 @@
         <tr>
           <td>disabled</td>
           <td>输入框是否可用</td>
-          <td>String</td>
+          <td>Boolean</td>
           <td>-</td>
         </tr>
         <tr>
