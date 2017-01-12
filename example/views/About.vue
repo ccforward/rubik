@@ -23,6 +23,9 @@
 
     <h2>兼容</h2>
     <p>支持 Vue.js 2.0+，不支持 Vue.js 1.x</p>
+
+    <h2>Demo</h2>
+    <a class="demo demo-link" href="https://ccforward.github.io/rubik/" target="_blank">https://ccforward.github.io/rubik/</a>
     
     <h2>使用</h2>
     <p>
@@ -46,9 +49,18 @@
         }
       }
     </code>
-    <p>
-      初始化
-    </p>
+
+    <p>引入字体</p>
+
+    <code>
+      &lt;link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet" type="text/css"&gt;
+    </code>
+
+    <p>引入css</p>
+
+    <code>
+      &lt;link href="./node_modules/i-rubik/dist/rubik.min.css" rel="stylesheet" type="text/css"&gt;
+    </code>
 
     <h2>相关开源项目</h2>
     <p>
@@ -71,6 +83,9 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+  .demo {
+    font-size 1.2rem
+  }
   .github {
     a {
       display inline-block
