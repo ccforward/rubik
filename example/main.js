@@ -3,8 +3,8 @@
 import Vue from 'vue'
 import App from './App'
 import router from './router/index'
-import rubik from '../src/index.js'
-Vue.use(rubik)
+import Rubik from '../src/index.js'
+Vue.use(Rubik)
 
 
 new Vue({
