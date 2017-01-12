@@ -42,13 +42,13 @@
         </tr>
         <tr>
           <td>id</td>
-          <td>input[radio] id 属性，对应 label 标签 for 属性</td>
+          <td>input[type=radio] id 属性，对应 label 标签 for 属性</td>
           <td>String</td>
           <td>-</td>
         </tr>
         <tr>
           <td>name</td>
-          <td>input[radio] name 属性</td>
+          <td>input[type=radio] name 属性</td>
           <td>String</td>
           <td>-</td>
         </tr>
@@ -66,13 +66,13 @@
         </tr>
         <tr>
           <td>value</td>
-          <td>input[radio] 的 value 属性</td>
+          <td>input[type=radio] 的 value 属性</td>
           <td>String</td>
           <td>-</td>
         </tr>
         <tr>
           <td>v-model 指令</td>
-          <td>和 input[radio] 的 value 双向绑定</td>
+          <td>和 input[type=radio] 的 value 双向绑定</td>
           <td>String</td>
           <td>-</td>
         </tr>
@@ -91,7 +91,7 @@
       &lt;r-radio id="d2" name="d2" label="disabled 选中" disabled checked&gt;&lt;/r-radio&gt;
       &lt;r-radio id="d3" name="d3" label="disabled 未选中" disabled&gt;&lt;/r-radio&gt;
       
-      &lt;scrip&gt;
+      &lt;script&gt;
         export default {
           data(){
             return {
@@ -100,7 +100,7 @@
             }
           }
         }
-      &lt;/scrip&gt;
+      &lt;/script&gt;
 
     </code>
 

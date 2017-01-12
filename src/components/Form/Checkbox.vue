@@ -16,18 +16,12 @@
     },
 
     props: {
-      disabled: Boolean,
-
-      filled: Boolean,
-
-      id: {
+      label: {
         type: String,
         default: ''
       },
 
-      indeterminate: Boolean,
-      
-      label: {
+      id: {
         type: String,
         default: ''
       },
@@ -37,15 +31,18 @@
         default: ''
       },
 
-      value: {
-        required: false
-      },
+      checked: Boolean,
+
+      disabled: Boolean,
 
       val: String,
 
-      list: [Array, String],
+      selected: Array,
 
-      checked: Boolean
+      filled: Boolean,
+
+      indeterminate: Boolean
+
     },
 
     computed: {
@@ -60,38 +57,32 @@
       const vm = this
 
       this.$refs.checkbox.indeterminate = this.indeterminate
-
-      this.state()
+      
+      if(this.checked){
+        this.$refs.checkbox.checked = true
+        if(this.selected && this.selected.indexOf(this.val) < 0)
+          this.selected.push(this.val)
+      }else if (this.selected && this.selected.includes(this.val) ) {
+        this.$refs.checkbox.checked = true
+      }
 
       this.$refs.checkbox.onchange = function () {
-        const c = this.checked
-        // const v = this.value
-        const v = vm.val
+        const chk = this.checked
+        const val = vm.val
 
-        if (!vm.list || typeof vm.list === 'string') {
-          return vm.$emit('input', c ? true : false)
+        if (!vm.selected || typeof vm.selected === 'string') {
+          return vm.$emit('input', chk ? true : false)
         }
 
-        const i = vm.list.indexOf(v)
+        const idx = vm.selected.indexOf(val)
 
-        if (c) {
-          vm.list.push(v)
+        if (chk) {
+          vm.selected.push(val)
         } else {
-          vm.list.splice(i, 1)
+          vm.selected.splice(idx, 1)
         }
 
-        vm.$emit('input', v)
-      }
-    },
-
-    methods: {
-      state () {
-        if(this.checked){
-          this.$refs.checkbox.checked = true
-          this.list && this.list.push(this.val)
-        }else if (this.list && this.list.includes(this.val) ) {
-          this.$refs.checkbox.checked = true
-        }
+        vm.$emit('input', val)
       }
     }
   }
