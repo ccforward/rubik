@@ -51,9 +51,63 @@
     </div>
 
     <h2>API</h2>
+    
+    <table class="bordered responsive-table">
+      <thead>
+        <th>属性</th>
+        <th>说明</th>
+        <th>类型</th>
+        <th>默认值</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>close</td>
+          <td>是否带关闭按钮</td>
+          <td>Boolean</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>rect</td>
+          <td>是否为矩形</td>
+          <td>Boolean</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>outline</td>
+          <td>是否透明</td>
+          <td>Boolean</td>
+          <td>-</td>
+        </tr>
+        <tr>
+          <td>small</td>
+          <td>是否小标签</td>
+          <td>Boolean</td>
+          <td>-</td>
+        </tr>
 
+      </tbody> 
+    </table>
     <code>
-      
+      &lt;r-tag&gt;默认标签&lt;/r-tag&gt;
+
+       &lt;r-tag small class="green white-text"&gt;小标签 &lt;/r-tag&gt;
+
+      // 颜色
+      &lt;r-tag class="blue white-text"&gt;蓝色标签&lt;/r-tag&gt;
+
+      // icon
+      &lt;r-tag&gt;
+        &lt;r-icon left&gt;face&lt;/r-icon&gt;笑
+      &lt;/r-tag&gt;
+
+      // 透明
+      &lt;r-tag outline class="blue gray-text"&gt;蓝色标签&lt;/r-tag&gt;
+
+      // 矩形
+      &lt;r-tag rect class="blue white-text"&gt;蓝色标签&lt;/r-tag&gt;
+
+      // 可关闭
+      &lt;r-tag class="blue white-text" close&gt;关闭标签&lt;/r-tag&gt;
     </code>
   </article>
 </template>
