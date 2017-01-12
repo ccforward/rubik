@@ -1,0 +1,51 @@
+.badge
+  position relative
+  
+  &:after
+    content attr(data-badge)
+    display flex
+    position absolute
+    flex-direction row
+    justify-content center
+    align-items center
+    flex-wrap wrap
+    top -($badge-height / 2)
+    right -($badge-width)
+    width $badge-width
+    height $badge-height
+    border-radius $badge-border-radius
+    background-color: $theme.primary
+    color $badge-color
+    font-family $badge-font-family
+    font-size $badge-font-size
+  
+  &-inner
+    &.badge-left
+      &:after
+        left 0
+        
+    &:after
+      top 0
+      right 0
+      
+  &-icon
+    &:after
+      font-family 'Material Icons'
+  
+  &-dot
+    &:after
+      width 8px
+      height 8px
+      top -4px
+      right -4px
+
+  &-dot&-left
+    &:after
+      left -4px
+    
+
+  &-left
+    &:after
+      left -($badge-width)
+      
+

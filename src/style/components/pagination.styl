@@ -1,0 +1,63 @@
+.pagination
+  list-style-type none
+  display flex
+  align-items center
+  
+  a
+    transition $primary-transition
+      
+  &-round
+    .pagination-item,
+    .pagination-more,
+    .pagination-nav
+      border-radius 50%
+  
+  &-item
+    display inline-flex
+    margin .3rem
+    width 2rem
+    height 2rem
+    justify-content center
+    align-items center
+    border-radius 2px
+    transform scale(.85)
+    color #444
+    font-size 1.05rem
+    text-decoration none
+    background transparent
+    
+    &-active
+      color #fff
+      transform scale(1.1)
+      background: $blue.base
+    
+  &-nav
+    // @extend .z-depth-1
+    display inline-flex
+    justify-content center
+    align-items center
+    text-decoration none
+    height 2rem
+    color: $grey.darken-2
+    
+    border-radius 4px
+    width 2rem
+    margin .3rem
+    
+    .icon
+      font-size 2rem
+      transition $primary-transition
+      vertical-align middle
+      
+    &-disabled
+      color: $grey.base
+      opacity .75
+      pointer-events none
+      
+  &-dots
+    margin .3rem
+    display inline-flex
+    align-items flex-end
+    justify-content center
+    height 2rem
+    width 2rem

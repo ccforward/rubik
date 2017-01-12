@@ -1,0 +1,44 @@
+.tag
+  background $tag-background
+  border $tag-border
+  border-radius $tag-border-radius
+  display inline-flex
+  align-items center
+  justify-content space-between
+  font-size $tag-font-size
+  padding $tag-padding
+  min-height $tag-min-height
+  
+  &:active
+    background $tag-background-active
+    
+  &-rect
+    border-radius $tag-rect-border-radius
+  
+  &-outline
+    background $tag-outline-background
+    color $tag-outline-color
+    
+  &-small
+    min-height $tag-small-min-height
+    padding $tag-small-padding
+    
+  &-close
+    color inherit
+    display flex
+    align-items center
+    text-decoration none
+    
+    .icon
+      color inherit
+    
+  .icon
+    font-size $tag-icon-font-size
+    
+    &-left
+      margin-left -.4rem
+      margin-right 1rem
+      
+    &-right
+      margin-left 1rem
+      margin-right -.4rem

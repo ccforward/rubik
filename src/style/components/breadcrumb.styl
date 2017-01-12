@@ -1,0 +1,42 @@
+.breadcrumb
+  display flex
+  justify-content space-between
+  flex-wrap wrap
+  flex $breadcrumb-flex
+  margin $breadcrumb-margin
+  list-style-type none
+  
+  li
+    &:not(:last-child):after
+      content attr(data-separator)
+      vertical-align middle
+      color: $grey.lighten-1
+      
+    &:last-child a
+      color: $grey.lighten-1
+      pointer-events none
+      cursor default
+      
+  &-with-icon
+    li
+      &:not(:last-child):after
+        font-family 'Material Icons'
+      
+        
+  &-item
+    align-items center
+    display inline-flex
+    font-size $breadcrumb-item-font-size
+    padding $breadcrumb-padding
+    height $breadcrumb-height
+    text-decoration none
+    line-height $breadcrumb-height
+    transition $primary-transition
+    color: $theme.primary
+    
+    &:hover
+      color: $grey.darken-1
+      
+    &-disable
+      color: $grey.lighten-2
+      pointer-events none

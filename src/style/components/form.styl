@@ -1,0 +1,284 @@
+.input-field
+  position relative
+  margin 1rem 0
+  width 100%
+  
+  &.input-text
+    display flex
+  
+  .prefix 
+    width 3rem
+    font-size 2rem
+    transition $primary-transition
+
+  .input-box
+    flex auto
+    position relative
+    &:after
+      content ""
+      width 0%
+      height 2px
+      background-color: $blue.lighten-1
+      position absolute
+      bottom -1px
+      left 0
+      transition $primary-transition
+
+  label
+    color: $blue.lighten-1
+    position absolute
+    transform translateY(50%)
+    transition $primary-transition
+    
+  input
+    border-bottom 1px solid #ddd
+    height 3rem
+    width 100%
+    position relative
+    
+    &:focus
+      outline: none
+        
+    &[type=radio]
+      display none
+      
+      &:disabled
+        + label
+          &:before
+            border-color: $grey.base
+            
+        &:checked
+          + label
+            &:before
+              border-color: $grey.base
+              
+            &:after
+              background: $grey.base
+      
+      + label
+        padding-left 1.5rem
+        cursor pointer
+        position relative
+        top: 0
+        
+        &:before
+          content ""
+          position absolute
+          left 0
+          top 2px
+          width 1rem
+          height 1rem
+          border-radius 50%
+          border: 2px solid #5a5a5a
+          transition $secondary-transition
+          z-index 1
+
+        &:after
+          content ""
+          position absolute
+          left 0
+          top 2px
+          width 1rem
+          height 1rem
+          transform scale(0)
+          border-radius 50%
+          z-index 2
+          background transparent
+          transition $secondary-transition
+          
+      &:checked
+        + label
+          &:before
+            border: 2px solid #5a5a5a
+            background transparent
+            
+          &:after
+            background: #5a5a5a
+            transform scale(1)
+
+      &.dot
+        &:checked
+          + label
+            &:after
+              transform scale(.45)
+              
+    &[type=checkbox]
+      display none
+      
+      &:disabled
+        + label
+          &:before
+            background-clip padding-box
+            background rgba(0,0,0,0.26)
+            border-color rgba(0,0,0,0.26)
+            
+        &:checked
+          + label
+            &:before
+              background transparent
+              border-bottom-color rgba(0,0,0,0.26)
+              border-right-color rgba(0,0,0,0.26)
+      
+      + label
+        padding-left 1.5rem
+        cursor pointer
+        position relative
+        top 0
+        
+        &:before
+          content ""
+          position absolute
+          left 0
+          top 2px
+          width 1rem
+          height 1rem
+          z-index 2
+          transition $secondary-transition
+          border 2px solid #5a5a5a
+          transform-origin 100% 100%
+          
+      &:checked
+        + label
+          &:before
+            width .5rem
+            top 0
+            left -2px
+            border-bottom-color #5a5a5a
+            border-left-color transparent
+            border-right-color #5a5a5a
+            border-top-color transparent
+            transform rotate(40deg)
+            
+      &.filled
+        + label
+          &:before
+            border-color transparent
+            left -4px
+            
+          &:after
+            content ""
+            position absolute
+            left -1.7px
+            top 1px
+            width 1.2rem
+            height 1.2rem
+            border 2px solid #5a5a5a
+            border-radius .15rem
+            transition $secondary-transition
+            background transparent
+            
+        &:checked
+          + label
+            &:before
+              border-bottom 2px solid #fff
+              border-right 2px solid #fff
+              top -1px
+              left -1px
+              transform rotate(37deg) scale(.8)
+            
+            &:after
+              background #5a5a5a
+              border-color #5a5a5a
+              
+      &:indeterminate
+        + label    
+          &:before
+            left -20px
+            top -8px
+            width 1.2rem
+            height 1.2rem
+            border-right-color #5a5a5a
+            border-top 0px solid transparent
+            border-left 0px solid transparent
+            border-bottom 0px solid transparent
+            transform rotate(90deg)
+            
+          &:after
+            border none
+            background transparent
+              
+  &.input-select
+    .caret 
+      position absolute
+      right 10px
+      top 50%
+      transform translateY(-50%)
+    label
+      transform translateY(-95%)
+  
+  select
+    background-color rgba(255,255,255,0.9)
+    width 100%
+    padding 5px
+    border 1px solid #f2f2f2
+    border-radius 2px
+    height 3rem
+    
+    &:focus
+      outline: none
+    
+    &[multiple]
+      height 10rem
+      top 9px
+      margin-bottom 1rem
+  
+  &.file-field
+    display flex
+    input[type=file]
+      position absolute
+      top 0
+      right 0
+      left 0
+      bottom 0
+      width 100%
+      margin 0
+      padding 0
+      font-size 20px
+      cursor pointer
+      opacity 0
+      z-index 10
+    .file-path
+      flex auto
+      position relative
+      margin-left 10px
+      z-index 0
+      &:after
+        content ""
+        position absolute
+        left 0
+        bottom -1px
+        width 0%
+        height 2px
+        transition $secondary-transition
+        background-color: $blue.lighten-1
+    .icon
+      position absolute
+      right 5px
+      top 50%
+      transform translateY(-50%)
+      cursor pointer
+      z-index 11
+      color: $grey.base
+
+  &.file-field-disabled
+    button 
+      cursor not-allowed
+    input[type=file]
+      cursor not-allowed
+
+  &.file-field-active
+    .file-path::after
+      width 100%
+  
+  &-focused, &-active
+    label
+      transform translateY(-50%)
+      font-size .8rem
+  
+  &-focused
+    .prefix 
+      color: $blue.lighten-1
+
+    .input-box
+      &:after
+        width 100%

@@ -1,0 +1,136 @@
+table,th,td {
+  text-align: left
+  border: none
+}
+
+table {
+    width: 100%;
+    display: table
+    border-collapse: collapse
+}
+
+table.bordered>thead>tr,table.bordered>tbody>tr {
+    border-bottom: 1px solid #d0d0d0
+}
+
+table.striped>tbody>tr:nth-child(odd) {
+    background-color: #f2f2f2
+}
+
+table.striped>tbody>tr>td {
+    border-radius: 0
+}
+
+table.highlight>tbody>tr {
+    transition: background-color .25s ease
+}
+
+table.highlight>tbody>tr:hover {
+    background-color: #f2f2f2
+}
+
+table.centered thead tr th,table.centered tbody tr td {
+    text-align: center
+}
+
+thead {
+    border-bottom: 1px solid #d0d0d0
+}
+
+td,th {
+    // padding: 15px 5px;
+    padding: 1rem .6rem
+    display: table-cell;
+    text-align: left;
+    vertical-align: middle;
+    border-radius: 2px
+}
+
+@media only screen and (max-width: 992px) {
+    table.responsive-table {
+        width:100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        display: block;
+        position: relative
+    }
+
+    table.responsive-table td:empty:before {
+        content: '\00a0'
+    }
+
+    table.responsive-table th,table.responsive-table td {
+        margin: 0;
+        vertical-align: top
+    }
+
+    table.responsive-table th {
+        text-align: left
+    }
+
+    table.responsive-table thead {
+        display: block;
+        float: left
+    }
+
+    table.responsive-table thead tr {
+        display: block;
+        padding: 0 10px 0 0
+    }
+
+    table.responsive-table thead tr th::before {
+        content: "\00a0"
+    }
+
+    table.responsive-table tbody {
+        display: block;
+        width: auto;
+        position: relative;
+        overflow-x: auto;
+        white-space: nowrap
+    }
+
+    table.responsive-table tbody tr {
+        display: inline-block;
+        vertical-align: top
+    }
+
+    table.responsive-table th {
+        display: block;
+        text-align: right
+    }
+
+    table.responsive-table td {
+        display: block;
+        min-height: 1.25em;
+        text-align: left
+    }
+
+    table.responsive-table tr {
+        padding: 0 10px
+    }
+
+    table.responsive-table thead {
+        border: 0;
+        border-right: 1px solid #d0d0d0
+    }
+
+    table.responsive-table.bordered th {
+        border-bottom: 0;
+        border-left: 0
+    }
+
+    table.responsive-table.bordered td {
+        border-left: 0;
+        border-right: 0;
+        border-bottom: 0
+    }
+
+    table.responsive-table.bordered tr {
+        border: 0
+    }
+
+    table.responsive-table.bordered tbody tr {
+        border-right: 1px solid #d0d0d0
+    }
+}

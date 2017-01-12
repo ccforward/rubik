@@ -1,0 +1,44 @@
+.toast
+  position fixed
+  z-index 99999999999999
+
+  &-top
+    top 5%
+    left 50%
+    transform translateX(-50%)
+    
+  
+  &-right
+    top 5%
+    right 2%
+
+  &-bottom
+    bottom 5%
+    left 50%
+    transform translateX(-50%)
+    .toast-content-hide
+      margin-top 0
+      transform translate3d(0, -3rem, 0)
+
+  &-left
+    top 5%
+    left 2%
+
+  &-content
+    padding 1rem 2rem
+    margin 1rem 0
+    border-radius $button-border-radius
+    transform translate3d(0, 3rem, 0)
+    transition $primary-transition
+    color #fff
+    opacity 0
+    background: $theme.secondary
+    @extend .z-depth-1
+    
+    &-active
+      transform translate3d(0, 0, 0)
+      opacity 1
+      
+    &-hide
+      margin-top -3rem
+      opacity 0

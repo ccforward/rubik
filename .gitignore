@@ -2,6 +2,3 @@
 node_modules/
 dist/
 npm-debug.log
-src_/
-src/style/
-src/directives/
