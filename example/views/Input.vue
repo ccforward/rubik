@@ -40,6 +40,9 @@
       </r-col>
     </r-row>
 
+
+    <r-input type="file" label="File"></r-input>
+
     <h2>API</h2>
 
     <h3>props</h3>

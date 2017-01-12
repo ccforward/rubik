@@ -5,11 +5,11 @@
     <h2>例子</h2>
 
     <h3>Basic</h3>
-    <r-checkbox id="check0" :selected="selected" :val="'red'" label="Red"></r-checkbox>
-    <r-checkbox id="check1" :selected="selected" :val="'yellow'" label="Yellow 默认选中" checked="checked"></r-checkbox>
-    <r-checkbox id="check2" :selected="selected" :val="'blue'" label="Blue"></r-checkbox>
+    <r-checkbox id="check0" :selected="sel" :val="'red'" label="Red"></r-checkbox>
+    <r-checkbox id="check1" :selected="sel" :val="'yellow'" label="Yellow 默认选中" checked="checked"></r-checkbox>
+    <r-checkbox id="check2" :selected="sel" :val="'blue'" label="Blue"></r-checkbox>
     <p>
-      已选 {{ selected }}
+      已选 {{ sel }}
     </p>
 
     <r-checkbox id="checkd" label="默认选中" checked="checked"></r-checkbox>
@@ -117,7 +117,7 @@ export default {
   name: 'checkboxes',
   data(){
     return {
-      selected: ['red'],
+      sel: ['red'],
     }
   }
 }

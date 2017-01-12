@@ -20,6 +20,7 @@ import Pagination from '../views/Pagination.vue'
 import Input from '../views/Input.vue'
 import Radio from '../views/Radio.vue'
 import Checkbox from '../views/Checkbox.vue'
+import Select from '../views/Select.vue'
 import Badge from '../views/Badge.vue'
 import Tooltip from '../views/Tooltip.vue'
 import Toast from '../views/Toast.vue'
@@ -51,6 +52,7 @@ const router = new Router({
     { name: 'input', path: '/input', component: Input},
     { name: 'radio', path: '/radio', component: Radio},
     { name: 'checkbox', path: '/checkbox', component: Checkbox},
+    { name: 'select', path: '/select', component: Select},
     { name: 'badge', path: '/badge', component: Badge},
     { name: 'tooltip', path: '/tooltip', component: Tooltip},
     { name: 'toast', path: '/toast', component: Toast},

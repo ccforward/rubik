@@ -36,7 +36,6 @@
         if(this.noGutter){
           clazz += 'no-gutter'
         }
-        console.log(~justifyArr.indexOf(this.justify))
         if(~justifyArr.indexOf(this.justify)){
           clazz += ' row-flex-' + this.justify
         }

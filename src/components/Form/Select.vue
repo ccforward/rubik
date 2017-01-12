@@ -1,9 +1,10 @@
 <template>
-  <div class="input-group" v-bind:class="classes">
-    <label v-bind:for="id" v-text="label"></label>
-    <select v-bind:disabled="disabled" v-bind:id="id" v-bind:name="name" v-bind:multiple="multiple" v-bind:value="value" v-on:blur="focused = false" v-on:click="focused = true" v-on:input="update" ref="select">
-      <option value="" disabled="disabled" selected="selected" v-text="defaultText"></option>
-      <option v-bind:value="o.value" v-for="o in options" v-text="o.text" ref="options"></option>
+  <div class="input-field input-select" :class="clazz">
+    <span class="caret">▼</span>
+    <label :for="id" v-text="label"></label>
+    <select :disabled="disabled" :id="id" :name="name" @blur="update" @click="focused = true" @input="update" ref="select">
+      <option v-if="dftTxt" value="" selected="selected" :disabled="dftDisabled" v-text="dftTxt"></option>
+      <option v-for="o in options" v-bind:value="o.value"  :disabled="o.disabled" v-text="o.text" ref="options"></option>
     </select>
   </div>
 </template>
@@ -15,15 +16,18 @@
     
     data () {
       return {
+        input: '',
         focused: false
       }
     },
 
     props: {
-      defaultText: {
+      dftTxt: {
         type: String,
-        default: 'Select...'
+        default: ''
       },
+
+      dftDisabled: Boolean,
 
       disabled: Boolean,
 
@@ -36,8 +40,6 @@
         type: String,
         value: ''
       },
-
-      multiple: Boolean,
 
       name: {
         type: String,
@@ -55,10 +57,10 @@
     },
 
     computed: {
-      classes () {
+      clazz () {
         return {
-          'input-group--dirty': true,
-          'input-group--focused': this.focused && !this.multiple
+          'input-field-active': true,
+          'input-field-focused': this.focused && !this.multiple
         }
       }
     },
@@ -71,11 +73,7 @@
 
     methods: {
       update () {
-        if (!this.multiple) {
-          this.$emit('input', this.$refs.select.value)
-        } else {
-          this.$emit('input', this.$refs.options.filter(i => i.selected).map(i => i.value))
-        }
+        this.$emit('input', this.$refs.select.value)
       }
     }
   }
