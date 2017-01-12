@@ -3,7 +3,7 @@
     <span class="caret">▼</span>
     <label :for="id" v-text="label"></label>
     <select :disabled="disabled" :id="id" :name="name" @blur="update" @click="focused = true" @input="update" ref="select">
-      <option v-if="dftTxt" value="" selected="selected" :disabled="dftDisabled" v-text="dftTxt"></option>
+      <option v-if="dftText" value="" selected="selected" :disabled="dftDisabled" v-text="dftText"></option>
       <option v-for="o in options" v-bind:value="o.value"  :disabled="o.disabled" v-text="o.text" ref="options"></option>
     </select>
   </div>
@@ -22,21 +22,12 @@
     },
 
     props: {
-      dftTxt: {
-        type: String,
-        default: ''
-      },
-
-      dftDisabled: Boolean,
-
-      disabled: Boolean,
-
-      id: {
+      label: {
         type: String,
         value: ''
       },
 
-      label: {
+      id: {
         type: String,
         value: ''
       },
@@ -48,12 +39,22 @@
 
       options: {
         type: Array,
-        default: () => []
+        default: []
       },
 
       value: {
         required: false
-      }
+      },
+
+      dftText: {
+        type: String,
+        default: ''
+      },
+
+      dftDisabled: Boolean,
+
+      disabled: Boolean,
+
     },
 
     computed: {
