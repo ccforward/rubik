@@ -51,7 +51,7 @@
     </div>
 
     <h2>API</h2>
-    
+    <h3>props</h3>
     <table class="bordered responsive-table">
       <thead>
         <th>属性</th>

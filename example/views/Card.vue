@@ -1,6 +1,7 @@
 <template>
   <article>
-    <h1>卡片 Card</h1>
+    <h1>卡片 Card <strong class="red-text">beta</strong></h1>
+
     <h2>例子</h2>
 
     <h3>default</h3>
@@ -18,23 +19,24 @@
       </r-card>
     </section>
 
-    <h3>Header Footer</h3>
+    <h3>带有头(Header)和尾(Footer)</h3>
+
     <section class="card-item">
       <r-card>
         <r-card-row class="green darken-1">
-          <r-card-title class="white-text">Delta SkyMiles</r-card-title>
+          <r-card-title class="white-text">Header 卡片头部</r-card-title>
         </r-card-row>
         <r-card-text>
           <r-card-row height="75px">
-            <r-icon class="mr-5">card_membership</r-icon>
+            <r-icon class="mr-5">call</r-icon>
             <div>
-              <div>Frequent Flyer Number</div>
-              <strong>113241423</strong>
+              <p>手机号</p>
+              <p>+8618899990000</p>
             </div>
           </r-card-row>
         </r-card-text>
-        <r-card-row actions="actions">
-          <r-btn class="red-text darken-1" error flat="flat">View Email</r-btn>
+        <r-card-row actions>
+          <r-btn class="red-text" flat>Footer Button</r-btn>
         </r-card-row>
       </r-card>
     </section>
@@ -47,89 +49,77 @@
           <div>{{txt}}</div>
         </r-card-text>
         <r-card-row actions="actions">
-          <r-btn class="primary-text" flat="flat">View Updates</r-btn>
+          <r-btn class="red-text" flat="flat">Footer Button</r-btn>
         </r-card-row>
       </r-card>
 
       <r-card class="card-pic" :img="imgs[2]" height="auto">
-          <r-card-row class="white-text pl-3 pt-3 pb-3" actions="actions">This is footer description</r-card-row>
-        </r-card>
+        <r-card-row class="white-text pl-3 pt-3 pb-3" actions>Footer 带有阴影 </r-card-row>
+      </r-card>
     </section>
 
     <h3>水平排列 Horizontal</h3>
     <section class="card-item horizon">
-      <r-card horizontal="horizontal">
-        <r-card-row :img="imgs[0]" height="125px"></r-card-row>
+      <r-card horizontal>
+        <r-card-row :img="imgs[0]" height="150px"></r-card-row>
         <r-card-column>
           <r-card-row class="brown white-text" height="75px">
-            <r-card-text><strong>Reservation at Lazy Bear</strong>
-              <div>Feb 23, 7:00pm</div>
+            <r-card-text>
+              <p>
+                {{txt}}
+              </p>
             </r-card-text>
           </r-card-row>
-          <r-card-row class="brown darken-2" actions="actions">
-            <r-btn class="white-text" flat="flat">
-              <r-icon left="left">directions</r-icon>Directions
+          <r-card-row class="brown darken-2" actions>
+            <r-btn class="white-text" flat>
+              <r-icon left>call</r-icon>
+              1234567890
             </r-btn>
           </r-card-row>
         </r-card-column>
-      </r-card>
-
-      <r-card horizontal="horizontal">
-        <r-card-column class="amber white-text">
-          <r-card-row>
-            <!-- <r-spacer></r-spacer> -->
-            <r-card-text class="text-xs-right"><strong>Car Rental with Hertz</strong>
-              <div>Mar 5, 8:00pm</div>
-            </r-card-text>
-          </r-card-row>
-        </r-card-column>
-        <r-card-row :img="imgs[1]" height="125px"></r-card-row>
       </r-card>
     </section>
     
     <h2>API</h2>
     <h3>props</h3>
-    <table>
-      <thead>
-        <th>属性</th>
-        <th>说明</th>
-        <th>类型</th>
-        <th>默认值</th>
-      </thead>
-      <tbody>
-        <tr>
-          <td>arrow</td>
-          <td>是否显示箭头</td>
-          <td>Boolean</td>
-          <td>true</td>
-        </tr>
-        <tr>
-          <td>auto</td>
-          <td>是否自动播放</td>
-          <td>Boolean</td>
-          <td>true</td>
-        </tr>
-        <tr>
-          <td>interval</td>
-          <td>自动播放间隔时间 单位: 毫秒 ms</td>
-          <td>Number</td>
-          <td>5000</td>
-        </tr>
-        <tr>
-          <td>dot</td>
-          <td>底部导航</td>
-          <td>String</td>
-          <td>fiber_manual_record</td>
-        </tr>
-
-      </tbody> 
-    </table> 
+    <p>
+      TODO...
+    </p> 
     <code>
-      &lt;r-slider :arrow="true" :cycle="false" :interval="1000" :icon="'ac_unit'"&gt;
-        &lt;r-slider-item v-bind:src="'http://7xiblh.com1.z0.glb.clouddn.com/rubikui/img/1.jpg'"&gt;&lt;/r-slider-item&gt;
-        &lt;r-slider-item v-bind:src="'http://7xiblh.com1.z0.glb.clouddn.com/rubikui/img/2.jpg'"&gt;&lt;/r-slider-item&gt;
-        &lt;r-slider-item v-bind:src="'http://7xiblh.com1.z0.glb.clouddn.com/rubikui/img/3.jpg'"&gt;&lt;/r-slider-item&gt;
-      &lt;/r-slider&gt;
+      // Basic
+
+      &lt;r-card&gt;
+        &lt;r-card-text&gt;
+          &lt;p&gt;...&lt;/p&gt;
+        &lt;/r-card-text&gt;
+      &lt;/r-card&gt;
+
+      // Header Footer
+
+      &lt;r-card&gt;
+        &lt;r-card-row class="green darken-1"&gt;
+          &lt;r-card-title class="white-text"&gt;Header 卡片头部&lt;/r-card-title&gt;
+        &lt;/r-card-row&gt;
+        &lt;r-card-text&gt;
+          &lt;r-card-row height="75px"&gt;
+            &lt;r-icon class="mr-5"&gt;call&lt;/r-icon&gt;
+            &lt;div&gt;
+              &lt;p&gt;手机号&lt;/p&gt;
+              &lt;p&gt;+8618899990000&lt;/p&gt;
+            &lt;/div&gt;
+          &lt;/r-card-row&gt;
+        &lt;/r-card-text&gt;
+        &lt;r-card-row actions&gt;
+          &lt;r-btn class="red-text" flat&gt;Footer Button&lt;/r-btn&gt;
+        &lt;/r-card-row&gt;
+      &lt;/r-card&gt;
+
+      // 图片
+
+      &lt;r-card class="card-pic" :img="imgs[2]" height="auto"&gt;
+        &lt;r-card-row class="white-text pl-3 pt-3 pb-3" actions&gt;Footer 带有阴影 &lt;/r-card-row&gt;
+      &lt;/r-card&gt;
+
     </code>
   </article>
 </template>
@@ -152,6 +142,12 @@ export default {
 </script>
 
 <style scoped lang="stylus">
+h1 {
+  strong {
+    font-size 1.5rem
+    vertical-align top
+  }
+}
 .card-item {
   display flex
   margin-bottom 30px

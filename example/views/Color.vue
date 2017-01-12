@@ -27,7 +27,10 @@
     </code>
 
     <h3>文字颜色</h3>
-    <p>文字添加颜色需要在 class 中添加文字的颜色名和深浅(light/darkness)</p>
+    <p>
+      文字添加颜色需要在 class 中添加文字的颜色名和深浅(light/darkness) 如：<br>
+      class="blue-text text-accent-3" 
+    </p>
     
     <section class="card-item default">
       <r-card class="blue-text text-accent-3">
@@ -41,10 +44,21 @@
         </r-card-text>
       </r-card>
     </section>
-    <code class="z-depth-1">
+
+     <code>
       &lt;div class="blue-text text-accent-3"&gt;this is text-color&lt;/div&gt;
       &lt;div class="orange-text text-lighten-1"&gt;this is text-color&lt;/div&gt;
     </code>
+
+    <h3>after 伪类颜色</h3>
+    <p>badge 组件徽标在伪类 after 上， 使用 class="red-after" 给 after 伪类添加颜色 </p>
+    <r-icon class="badge-icons red-after" large v-badge:10.inner>call</r-icon>
+
+
+    <code>
+      &lt;r-icon class="badge-icons red-after" large v-badge:10.inner&gt;call&lt;/r-icon&gt;
+    </code>
+
     <h2>调色板</h2>
     <div class="color-palette">
       <section class="color-group">
@@ -479,6 +493,7 @@
         </ul>
       </section>
     </div>
+    
   </article>
 </template>
 

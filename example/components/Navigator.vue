@@ -65,13 +65,13 @@ export default {
       activeClass: 'active',
       css: [
         {
-          name: 'color',
-          icon: 'palette',
-          txt: '颜色 Color'
-        },{
           name: 'grid',
           icon: 'grid_on',
           txt: '栅格 Grid'
+        },{
+          name: 'color',
+          icon: 'palette',
+          txt: '颜色 Color'
         },{
           name: 'shadow',
           icon: 'movie',
