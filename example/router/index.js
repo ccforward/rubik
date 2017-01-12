@@ -21,6 +21,7 @@ import Input from '../views/Input.vue'
 import Radio from '../views/Radio.vue'
 import Checkbox from '../views/Checkbox.vue'
 import Select from '../views/Select.vue'
+import File from '../views/File.vue'
 import Badge from '../views/Badge.vue'
 import Tooltip from '../views/Tooltip.vue'
 import Toast from '../views/Toast.vue'
@@ -53,6 +54,7 @@ const router = new Router({
     { name: 'radio', path: '/radio', component: Radio},
     { name: 'checkbox', path: '/checkbox', component: Checkbox},
     { name: 'select', path: '/select', component: Select},
+    { name: 'file', path: '/file', component: File},
     { name: 'badge', path: '/badge', component: Badge},
     { name: 'tooltip', path: '/tooltip', component: Tooltip},
     { name: 'toast', path: '/toast', component: Toast},

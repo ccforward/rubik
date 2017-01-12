@@ -1,12 +1,12 @@
 <template>
-  <div class="input-field file-field">
-    <r-btn info>
-      FLIE
-    </r-btn>
-    <input id="file" name="name" type="file" ref="file"/>
+  <div class="input-field file-field" :class="clazz">
+    <r-btn v-if="disabled" disabled>FLIE</r-btn>
+    <r-btn v-else info>FLIE</r-btn>
+    <input id="file" name="name" type="file" :multiple="multiple" :disabled="disabled" ref="file"/>
     <div class="file-path">
-      <input class="file-path" type="text" placeholder="上传个文件">
+      <input type="text" v-model="fileName" :placeholder="placeholder">
     </div>
+    <i v-if="fileName" class="material-icons icon" @click="clear">cancel</i>
   </div>
 </template>
 
@@ -16,51 +16,57 @@
     
     data () {
       return {
-        focused: false,
-        inputValue: ''
+        fileName: '',
+        active: false
       }
     },
 
     computed: {
       clazz () {
         return {
-          'input-field-focused': this.focused,
-          'input-field-active': this.inputValue || this.placeholder || (this.$refs.input && this.$refs.input.value)
+          'file-field-disabled': this.disabled,
+          'file-field-active': this.active,
         }
       }
     },
 
     props: {
-
-      label: String,
-
-      id: String,
-
       name: String,
+
+      value: [Object, FileList],
 
       placeholder: String,
 
-      disabled: Boolean,
+      multiple: Boolean,
 
-      value: {
-        required: false
-      }
-    },
+      disabled: Boolean
 
-    watch: {
-      value (value) {
-        this.inputValue = value
-      }
     },
 
     mounted () {
-      this.inputValue = this.value
-    },
+      const vm = this
 
-    methods: {
-      val (e) {
-        this.inputValue = e.target.value
-        this.$emit('input', this.inputValue)
+      this.$refs.file.onchange = function (e) {
+        if(this.files.length){
+          vm.$emit('input', this.files)
+
+          vm.active = true
+          if(vm.multiple){
+            let files = []
+            for(let i=0,l=this.files.length;i<l;i++){
+              files.push(this.files[i].name)
+            }
+            vm.fileName = files.join(' , ')
+          }else {
+            vm.fileName = this.files[0].name
+          }
+        }        
+      }
+    },
+    methods:{
+      clear(){
+        this.$refs.file.value = this.fileName = ''
+        this.$emit('input', '')
       }
     }
   }

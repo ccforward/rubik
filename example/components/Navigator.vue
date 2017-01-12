@@ -132,17 +132,16 @@ export default {
           icon: 'crop_landscape',
           txt: '消息通知 Toast'
         }
-        // ,{
-        //   name: 'sidenav',
-        //   icon: 'menu',
-        //   txt: '侧边栏 SideNav'
-        // }
       ],
       forms: [
         {
           name: 'input',
           icon: 'input',
           txt: '输入 Input'
+        },{
+          name: 'file',
+          icon: 'file_upload',
+          txt: '上传 File'
         },{
           name: 'radio',
           icon: 'radio_button_checked',

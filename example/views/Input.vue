@@ -41,6 +41,7 @@
     </r-row>
 
     <r-file></r-file>
+    <r-file disabled></r-file>
 
 
     <h2>API</h2>
