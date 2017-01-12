@@ -40,8 +40,8 @@
       </r-col>
     </r-row>
 
+    <r-file></r-file>
 
-    <r-input type="file" label="File"></r-input>
 
     <h2>API</h2>
 

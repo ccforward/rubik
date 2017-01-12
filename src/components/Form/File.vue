@@ -1,16 +1,18 @@
 <template>
-  <div class="input-field input-text" :class="clazz">
-    <i v-if="icon" class="material-icons prefix" v-text="icon"></i>
-    <div class="input-box">
-      <label :for="id" v-html="label"></label>
-      <input :disabled="disabled" :id="id" :name="name" :placeholder="placeholder" :type="type" :value="inputValue" @blur="blur" @input="val" @focus="focus" ref="input" />
+  <div class="input-field file-field">
+    <r-btn info>
+      FLIE
+    </r-btn>
+    <input id="file" name="name" type="file" ref="file"/>
+    <div class="file-path">
+      <input class="file-path" type="text" placeholder="上传个文件">
     </div>
   </div>
 </template>
 
 <script>
   export default {
-    name: 'input',
+    name: 'file',
     
     data () {
       return {
@@ -29,17 +31,12 @@
     },
 
     props: {
-      type: {
-        default: 'text'
-      },
 
       label: String,
 
       id: String,
 
       name: String,
-
-      icon: String,
 
       placeholder: String,
 
@@ -61,15 +58,6 @@
     },
 
     methods: {
-      blur () {
-        this.focused = false
-        this.$emit('blur')
-      },
-
-      focus () {
-        this.focused = true
-        this.$emit('focus')
-      },
       val (e) {
         this.inputValue = e.target.value
         this.$emit('input', this.inputValue)
