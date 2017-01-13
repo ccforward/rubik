@@ -101,9 +101,14 @@ export default {
 
 <style scoped lang="stylus">
   .alert-container {
-    width 50%
+    width 70%
     .alert {
       margin 10px 0
+    }
+  }
+  @media (max-width: 600px) {
+    .alert-container {
+      width 100%
     }
   }
 </style>
