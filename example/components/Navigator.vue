@@ -2,7 +2,7 @@
   <nav>
     <ul>
       <li>
-        <router-link :class="active == 'about' && activeClass" :to="{path: '/about'}">
+        <router-link :class="active == 'about' || 'home' && activeClass" :to="{path: '/about'}">
           <r-icon>face</r-icon>
           <span>关于</span>
         </router-link>
@@ -218,6 +218,9 @@ nav {
   }
 }
 @media (max-width: 700px) {
+  nav {
+    padding 0
+  }
   nav a {
     font-size 12px
   }

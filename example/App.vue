@@ -162,6 +162,7 @@ export default {
             padding-left 5px
             font-size 12px
             .icon {
+              margin auto
               width 20px
             }
             span {
