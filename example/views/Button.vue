@@ -39,6 +39,11 @@
     <r-btn info flat>Flat</r-btn>
     <r-btn info flat disabled>Flat</r-btn>
 
+    <h3>Link 链接</h3>
+    <r-btn link :href="link" :target="target">_Blank</r-btn>
+    <r-btn link :href="link" :target="'_self'" success>_Self</r-btn>
+    <r-btn link primary>Link</r-btn>
+
     <h3>icon</h3>
 
     <r-btn icon>
@@ -104,6 +109,10 @@
       &lt;r-btn secondary&gt;Secondary&lt;/r-btn&gt;
 
       &lt;r-btn info&gt;Info&lt;/r-btn&gt;
+      
+      &lt;r-btn link :href="link" :target="target"&gt;_Blank&lt;/r-btn&gt;
+      &lt;r-btn link :href="link" :target="'_self'" success&gt;_Self&lt;/r-btn&gt;
+      &lt;r-btn link primary&gt;Link&lt;/r-btn&gt;
 
       &lt;r-btn icon&gt;
         &lt;r-icon&gt;android&lt;/r-icon&gt;
@@ -123,6 +132,8 @@
       export default {
         data () {
           return {
+            link: 'https://www.ccforward.net/',
+            target: '_blank',
             loading: false
           }
         },
@@ -142,6 +153,8 @@ export default {
   name: 'buttons',
   data () {
     return {
+      link: 'https://www.ccforward.net/',
+      target: '_blank',
       loading: false
     }
   },
@@ -155,7 +168,7 @@ export default {
 </script>
 
 <style scoped lang="stylus">
-  button {
+  .btn {
     margin 1rem
   }
 </style>
