@@ -83,7 +83,7 @@
         </tr>
         <tr>
           <td>disabled</td>
-          <td>radio 是否可用</td>
+          <td>input[type=file] 是否可用</td>
           <td>Boolean</td>
           <td>-</td>
         </tr>
