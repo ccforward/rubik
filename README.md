@@ -46,16 +46,19 @@ export default {
 }
 ```
 
-### 引入字体
+### iconfont
 
-```html
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet" type="text/css">
-```
+Material Design 的 iconfont 文件已经嵌入在了 css 中
 
 ### 引入css
 
 ```html
 <link href="./node_modules/i-rubik/dist/rubik.min.css" rel="stylesheet" type="text/css">
+```
+OR
+
+```html
+<link href="//unpkg.com/i-rubik/dist/rubik.min.css" rel="stylesheet" type="text/css">
 ```
 
 ## 相关开源项目
