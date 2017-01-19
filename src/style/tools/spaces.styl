@@ -1,0 +1,37 @@
+$i = 0
+for level, s in $spaces
+  .mt-{$i}
+    margin-top: s.y !important
+  .mr-{$i}
+    margin-right: s.x !important
+  .mb-{$i}
+    margin-bottom: s.y !important
+  .ml-{$i}
+    margin-left: s.x !important
+  .mx-{$i}
+    margin-left: s.x !important
+    margin-right: s.x !important
+  .my-{$i}
+    margin-top: s.y !important
+    margin-bottom: s.y !important
+  .ma-{$i}
+    margin: s.y s.x !important
+    
+  .pt-{$i}
+    padding-top: s.y !important
+  .pr-{$i}
+    padding-right: s.x !important
+  .pb-{$i}
+    padding-bottom: s.y !important
+  .pl-{$i}
+    padding-left: s.x !important
+  .px-{$i}
+    padding-left: s.x !important
+    padding-right: s.x !important
+  .py-{$i}
+    padding-top: s.y !important
+    padding-bottom: s.y !important
+  .pa-{$i}
+    padding: s.y s.x !important
+    
+  $i = $i + 1

@@ -36,35 +36,35 @@ $grid-gutter-half := $grid-gutter * .25
 $grid-columns := 12
 
 
-// Blank
+// Space
 // ============================================================
-$blank := 1rem
-$blank-x := $blank
-$blank-y := $blank
-$blanks := {
+$space := 1rem
+$space-x := $space
+$space-y := $space
+$spaces := {
   zero: {
     x: 0,
     y: 0
   },
   one: {
-    x: ($blank-x * .25),
-    y: ($blank-y * .25)
+    x: ($space-x * .25),
+    y: ($space-y * .25)
   },
   two: {
-    x: ($blank-x * .5),
-    y: ($blank-y * .5)
+    x: ($space-x * .5),
+    y: ($space-y * .5)
   },
   three: {
-    x: $blank-x,
-    y: $blank-y
+    x: $space-x,
+    y: $space-y
   },
   four: {
-    x: ($blank-x * 1.5),
-    y: ($blank-y * 1.5)
+    x: ($space-x * 1.5),
+    y: ($space-y * 1.5)
   },
   five: {
-    x: ($blank-x * 3),
-    y: ($blank-y * 3)
+    x: ($space-x * 3),
+    y: ($space-y * 3)
   }
 }
 
@@ -74,23 +74,23 @@ $blanks := {
 $heading-color := $grey.darken-3
 $headings := {
   h1: {
-    size: 4rem,
-    weight: 300
+    size: 3.2rem,
+    weight: 400
   },
   h2: {
-    size: 3.5rem,
+    size: 2.8rem,
     weight: 400
   },
   h3: {
-    size: 3rem,
-    weight: 400
-  },
-  h4: {
     size: 2.5rem,
     weight: 400
   },
+  h4: {
+    size: 2.2rem,
+    weight: 400
+  },
   h5: {
-    size: 2rem,
+    size: 1.9rem,
     weight: 400
   },
   h6: {
@@ -102,11 +102,15 @@ $heading-base := 1rem
 $heading-growth := .6
 
 // Transitions
+// ============================================================
+
 $primary-transition := all 0.3s cubic-bezier(0, 0, .2, 1)
 $secondary-transition := all 0.2s ease-out
 
 
 // Alert
+// ============================================================
+
 $alert-color := inherit
 $alert-border-radius := 0
 $alert-border-width := 4px 0 0 0
@@ -114,9 +118,11 @@ $alert-font-size := 1.1rem
 $alert-icon-color := rgba(#000, .3)
 $alert-icon-font-size := 2rem
 $alert-padding := .5rem 1rem
-$alert-margin := $blanks.one.y auto
+$alert-margin := $spaces.one.y auto
 
 // Badges
+// ============================================================
+
 $badge-border-radius := 50%
 $badge-color := #fff
 $badge-font-family := $body-font-family
@@ -128,6 +134,8 @@ $badge-width := 22px
 $badge-offset := 10px
 
 // Breadcrumb
+// ============================================================
+
 $breadcrumb-flex := 0 1 auto
 $breadcrumb-height := 40px
 $breadcrumb-item-font-size := 1rem
@@ -135,6 +143,8 @@ $breadcrumb-margin := 0
 $breadcrumb-padding := 0 1rem
 
 /** Buttons */
+// ============================================================
+
 
 // Base
 $button-background := $grey.lighten-2
@@ -180,6 +190,8 @@ $button-icon-padding := $button-padding-left * .3
 $button-icon-font-size := $button-font-size * 1.5
 
 // Card
+// ============================================================
+
 $card-actions-border-top := 1px solid rgba(#000, .1)
 $card-background := #fff
 $card-padding := 14px
@@ -192,6 +204,8 @@ $card-actions-font-size := .9rem
 $card-actions-button-padding := .7rem
 
 // Tag
+// ============================================================
+
 $tag-background := $grey.lighten-2
 $tag-background-active := $grey.lighten-3
 $tag-border := 1px solid $grey.lighten-2
@@ -206,47 +220,10 @@ $tag-min-height := 25px
 $tag-small-min-height := 20px
 $tag-small-padding := 0 .2rem
 
-// Collapsible
-$collapsible-collapse-height := 3rem
-$collapsible-transition-height := 0.23s
-
-// Footer
-$footer-height := 3rem
-
-// Navbar
-$navbar-height := 5rem
-$navbar-item-padding := 0 1.2rem
-
-
-/* Sidebar */
-
-$sidebar-height := 100vh
-$sidebar-width := 260px
-
-// Sidebar Item
-$sidebar-item-color := #fff
-$sidebar-item-height := 2.8rem
-$sidebar-item-padding := .7rem 2rem
-$sidebar-item-active-color := #fff
-$sidebar-item-active-background-color := $theme.primary
-$sidebar-item-hover-background-color := rgba($theme.primary, .4)
-
-// Sidebar Item Header
-$sidebar-item-header-padding := .2rem .2rem .2rem 2rem
-$sidebar-item-header-color := #fff
-$sidebar-item-header-font-size := 90%
-$sidebar-item-header-letter-spacing := .1px
-
-// Sidebar Group
-$sidebar-group-items-background-color := darken($theme.secondary, 15%)
-$sidebar-group-header-active-sidebar-items-border := 1px solid rgba(#fff, .1)
-$sidebar-group-header-active-sidebar-item-active-background-color := rgba($theme.primary, .4)
-
-// Slider
-$slider-arrow-size := 2rem
-
 
 // Waves
+// ============================================================
+
 $waves-container-color := #fff
 $waves-animation-background := currentColor
 $waves-animation-transition := .7s transform cubic-bezier(.2, .4, .4, .9), .3s opacity cubic-bezier(.2, .4, .4, .1)

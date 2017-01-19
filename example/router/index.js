@@ -4,6 +4,7 @@ import About from '../views/About.vue'
 import Color from '../views/Color.vue'
 import Tag from '../views/Tag.vue'
 import Grid from '../views/Grid.vue'
+import Helper from '../views/Helper.vue'
 import Shadow from '../views/Shadow.vue'
 import Table from '../views/Table.vue'
 import Alert from '../views/Alert.vue'
@@ -36,6 +37,7 @@ const router = new Router({
     { name: 'about', path: '/about', component: About},
     { name: 'color', path: '/color', component: Color},
     { name: 'grid', path: '/grid', component: Grid},
+    { name: 'helper', path: '/helper', component: Helper},
     { name: 'alert', path: '/alert', component: Alert},
     { name: 'shadow', path: '/shadow', component: Shadow},
     { name: 'table', path: '/table', component: Table},

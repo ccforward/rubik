@@ -69,6 +69,10 @@ export default {
           icon: 'grid_on',
           txt: '栅格 Grid'
         },{
+          name: 'helper',
+          icon: 'build',
+          txt: '工具 Helper'
+        },{
           name: 'color',
           icon: 'palette',
           txt: '颜色 Color'
@@ -205,8 +209,9 @@ nav {
       color $txt-green
     }
     .material-icons {
-      font-size 20px
       margin-right 5px
+      min-width 20px
+      font-size 20px
     }
     span {
       line-height 24px

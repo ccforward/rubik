@@ -99,19 +99,15 @@ export default {
     .wrapper-content {
       padding 20px
       
-      h1 {
-        margin-bottom 15px
-        font-size 2.2rem
-      }
-      h2 {
-        font-size 1.8rem
-        margin 15px 0
-      }
-      
-      h3 {
-        font-size 1.4rem
-        margin 1rem 0
-      }
+      // h1 {
+      //   margin-bottom 15px
+      // }
+      // h2 {
+      //   margin 15px 0
+      // }
+      // h3 {
+      //   margin 1rem 0
+      // }
       .demo-link {
         font-size 1rem
         color $txt-green

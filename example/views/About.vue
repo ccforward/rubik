@@ -50,15 +50,13 @@
       }
     </code>
 
-    <p>引入字体</p>
-
-    <code>
-      &lt;link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons" rel="stylesheet" type="text/css"&gt;
-    </code>
-
     <p>引入css</p>
 
     <code>
+      &lt;link rel="stylesheet" href="//unpkg.com/i-rubik/dist/rubik.min.css"&gt;
+
+      或者
+      
       &lt;link href="./node_modules/i-rubik/dist/rubik.min.css" rel="stylesheet" type="text/css"&gt;
     </code>
 
