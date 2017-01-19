@@ -6,6 +6,7 @@ import router from './router/index'
 import Rubik from '../src/index.js'
 Vue.use(Rubik)
 
+// require('../dist/rubik.min.css')
 
 new Vue({
   el: '#app',

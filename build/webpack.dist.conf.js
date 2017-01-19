@@ -3,7 +3,7 @@ const nib = require('nib')
 const path = require('path')
 const projectRoot = path.resolve(__dirname, '../')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
-
+const config = require('./config')
 
 module.exports = {
   devtool: false,
@@ -11,6 +11,7 @@ module.exports = {
   entry: {
     app: './src/index.js'
   },
+  // devtool: config.build.productionSourceMap ? '#source-map' : false,
   output: {
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/dist/'

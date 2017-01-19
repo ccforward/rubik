@@ -9,11 +9,11 @@
   export default {
     name: 'checkbox',
     
-    data () {
-      return {
-        model: null
-      }
-    },
+    // data () {
+    //   return {
+    //     model: null
+    //   }
+    // },
 
     props: {
       label: {

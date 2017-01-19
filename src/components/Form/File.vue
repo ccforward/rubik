@@ -2,7 +2,7 @@
   <div class="input-field file-field" :class="clazz">
     <r-btn v-if="disabled" disabled>FILE</r-btn>
     <r-btn v-else info>FILE</r-btn>
-    <input id="file" name="name" type="file" :multiple="multiple" :disabled="disabled" ref="file"/>
+    <input name="name" type="file" :multiple="multiple" :disabled="disabled" ref="file"/>
     <div class="file-path">
       <input type="text" v-model="fileName" :placeholder="placeholder">
     </div>
