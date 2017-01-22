@@ -1,7 +1,6 @@
 import { createSimpleFunctional } from '../../util/tools'
 
 import Row from './Row.vue'
-// const Row = createSimpleFunctional('row')
 
 const Col = {
   functional: true,

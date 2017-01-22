@@ -2,7 +2,7 @@
 
 Rubik UI 是一个基于 Vue.js 2.0+ 的开源 UI 组件库，在交互和视觉设计上遵循 Material Design 规范，适用于 PC 端和 mobile 端。
 
-这是个从 jQuery 版本的 Material Design UI 组件库改版而来，内部系统已经开始使用，开源版本还在开发完善中。
+公司内部系统已经开始使用，开源版本还在开发完善中。
 
 ## GitHub
 
