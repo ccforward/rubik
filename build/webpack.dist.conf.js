@@ -27,20 +27,20 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        loader: 'babel',
+        loader: 'babel-loader',
         include: projectRoot,
         exclude: /node_modules/
       },
       {
         test: /\.styl$/,
-        loader: ExtractTextPlugin.extract('style-loader', 'css-loader!stylus-loader')
+        loader: ExtractTextPlugin.extract({ fallback: 'style-loader', use: 'css-loader!stylus-loader' }),
+        // options: {
+        //   use: [nib()],
+        //   import: ['~nib/lib/nib/index.styl'],
+        //   "include css": true
+        // }
       }
     ]
-  },
-  stylus: {
-    use: [nib()],
-    import: ['~nib/lib/nib/index.styl'],
-    "include css": true
   },
   plugins: [
     new webpack.optimize.UglifyJsPlugin({

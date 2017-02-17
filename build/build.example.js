@@ -3,11 +3,11 @@ require('./check-versions')()
 require('shelljs/global')
 env.NODE_ENV = 'production'
 
-var path = require('path')
-var config = require('./config')
-var ora = require('ora')
-var webpack = require('webpack')
-var webpackConfig = require('./webpack.example.conf')
+const path = require('path')
+const config = require('./config')
+const ora = require('ora')
+const webpack = require('webpack')
+const webpackConfig = require('./webpack.example.conf')
 
 console.log(
   '  Tip:\n' +
@@ -15,10 +15,10 @@ console.log(
   '  Opening index.html over file:// won\'t work.\n'
 )
 
-var spinner = ora('building for example dist...')
+const spinner = ora('building for example dist...')
 spinner.start()
 
-var assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
+const assetsPath = path.join(config.build.assetsRoot, config.build.assetsSubDirectory)
 rm('-rf', assetsPath)
 mkdir('-p', assetsPath)
 cp('-R', 'static/*', assetsPath)
