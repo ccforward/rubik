@@ -7,7 +7,7 @@ delete webpackConfig.entry;
 
 module.exports = function(config) {
   config.set({
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
 
     frameworks: ['mocha', 'sinon-chai'],
 

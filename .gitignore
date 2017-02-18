@@ -4,5 +4,3 @@ npm-debug.log
 coverage
 
 test/unit/specs
-test/unit/util.js
-test/unit/index.js
