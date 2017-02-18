@@ -2,4 +2,7 @@
 node_modules/
 npm-debug.log
 coverage
-test
+
+test/unit/specs
+test/unit/util.js
+test/unit/index.js
