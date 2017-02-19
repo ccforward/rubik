@@ -1,7 +1,6 @@
 import { createTest, createVue, destroyVM } from '../util'
 import Comp from 'src/components/Alert'
 
-debugger
 describe('Alert', () => {
   let vm;
   afterEach(() => {
