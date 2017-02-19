@@ -8,13 +8,11 @@ delete webpackConfig.entry;
 module.exports = function(config) {
   config.set({
     browsers: ['PhantomJS'],
+    // browsers: ['Chrome'],
 
     frameworks: ['mocha', 'sinon-chai'],
 
-    // list of files / patterns to load in the browser
-    files: [
-      './index.js'
-    ],
+    files: ['./index.js'],
 
     preprocessors: {
       './index.js': ['webpack', 'sourcemap']
@@ -29,12 +27,14 @@ module.exports = function(config) {
       'karma-chai',
       'karma-sinon-chai',
       'karma-chrome-launcher',
-      'karma-phantomjs-launcher'
+      'karma-phantomjs-launcher',
+      'karma-spec-reporter',
+      'karma-coverage'
     ],
 
-    reporters: ['progress'],
-
     // reporters: ['spec', 'coverage'],
+
+    reporters: ['progress'],
 
     coverageReporter: {
       dir: './coverage',
@@ -46,17 +46,13 @@ module.exports = function(config) {
 
     port: 9876,
 
-
     colors: true,
-
 
     // possible values: config.LOG_DISABLE || config.LOG_ERROR || config.LOG_WARN || config.LOG_INFO || config.LOG_DEBUG
     logLevel: config.LOG_INFO,
 
-
     // enable / disable watching file and executing tests whenever any file changes
     autoWatch: false,
-
 
     concurrency: Infinity
   })

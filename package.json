@@ -8,7 +8,8 @@
     "dev": "node build/dev-server.js",
     "build": "node build/build.dist.js",
     "build:demo": "node build/build.example.js",
-    "test": "karma start test/unit/karma.conf.js --single-run"
+    "test": "karma start test/unit/karma.conf.js --single-run",
+    "test:watch": "karma start test/unit/karma.conf.js"
   },
   "repository": {
     "type": "git",

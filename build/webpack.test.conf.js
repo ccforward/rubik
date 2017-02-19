@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const vueConf = require('./vue-loader.conf')
 const projectRoot = path.resolve(__dirname, '../')
 
 module.exports = {
@@ -12,7 +13,8 @@ module.exports = {
     loaders: [
       {
         test: /\.vue$/,
-        loader: 'vue-loader'
+        loader: 'vue-loader',
+        options: vueConf
       },
       {
         test: /\.js$/,
@@ -26,5 +28,7 @@ module.exports = {
       }
     ]
   },
-  stats: "errors-only"
+  devServer: {
+    stats: "errors-only"
+  }
 }

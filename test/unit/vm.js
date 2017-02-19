@@ -26,35 +26,35 @@ exports.destroyVM = function(vm) {
 
 /**
  * 创建一个 Vue 的实例对象
- * @param  {Object|String}  Compo   组件配置，可直接传 template
- * @param  {Boolean=false} mounted 是否添加到 DOM 上
+ * @param  {Object|String}  Component   - 组件配置，可直接传 template
+ * @param  {Boolean=false}  mounted     - 是否添加到 DOM 上
  * @return {Object} vm
  */
-exports.createVue = function(Compo, mounted = false) {
+exports.createVm = function(Component, mounted = false) {
   const elm = createElm();
 
-  if (Object.prototype.toString.call(Compo) === '[object String]') {
-    Compo = { template: Compo };
+  if (Object.prototype.toString.call(Component) === '[object String]') {
+    Component = { template: Component };
   }
-  return new Vue(Compo).$mount(mounted === false ? null : elm);
+  return new Vue(Component).$mount(mounted === false ? null : elm);
 };
 
 /**
  * 创建一个测试组件实例
  * @link http://vuejs.org/guide/unit-testing.html#Writing-Testable-Components
- * @param  {Object}  Compo          - 组件对象
- * @param  {Object}  propsData      - props 数据
+ * @param  {Object}  Component      - 组件对象
+ * @param  {Object}  props          - props 数据
  * @param  {Boolean=false} mounted  - 是否添加到 DOM 上
  * @return {Object} vm
  */
-exports.createTest = function(Compo, propsData = {}, mounted = false) {
-  if (propsData === true || propsData === false) {
-    mounted = propsData;
-    propsData = {};
+exports.createTest = function(Component, props = {}, mounted = false) {
+  if (props === true || props === false) {
+    mounted = props;
+    props = {};
   }
   const elm = createElm();
-  const Ctor = Vue.extend(Compo);
-  return new Ctor({ propsData }).$mount(mounted === false ? null : '#'+elm.id);
+  const Comp = Vue.extend(Component);
+  return new Comp({ props }).$mount(mounted === false ? null : elm);
 };
 
 /**
