@@ -1,4 +1,4 @@
-import { createTest, createVm, destroyVM } from '../vm'
+import { createComponent, createVM, destroyVM } from '../vm'
 import Component from 'src/components/Alert'
 const Alert = Component.Alert
 
@@ -9,7 +9,7 @@ describe('Alert', () => {
   })
 
   it('create', () => {
-    vm = createTest(Alert, {
+    vm = createComponent(Alert, {
       info: true
     }, true);
 
@@ -17,7 +17,7 @@ describe('Alert', () => {
   })
 
   it('close', () => {
-    vm = createVm({
+    vm = createVM({
       template: `
         <div class="alert-container">
           <r-alert close >close</r-alert>

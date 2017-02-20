@@ -5,17 +5,17 @@ const webpackConfig = require('../../build/webpack.base.conf');
 delete webpackConfig.entry;
 
 
-module.exports = function(config) {
+module.exports = config => {
   config.set({
-    browsers: ['PhantomJS'],
-    // browsers: ['Chrome'],
+    // browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
 
     frameworks: ['mocha', 'sinon-chai'],
 
-    files: ['./index.js'],
+    files: ['./file.js'],
 
     preprocessors: {
-      './index.js': ['webpack', 'sourcemap']
+      './file.js': ['webpack', 'sourcemap']
     },
 
     webpack: webpackConfig,

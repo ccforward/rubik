@@ -1,85 +1,76 @@
 import Vue from 'vue'
 import Rubik from 'src/index.js'
 
-Vue.use(Rubik);
+Vue.use(Rubik)
 
 let id = 0
 
 const createElm = function() {
-  const elm = document.createElement('div');
+  const elm = document.createElement('div')
+  elm.id = 'app' + ++id
+  document.body.appendChild(elm)
 
-  elm.id = 'app' + ++id;
-  document.body.appendChild(elm);
-
-  return elm;
-};
+  return elm
+}
 
 /**
- * 回收 vm
- * @param  {Object} vm
+ * 销毁 vm
  */
 exports.destroyVM = function(vm) {
   vm.$el &&
   vm.$el.parentNode &&
-  vm.$el.parentNode.removeChild(vm.$el);
+  vm.$el.parentNode.removeChild(vm.$el)
 };
 
 /**
  * 创建一个 Vue 的实例对象
- * @param  {Object|String}  Component   - 组件配置，可直接传 template
- * @param  {Boolean=false}  mounted     - 是否添加到 DOM 上
- * @return {Object} vm
+ * Component - 组件配置，可直接传 template 
+ * mounted   - 是否添加到 DOM 上
  */
-exports.createVm = function(Component, mounted = false) {
-  const elm = createElm();
+exports.createVM = function(Component, mounted = false) {
+  const elm = createElm()
 
   if (Object.prototype.toString.call(Component) === '[object String]') {
-    Component = { template: Component };
+    Component = { template: Component }
   }
-  return new Vue(Component).$mount(mounted === false ? null : elm);
+  return new Vue(Component).$mount(mounted === false ? null : elm)
 };
 
 /**
  * 创建一个测试组件实例
- * @link http://vuejs.org/guide/unit-testing.html#Writing-Testable-Components
- * @param  {Object}  Component      - 组件对象
- * @param  {Object}  props          - props 数据
- * @param  {Boolean=false} mounted  - 是否添加到 DOM 上
- * @return {Object} vm
+ * http://vuejs.org/v2/guide/unit-testing.html
+ * Component
+ * props
+ * mounted
  */
-exports.createTest = function(Component, props = {}, mounted = false) {
+exports.createComponent = function(Component, props = {}, mounted = false) {
   if (props === true || props === false) {
-    mounted = props;
-    props = {};
+    mounted = props
+    props = {}
   }
-  const elm = createElm();
-  const Comp = Vue.extend(Component);
-  return new Comp({ props }).$mount(mounted === false ? null : elm);
+  const elm = createElm()
+  const Ctor = Vue.extend(Component)
+  return new Ctor({ props }).$mount(mounted === false ? null : elm)
 };
 
-/**
- * 触发一个事件
- * mouseenter, mouseleave, mouseover, keyup, change, click 等
- * @param  {Element} elm
- * @param  {String} name
- * @param  {*} opts
- */
-exports.triggerEvent = function(elm, name, ...opts) {
+// 触发事件: mouseenter, mouseleave, mouseover, keyup, change, click...
+exports.fireEvent = function(elm, name, ...opts) {
   let eventName;
 
   if (/^mouse|click/.test(name)) {
-    eventName = 'MouseEvents';
+    eventName = 'MouseEvents'
   } else if (/^key/.test(name)) {
-    eventName = 'KeyboardEvent';
+    eventName = 'KeyboardEvent'
   } else {
-    eventName = 'HTMLEvents';
+    eventName = 'HTMLEvents'
   }
-  const evt = document.createEvent(eventName);
 
-  evt.initEvent(name, ...opts);
+  const evt = document.createEvent(eventName)
+  evt.initEvent(name, ...opts)
+
   elm.dispatchEvent
     ? elm.dispatchEvent(evt)
-    : elm.fireEvent('on' + name, evt);
+    : elm.fireEvent('on' + name, evt)
 
-  return elm;
+  return elm
 };
