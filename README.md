@@ -1,8 +1,9 @@
 # 关于 Rubik UI
 
+Rubik UI is a Material Design style ui library based Vue.js 2.0+ which can be used for PC and Mobile.
+
 Rubik UI 是一个基于 Vue.js 2.0+ 的开源 UI 组件库，在交互和视觉设计上遵循 Material Design 规范，适用于 PC 端和 mobile 端。
 
-部分内部系统和一些小应用已经开始使用，开源版本还在开发完善中。
 
 ## GitHub
 
@@ -12,17 +13,19 @@ Rubik UI 是一个基于 Vue.js 2.0+ 的开源 UI 组件库，在交互和视觉
 
 [![npm](https://img.shields.io/npm/v/i-rubik.svg)](https://www.npmjs.com/package/i-rubik)
 
-## 兼容
+## Support
 
-支持 Vue.js 2.0+，不支持 Vue.js 1.x
+Support Vue.js 2.0+
+
+Not support Vue.js 1.x
 
 ## Demo
 
 [https://ccforward.github.io/rubik/](https://ccforward.github.io/rubik/)
 
-## 使用
+## Usage
 
-#### npm 安装
+#### npm install
 
 ``` shell
 $ npm install i-rubik --save
@@ -31,7 +34,7 @@ $ yarn add i-rubik
 
 ```
 
-#### Rubik 初始化
+#### Rubik init
 
 ``` js
 import Vue from 'vue'
@@ -48,9 +51,9 @@ export default {
 
 ### iconfont
 
-Material Design 的 iconfont 文件已经嵌入在了 css 中
+Material Design's iconfont has been writtened in css file
 
-### 引入css
+### import css
 
 ```html
 <link href="./node_modules/i-rubik/dist/rubik.min.css" rel="stylesheet" type="text/css">
@@ -61,11 +64,11 @@ OR
 <link href="//unpkg.com/i-rubik/dist/rubik.min.css" rel="stylesheet" type="text/css">
 ```
 
-## 相关开源项目
+## Releated Projects
 
 Rubik UI 的部分组件和样式代码参考了以下项目 
 
-在此表示感谢
+Thanks to
 
 *   [materializecss](http://materializecss.com/)
 *   [material-ui](http://www.material-ui.com/)

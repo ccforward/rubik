@@ -32,9 +32,9 @@ module.exports = config => {
       'karma-coverage'
     ],
 
-    reporters: ['spec', 'coverage'],
+    // reporters: ['spec', 'coverage'],
 
-    // reporters: ['progress'],
+    reporters: ['progress'],
 
     coverageReporter: {
       dir: './coverage',
