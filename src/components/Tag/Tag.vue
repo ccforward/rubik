@@ -1,8 +1,8 @@
 <template>
-  <span class="tag" :class="clazz" v-show="value">
+  <span class="tag" :class="clazz" v-show="show">
     <slot></slot>
     <!-- <a v-if="close" href="#" class="tag-close" @click.prevent="$emit('input', false)"> -->
-    <a v-if="close" href="#" class="tag-close" @click.prevent="value=false">
+    <a v-if="close" href="#" class="tag-close" @click.prevent="show=false">
       <r-icon right>cancel</r-icon>
     </a>
   </span>
@@ -14,7 +14,7 @@
 
     data(){
       return {
-        value: {
+        show: {
           type: Boolean,
           default: true
         }
