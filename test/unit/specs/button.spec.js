@@ -5,11 +5,11 @@ const Btn = Component.Btn
 describe('Button', () => {
   let vm
   afterEach(() => {
-    destroyVM(vm);
+    destroyVM(vm)
   })
 
   it('create', () => {
-    vm = createComponent(Btn,true);
+    vm = createComponent(Btn,true)
     expect(vm.$el.classList.contains('btn')).to.true
   })
 
@@ -21,11 +21,11 @@ describe('Button', () => {
     }, true)
 
     vm.$nextTick( () => {
-      expect(vm.$el.nodeName).to.be.equal('A')
-      expect(vm.$el.getAttribute('href')).to.be.equal('#')
+      expect(vm.$el.nodeName).to.equal('A')
+      expect(vm.$el.getAttribute('href')).to.equal('#')
       done()
     })
-  });
+  })
 
   it('icon', done => {
     vm = createVM({
