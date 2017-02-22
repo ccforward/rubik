@@ -1,3 +1,10 @@
+// 初始化 rubik
+// body 绑定 click 事件
+import { createVM } from './vm'
+const vm = createVM({ template: '' }, true)
+vm.$rubik.init()
+
+
 // Polyfill fn.bind() for PhantomJS
 /* eslint-disable no-extend-native */
 Function.prototype.bind = require('function-bind')
