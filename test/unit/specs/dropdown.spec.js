@@ -32,17 +32,15 @@ describe('Dropdown', () => {
     const dropdown = vm.$children[1].$el
     fireEvent(btn, 'mouseenter')
 
-    setTimeout(()=>{
-      const rect = dropdown.getBoundingClientRect()
-      expect(rect.width > 0 && rect.height > 0).to.be.true
-      fireEvent(document.querySelector('body'), 'click')
-      setTimeout(() => {
-        const rect = dropdown.getBoundingClientRect()
-        expect(rect.width == 0 && rect.height == 0).to.be.true
-        destroyVM(vm)
-        done()
-      }, 200)
-    }, 50)
+    vm.$nextTick( _ => {
+        expect(dropdown.clientWidth > 0 && dropdown.clientHeight > 0).to.be.true
+        fireEvent(document.querySelector('body'), 'click')
+        setTimeout(() => {
+          expect(dropdown.classList.contains('dropdown-open-from-right')).to.be.true
+          destroyVM(vm)
+          done()
+        }, 200)
+    })
 
   })
 
@@ -64,17 +62,15 @@ describe('Dropdown', () => {
     const dropdown = vm.$children[1].$el
 
     fireEvent(btn, 'click')
-    setTimeout(()=>{
-      let rect = dropdown.getBoundingClientRect()
-      expect(rect.width > 0 && rect.height > 0).to.be.true
+     vm.$nextTick(()=>{
+      expect(dropdown.clientWidth > 0 && dropdown.clientHeight > 0).to.be.true
       fireEvent(document.querySelector('body'), 'click')
       setTimeout(() => {
-        const rect = dropdown.getBoundingClientRect()
-        expect(rect.width == 0 && rect.height == 0).to.be.true
+        expect(dropdown.classList.contains('dropdown-open-from-right')).to.be.false
         destroyVM(vm)
         done()
       }, 200)
-    }, 50)
+    })
 
   })
 

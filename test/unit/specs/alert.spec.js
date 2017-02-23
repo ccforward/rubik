@@ -8,12 +8,17 @@ describe('Alert', () => {
     destroyVM(vm);
   })
 
-  it('create', () => {
-    vm = createComponent(Alert, {
-      info: true
-    }, true);
+  it('create', done => {
+    vm = createComponent(Alert, true)
+
+    vm.info = true
 
     expect(vm.$el.classList.contains('alert')).to.true
+    
+    vm.$nextTick(() => {
+      expect(vm.$el.classList.contains('alert-info')).to.true
+      done()
+    })
   })
 
   it('close', () => {

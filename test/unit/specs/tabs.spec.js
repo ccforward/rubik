@@ -39,30 +39,27 @@ describe('Tabs', () => {
   })
 
   it('click-show-hide', done => {
-      vm = createVM({
-        template: template
-      }, true)
+    vm = createVM({
+      template: template
+    }, true)
 
-      const tab2 = vm.$el.querySelectorAll('.tabs-tab')[1]
-      const item1 = vm.$el.querySelectorAll('.tabs-item')[0]
-      const item2 = vm.$el.querySelectorAll('.tabs-item')[1]
+    const tab2 = vm.$el.querySelectorAll('.tabs-tab')[1]
+    const item1 = vm.$el.querySelectorAll('.tabs-item')[0]
+    const item2 = vm.$el.querySelectorAll('.tabs-item')[1]
 
-      vm.$nextTick(()=>{
-        setTimeout(() => {
-          tab2.click()
-          vm.$nextTick(()=>{
-            setTimeout(()=>{
-              expect(item1.style.display).to.be.equal('none')
-              expect(item2.style.display).to.be.equal('')
-              done()
-            }, 500)
-          })
-        }, 50)
-      })
-
+    vm.$nextTick(()=>{
+      setTimeout(() => {
+        tab2.click()
+        vm.$nextTick(()=>{
+          setTimeout(()=>{
+            expect(item1.style.display).to.be.equal('none')
+            expect(item2.style.display).to.be.equal('')
+            done()
+          }, 500)
+        })
+      }, 50)
     })
 
-
-    
+  })
 
 });
