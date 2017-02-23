@@ -23,7 +23,7 @@ describe('Pagination', () => {
   })
 
   it('click', done => {
-    let callback = sinon.spy()
+    const callback = sinon.spy()
     vm = createComponent(Pagination, true)
     vm.total = 100
     vm.current = 2

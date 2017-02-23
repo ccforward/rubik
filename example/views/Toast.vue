@@ -12,14 +12,17 @@
     <r-btn info @click.native="toast(right)">右边</r-btn>
     <r-btn info @click.native="toast(bottom)">下边</r-btn>
     <r-btn info @click.native="toast(left)">左边</r-btn>
+    <br>
 
     <h3>定时显示</h3>
     <p>默认显示 3 秒</p>
     <r-btn info @click.native="toast(bottom2)">0.5秒后消失</r-btn>
     <r-btn info @click.native="toast(bottom10)">10秒后消失</r-btn>
+    <br>
 
     <h3>回调函数</h3>
     <r-btn success @click.native="toast(callback)">回调函数</r-btn>
+    <br>
 
     <h2>API</h2>
     <p>

@@ -62,7 +62,8 @@ describe('Dropdown', () => {
     const dropdown = vm.$children[1].$el
 
     fireEvent(btn, 'click')
-     vm.$nextTick(()=>{
+    
+    vm.$nextTick(()=>{
       expect(dropdown.clientWidth > 0 && dropdown.clientHeight > 0).to.be.true
       fireEvent(document.querySelector('body'), 'click')
       setTimeout(() => {
