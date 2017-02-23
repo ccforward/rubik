@@ -9,8 +9,8 @@ describe('Tag', () => {
   })
 
   it('create', () => {
-    vm = createComponent(Tag,true)
-    expect(vm.$el.nodeName).to.equal('SPAN')
+    vm = createComponent(Tag, true)
+    expect(vm.$el.nodeName).to.be.equal('SPAN')
     expect(vm.$el.classList.contains('tag')).to.true
   })
 
@@ -22,9 +22,9 @@ describe('Tag', () => {
     }, true)
 
     vm.$nextTick( () => {
-      expect(vm.$el.querySelector('a').classList.contains('tag-close')).to.true
+      expect(vm.$el.querySelector('a').classList.contains('tag-close')).to.be.true
       vm.$el.querySelector('.tag-close').click()
-      expect(vm.$children[0].$data.show).to.false
+      expect(vm.$children[0].$data.show).to.be.false
       done()
     })
   })
