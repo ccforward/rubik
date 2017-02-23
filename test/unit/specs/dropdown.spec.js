@@ -33,11 +33,11 @@ describe('Dropdown', () => {
     fireEvent(btn, 'mouseenter')
 
     setTimeout(()=>{
-      const rect = dropdown.getClientRects()[0]
+      const rect = dropdown.getBoundingClientRect()
       expect(rect.width > 0 && rect.height > 0).to.be.true
       fireEvent(document.querySelector('body'), 'click')
       setTimeout(() => {
-        const rect = dropdown.getClientRects()[0]
+        const rect = dropdown.getBoundingClientRect()
         expect(rect.width == 0 && rect.height == 0).to.be.true
         destroyVM(vm)
         done()
@@ -65,11 +65,11 @@ describe('Dropdown', () => {
 
     fireEvent(btn, 'click')
     setTimeout(()=>{
-      let rect = dropdown.getClientRects()[0]
+      let rect = dropdown.getBoundingClientRect()
       expect(rect.width > 0 && rect.height > 0).to.be.true
       fireEvent(document.querySelector('body'), 'click')
       setTimeout(() => {
-        const rect = dropdown.getClientRects()[0]
+        const rect = dropdown.getBoundingClientRect()
         expect(rect.width == 0 && rect.height == 0).to.be.true
         destroyVM(vm)
         done()
