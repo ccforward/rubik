@@ -26,6 +26,7 @@
 
     <h2>Demo</h2>
     <a class="demo demo-link" href="https://ccforward.github.io/rubik/" target="_blank">https://ccforward.github.io/rubik/</a>
+    <a class="demo demo-link" href="http://rubik.ccforward.net/" target="_blank">http://rubik.ccforward.net/</a>
     
     <h2>使用</h2>
     <p>

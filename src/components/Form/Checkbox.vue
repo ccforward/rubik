@@ -8,12 +8,6 @@
 <script>
   export default {
     name: 'checkbox',
-    
-    // data () {
-    //   return {
-    //     model: null
-    //   }
-    // },
 
     props: {
       label: {
@@ -62,7 +56,7 @@
         this.$refs.checkbox.checked = true
         if(this.selected && this.selected.indexOf(this.val) < 0)
           this.selected.push(this.val)
-      }else if (this.selected && this.selected.includes(this.val) ) {
+      }else if (this.selected && this.selected.indexOf(this.val) >= 0 ) {
         this.$refs.checkbox.checked = true
       }
 

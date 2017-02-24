@@ -23,6 +23,8 @@ Not support Vue.js 1.x
 
 [https://ccforward.github.io/rubik/](https://ccforward.github.io/rubik/)
 
+[http://rubik.ccforward.net/](http://rubik.ccforward.net/)
+
 ## Usage
 
 #### npm install

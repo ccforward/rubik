@@ -7,8 +7,8 @@ delete webpackConfig.entry;
 
 module.exports = config => {
   config.set({
-    // browsers: ['PhantomJS'],
-    browsers: ['Chrome'],
+    browsers: ['PhantomJS'],
+    // browsers: ['PhantomJS', 'Chrome'],
 
     frameworks: ['mocha', 'sinon-chai'],
 
@@ -32,13 +32,12 @@ module.exports = config => {
       'karma-coverage'
     ],
 
-    // reporters: ['spec', 'coverage'],
-
-    reporters: ['progress'],
+    reporters: ['spec', 'coverage', 'progress'],
 
     coverageReporter: {
       dir: './coverage',
       reporters: [
+        { type: 'html', subdir: 'report-html' },
         { type: 'lcov', subdir: '.' },
         { type: 'text-summary' }
       ]

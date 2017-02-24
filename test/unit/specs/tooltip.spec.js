@@ -17,7 +17,6 @@ describe('Tooltip', () => {
       const tt = document.querySelector('.tt-top')
 
       expect(vm.$el.dataset.tooltip).to.be.equal(txt)
-      expect(getComputedStyle(tt, ':after').content.toString().replace(/"/g, '') == vm.$el.dataset.tooltip).to.be.true
       done()
     })
   })
