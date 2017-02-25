@@ -2,6 +2,7 @@ const path = require('path')
 const config = require('./config')
 const utils = require('./utils')
 const projectRoot = path.resolve(__dirname, '../')
+const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const vueConf = require('./vue-loader.conf')
 
 function resolve (dir) {
@@ -54,7 +55,10 @@ module.exports = {
       },
       {
         test: /\.styl$/,
-        loader: 'style-loader!css-loader!stylus-loader',
+        use: ExtractTextPlugin.extract({
+          fallback: "style-loader",
+          use: "css-loader!stylus-loader"
+        })
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
