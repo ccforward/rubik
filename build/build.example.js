@@ -1,7 +1,8 @@
 // https://github.com/shelljs/shelljs
 require('./check-versions')()
 require('shelljs/global')
-env.NODE_ENV = 'production'
+
+process.env.NODE_ENV = 'production'
 
 const path = require('path')
 const config = require('./config')

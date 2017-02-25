@@ -1,8 +1,13 @@
 // 初始化 rubik
 // body 绑定 click 事件
+import Vue from 'vue'
 import { createVM } from './vm'
-const vm = createVM({ template: '' }, true)
+import Rubik from 'src/index.js'
+
+Vue.use(Rubik)
+const vm = createVM({}, true)
 vm.$rubik.init()
+
 
 
 // Polyfill fn.bind() for PhantomJS
@@ -13,7 +18,7 @@ Function.prototype.bind = require('function-bind')
 const testsContext = require.context('./specs', true, /\.spec$/)
 testsContext.keys().forEach(testsContext)
 
-// require all src files for coverage.
+// require all src files except main.js for coverage.
 // you can also change this to match only the subset of files that
 // you want coverage for.
 const srcContext = require.context('../../src', true, /index\.js/)

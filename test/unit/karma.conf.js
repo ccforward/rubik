@@ -1,14 +1,11 @@
 // Karma configuration
 
-const webpackConfig = require('../../build/webpack.base.conf');
-
-delete webpackConfig.entry;
-
+const webpackConfig = require('../../build/webpack.test.conf');
 
 module.exports = config => {
   config.set({
-    browsers: ['PhantomJS'],
-    // browsers: ['PhantomJS', 'Chrome'],
+    // browsers: ['PhantomJS'],
+    browsers: ['Chrome'],
 
     frameworks: ['mocha', 'sinon-chai'],
 

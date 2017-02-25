@@ -1,7 +1,4 @@
 import Vue from 'vue'
-import Rubik from 'src/index.js'
-
-Vue.use(Rubik)
 
 let id = 0
 
@@ -20,7 +17,7 @@ exports.destroyVM = function(vm) {
   vm.$el &&
   vm.$el.parentNode &&
   vm.$el.parentNode.removeChild(vm.$el)
-};
+}
 
 /**
  * 创建一个 Vue 的实例对象
@@ -34,7 +31,7 @@ exports.createVM = function(Component, mounted = false) {
     Component = { template: Component }
   }
   return new Vue(Component).$mount(mounted === false ? null : elm)
-};
+}
 
 /**
  * 创建一个测试组件实例
@@ -51,7 +48,7 @@ exports.createComponent = function(Component, props = {}, mounted = false) {
   const elm = createElm()
   const Ctor = Vue.extend(Component)
   return new Ctor({ props }).$mount(mounted === false ? null : elm)
-};
+}
 
 // 触发事件: mouseenter, mouseleave, mouseover, keyup, change, click...
 exports.fireEvent = function(elm, name, ...opts) {
@@ -73,4 +70,4 @@ exports.fireEvent = function(elm, name, ...opts) {
     : elm.fireEvent('on' + name, evt)
 
   return elm
-};
+}

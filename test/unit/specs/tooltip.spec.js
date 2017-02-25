@@ -32,7 +32,7 @@ describe('Tooltip', () => {
       fireEvent(vm.$el, 'mouseenter')
       setTimeout( _ => {
         expect(getComputedStyle(tt, ':after').visibility).to.not.equal('hidden')
-      }, 1000)
+      }, 300)
       done()
     })
   })

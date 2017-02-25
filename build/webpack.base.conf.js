@@ -4,6 +4,10 @@ const utils = require('./utils')
 const projectRoot = path.resolve(__dirname, '../')
 const vueConf = require('./vue-loader.conf')
 
+function resolve (dir) {
+  return path.join(__dirname, '..', dir)
+}
+
 module.exports = {
   entry: {
     app: './example/main.js'
@@ -18,7 +22,10 @@ module.exports = {
   },
   resolve: {
     extensions: ['.js', '.vue', '.json'],
-    // fallback: [path.join(__dirname, '../node_modules')],
+    modules: [
+      resolve('src'),
+      resolve('node_modules')
+    ],
     alias: {
       'vue$': 'vue/dist/vue.common.js',
       'src': path.resolve(__dirname, '../src'),
@@ -27,9 +34,6 @@ module.exports = {
       'components': path.resolve(__dirname, '../example/components')
     }
   },
-  // resolveLoader: {
-  //   fallback: [path.join(__dirname, '../node_modules')]
-  // },
   module: {
     noParse: /es6-promise\.js$/,
     rules: [
@@ -50,7 +54,7 @@ module.exports = {
       },
       {
         test: /\.styl$/,
-        loader: 'style-loader!css-loader!stylus-loader'
+        loader: 'style-loader!css-loader!stylus-loader',
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
