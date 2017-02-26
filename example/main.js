@@ -4,12 +4,13 @@ import Vue from 'vue'
 import App from './App'
 import router from './router/index'
 import Rubik from '../src/index.js'
-Vue.use(Rubik)
+require('offline-plugin/runtime').install()
 
-// require('../dist/rubik.min.css')
+Vue.use(Rubik)
 
 new Vue({
   el: '#app',
+  name: 'Rubik',
   router,
   render: h => h(App)
 })

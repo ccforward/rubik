@@ -1,6 +1,6 @@
 {
   "name": "i-rubik",
-  "version": "0.2.6",
+  "version": "0.3.0",
   "description": "A Vue.js 2.0 UI Components Framework",
   "author": "cc <ccking@foxmail.com>",
   "main": "dist/rubik.min.js",
@@ -24,6 +24,7 @@
     "UI Components"
   ],
   "dependencies": {
+    "offline-plugin": "^4.6.1",
     "vue": "^2.1.8"
   },
   "devDependencies": {

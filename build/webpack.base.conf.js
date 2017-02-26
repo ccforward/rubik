@@ -55,10 +55,11 @@ module.exports = {
       },
       {
         test: /\.styl$/,
-        use: ExtractTextPlugin.extract({
-          fallback: "style-loader",
-          use: "css-loader!stylus-loader"
-        })
+        loader: 'style-loader!css-loader!stylus-loader'
+        // use: ExtractTextPlugin.extract({
+        //   fallback: "style-loader",
+        //   use: "css-loader!stylus-loader"
+        // })
       },
       {
         test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,

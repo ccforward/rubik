@@ -12,7 +12,7 @@ module.exports = config => {
     files: ['./file.js'],
 
     preprocessors: {
-      './file.js': ['webpack', 'sourcemap']
+      './file.js': ['webpack', 'sourcemap', 'coverage']
     },
 
     webpack: webpackConfig,
@@ -24,7 +24,7 @@ module.exports = config => {
       'karma-chai',
       'karma-sinon-chai',
       'karma-chrome-launcher',
-      'karma-phantomjs-launcher',
+      // 'karma-phantomjs-launcher',
       'karma-spec-reporter',
       'karma-coverage'
     ],
