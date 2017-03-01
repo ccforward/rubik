@@ -50,13 +50,13 @@
       </tbody> 
     </table>
 
-    <code>
+    <Markup :lang="'html'">
       &lt;r-pagination :total="5" :cur="pageData"&gt;&lt;/r-pagination&gt;
       &lt;r-pagination :total="100" :cur="pageData"&gt;&lt;/r-pagination&gt;
 
       &lt;r-pagination :total="5" :cur="pageData2" round&gt;&lt;/r-pagination&gt;
       &lt;r-pagination :total="100" :cur="pageData2" round&gt;&lt;/r-pagination&gt;
-    </code>
+    </Markup>
   </article>
 </template>
 

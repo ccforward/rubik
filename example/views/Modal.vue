@@ -100,7 +100,7 @@
     </table>
 
 
-    <code>
+    <Markup :lang="'html'">
       &lt;r-btn class="green white-text" v-modal:modal=""&gt;底部弹出&lt;/r-btn&gt;
       &lt;r-modal id="modal" bottom&gt;
         &lt;r-card class="green white-text"&gt;
@@ -111,7 +111,7 @@
           &lt;/r-card-row&gt;
         &lt;/r-card&gt;
       &lt;/r-modal&gt;
-    </code>
+    </Markup>
   </article>
 </template>
 

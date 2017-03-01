@@ -29,7 +29,7 @@
       </div>
     </div>
 
-    <code>
+    <Markup :lang="'html'">
       &lt;div class="col xs1"&gt;
         &lt;div class="z-depth-0">z-depth-0&lt;/div&gt;
       &lt;/div&gt;
@@ -48,7 +48,7 @@
       &lt;div class="col xs1"&gt;
         &lt;div class="z-depth-5">z-depth-5&lt;/div&gt;
       &lt;/div&gt;
-    </code>
+    </Markup>
     
   </article>
 </template>

@@ -70,7 +70,7 @@
       </tbody> 
     </table>
 
-    <code>
+    <Markup :lang="'js'">
       const fn = () => alert('toast 的回调函数')
       export default {
         name: 'toast',
@@ -92,7 +92,7 @@
           }
         }
       }
-    </code>
+    </Markup>
   </article>
 </template>
 

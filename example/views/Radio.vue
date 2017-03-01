@@ -79,7 +79,7 @@
       </tbody> 
     </table>
 
-    <code>
+    <Markup :lang="'html'">
       &lt;r-radio id="gender-male" name="gender" v-model="gender" value="男" label="男"&gt;&lt;/r-radio&gt;
       &lt;r-radio id="gender-female" name="gender" v-model="gender" value="女" label="女"&gt;&lt;/r-radio&gt;
       &lt;r-radio id="checked-yes" name="checked" label="默认选中" checked&gt;&lt;/r-radio&gt;
@@ -90,17 +90,17 @@
       &lt;r-radio id="d1" name="d1" label="disabled 选中 圆点" dot checked &gt;&lt;/r-radio&gt;
       &lt;r-radio id="d2" name="d2" label="disabled 选中" disabled checked&gt;&lt;/r-radio&gt;
       &lt;r-radio id="d3" name="d3" label="disabled 未选中" disabled&gt;&lt;/r-radio&gt;
-      
-      &lt;script&gt;
-        export default {
-          data(){
-            return {
-              gender: '男',
-              color: '',
-            }
+    </Markup>  
+    <Markup :lang="'js'">
+      export default {
+        data(){
+          return {
+            gender: '男',
+            color: '',
           }
         }
-      &lt;/script&gt;
+      }
+    </Markup>
 
     </code>
 

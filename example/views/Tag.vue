@@ -87,7 +87,7 @@
 
       </tbody> 
     </table>
-    <code>
+    <Markup :lang="'html'">
       &lt;r-tag&gt;默认标签&lt;/r-tag&gt;
 
        &lt;r-tag small class="green white-text"&gt;小标签 &lt;/r-tag&gt;
@@ -108,7 +108,7 @@
 
       // 可关闭
       &lt;r-tag class="blue white-text" close&gt;关闭标签&lt;/r-tag&gt;
-    </code>
+    </Markup>
   </article>
 </template>
 

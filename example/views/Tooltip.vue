@@ -37,10 +37,11 @@
         </tr>
       </tbody> 
     </table>
-    <code>
+
+    <Markup :lang="'html'">
       &lt;span class="green white-text" v-tooltip:top="{ text: '提示在上边' }"&gt;上&lt;/span&gt;
       &lt;r-btn class="grey white-text" v-tooltip:right="{ text: '我真的是个按钮' }"&gt;我是按钮&lt;/r-btn&gt;
-    </code>
+    </Markup>
   </article>
 </template>
 

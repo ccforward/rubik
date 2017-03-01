@@ -71,7 +71,7 @@
     <h2>API</h2>
     
 
-    <code>
+    <Markup :lang="'html'">
       &lt;r-tabs&gt; 
         &lt;!-- 标签页导航 --&gt;
         &lt;r-tabs-nav &gt;
@@ -97,7 +97,7 @@
           &lt;r-tabs-item id="tab4"&gt;...&lt;/r-tabs-item&gt;
         &lt;/r-tabs-content&gt;
       &lt;/r-tabs&gt;
-    </code>
+    </Markup>
   </article>
 </template>
 

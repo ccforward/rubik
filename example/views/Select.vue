@@ -98,13 +98,14 @@
       </tbody> 
     </table>
 
-    <code>
+    <Markup :lang="'html'">
       &lt;r-select v-model="seled1" :options="options" id="test" label="Browser Select" dftDisabled name="test"  :dftText="dft"&gt;&lt;/r-select&gt;
 
       &lt;r-select v-model="seled2" :options="options" id="test" label="FF 默认选中" name="test"  :dftText="dft"&gt;&lt;/r-select&gt;
 
       &lt;r-select v-model="seled2" :options="options2" id="test" label="disabled option" name="test"  :dftText="dft"&gt;&lt;/r-select&gt;
-      
+    </Markup>
+    <Markup :lang="'js'">  
       export default {
         data(){
           return {
@@ -148,7 +149,7 @@
           }
         }
       }
-    </code>
+    </Markup>
     
   </article>
 </template>

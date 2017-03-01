@@ -40,11 +40,12 @@
     <p>
       注意：元素在显示水波时会添加样式 position: relative !important 
     </p>
-    <code>
+    
+    <Markup :lang="'html'">
       &lt;r-btn class="white black-text" large v-wave="{color:'purple'}"&gt;紫色 Waves&lt;/r-btn&gt;
       &lt;r-btn class="blue white-text" large v-wave.light&gt;浅色 Waves&lt;/r-btn&gt;
       &lt;div class="grey white-text" v-wave="{color:'green'}"&gt;div 绿色 Waves&lt;/div&gt;
-    </code>
+    </Markup>
   </article>
 </template>
 

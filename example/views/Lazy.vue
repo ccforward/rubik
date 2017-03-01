@@ -30,10 +30,10 @@
       </tbody> 
     </table>
 
-    <code class="z-depth-1">
+    <Markup :lang="'html'">
        &lt;img class="img" v-for="img in imgs" v-lazy="img"&gt;
        &lt;div class="img" v-for="img in images" v-lazy:background-image="img"&gt;&lt;/div&gt;
-    </code>
+    </Markup>
   </article>
 </template>
 

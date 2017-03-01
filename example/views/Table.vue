@@ -182,7 +182,7 @@
     </table>
 
 
-    <code>
+    <Markup :lang="'html'">
       &lt;table class="bordered striped highlight centered"&gt;
         &lt;thead&gt;
           &lt;tr&gt;
@@ -200,7 +200,7 @@
           &lt;/tr&gt;
         &lt;/tbody&gt;
     &lt;/table&gt;
-    </code>
+    </Markup>
     
   </article>
 </template>

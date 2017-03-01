@@ -40,10 +40,6 @@
       </r-col>
     </r-row>
 
-    <r-file></r-file>
-    <r-file disabled></r-file>
-
-
     <h2>API</h2>
 
     <h3>props</h3>
@@ -106,12 +102,12 @@
       </tbody> 
     </table>
 
-    <code>
+    <Markup :lang="'html'">
       &lt;r-input label="this is label" v-model="val" name="input1-name"&gt;&lt;/r-input&gt;
       &lt;r-input type="password" label="输入密码"&gt;&lt;/r-input&gt;
       &lt;r-input label="this is another label"  placeholder="这里是placeholder"&gt;&lt;/r-input&gt;
       &lt;r-input type="password" icon="security" label="Password" &gt;&lt;/r-input&gt;
-    </code>
+    </Markup>
 
   </article>
 </template>

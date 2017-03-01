@@ -1,13 +1,13 @@
 CACHE MANIFEST
-#ver:2017-3-5 22:49:36
+#ver:2017-3-2 00:25:24
 #plugin:4.6.1
 
 CACHE:
 ./demo/img/rubik-256.png
-./demo/js/app.52d80.js
-./demo/js/vendor.af1c9.js
-./demo/js/manifest.f3240.js
-./demo/css/app.57279.css
+./demo/js/app.a0ace.js
+./demo/js/vendor.d5eb8.js
+./demo/js/manifest.7036c.js
+./demo/css/app.42f39.css
 ./demo/../
 
 NETWORK:
