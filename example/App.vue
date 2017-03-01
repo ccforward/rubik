@@ -21,6 +21,7 @@
 
 <script>
 import Navigator from './components/Navigator.vue'
+import Markup from './components/Markup.vue'
 
 export default {
   name: 'app',
@@ -31,7 +32,8 @@ export default {
     }
   },
   components: {
-    Navigator
+    Navigator,
+    Markup
   },
   mounted(){
     this.$rubik.init()
@@ -160,5 +162,4 @@ export default {
       
     }
   }
-
 </style>

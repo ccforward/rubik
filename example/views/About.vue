@@ -38,7 +38,7 @@
     <p>
       Rubik 初始化
     </p>
-    <code>
+    <Markup :lang="'js'">
       import Vue from 'vue'
       import Rubik from 'i-rubik'
       Vue.use(Rubik)
@@ -49,17 +49,16 @@
           this.$rubik.init()
         }
       }
-    </code>
+    </Markup>
 
     <p>引入css</p>
 
-    <code>
+    <Markup :lang="'html'">
       &lt;link rel="stylesheet" href="//unpkg.com/i-rubik/dist/rubik.min.css"&gt;
-
       或者
-      
       &lt;link href="./node_modules/i-rubik/dist/rubik.min.css" rel="stylesheet" type="text/css"&gt;
-    </code>
+    </Markup> 
+    
 
     <h2>相关开源项目</h2>
     <p>
@@ -76,6 +75,7 @@
 </template>
 
 <script>
+
 export default {
   name: 'about'
 }
