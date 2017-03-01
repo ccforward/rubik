@@ -70,12 +70,12 @@
         
       </tbody> 
     </table>
-    <code>
+    <Markup :lang="'html'">
       &lt;r-icon class="red-after" large v-badge:10.inner&gt;call&lt;/r-icon&gt;
       &lt;r-icon large v-badge:star.inner.icon&gt;face&lt;/r-icon&gt;
       &lt;span class="badge-demo" v-badge:star.icon.left&gt;&lt;/span&gt;
       &lt;a class="badge-link red-after" v-badge:dot&gt;This is a link&lt;/a&gt;
-    </code>
+    </Markup>
   </article>
 </template>
 

@@ -21,10 +21,10 @@
         </r-card-text>
       </r-card>
     </section>
-    <code>
+    <Markup :lang="'html'">
       &lt;div class="green accent-3"&gt;this is background-color&lt;/div&gt;
       &lt;div class="red lighten-3"&gt;this is background-color&lt;/div&gt;
-    </code>
+    </Markup>
 
     <h3>文字颜色</h3>
     <p>
@@ -45,19 +45,19 @@
       </r-card>
     </section>
 
-     <code>
+    <Markup :lang="'html'">
       &lt;div class="blue-text text-accent-3"&gt;this is text-color&lt;/div&gt;
       &lt;div class="orange-text text-lighten-1"&gt;this is text-color&lt;/div&gt;
-    </code>
+    </Markup>
 
     <h3>after 伪类颜色</h3>
     <p>badge 组件徽标在伪类 after 上， 使用 class="red-after" 给 after 伪类添加颜色 </p>
     <r-icon class="badge-icons red-after" large v-badge:10.inner>call</r-icon>
 
 
-    <code>
+    <Markup :lang="'html'">
       &lt;r-icon class="badge-icons red-after" large v-badge:10.inner&gt;call&lt;/r-icon&gt;
-    </code>
+    </Markup>
 
     <h2>调色板</h2>
     <div class="color-palette">

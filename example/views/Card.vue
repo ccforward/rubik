@@ -85,7 +85,7 @@
     <p>
       TODO...
     </p> 
-    <code>
+    <Markup :lang="'html'">
       // Basic
 
       &lt;r-card&gt;
@@ -120,7 +120,7 @@
         &lt;r-card-row class="white-text pl-3 pt-3 pb-3" actions&gt;Footer 带有阴影 &lt;/r-card-row&gt;
       &lt;/r-card&gt;
 
-    </code>
+    </Markup>
   </article>
 </template>
 

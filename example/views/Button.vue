@@ -101,7 +101,7 @@
     </r-btn>
 
     <h2>API</h2>
-    <code>
+    <Markup :lang="'html'">
       &lt;r-btn&gt;Default&lt;/r-btn&gt;
 
       &lt;r-btn primary&gt;Primary&lt;/r-btn&gt;
@@ -128,7 +128,8 @@
       &lt;r-btn info :loading="loading" @click.native="load()" :disabled="loading"&gt;
         &lt;span slot="loading"&gt;&lt;/span&gt; 3s Loading
       &lt;/r-btn&gt;
-
+    </Markup>
+    <Markup :lang="'js'">
       export default {
         data () {
           return {
@@ -144,7 +145,7 @@
             }
           }
       }
-    </code>
+    </Markup>
   </article>
 </template>
 

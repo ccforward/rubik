@@ -57,7 +57,7 @@
       &lt;link rel="stylesheet" href="//unpkg.com/i-rubik/dist/rubik.min.css"&gt;
       或者
       &lt;link href="./node_modules/i-rubik/dist/rubik.min.css" rel="stylesheet" type="text/css"&gt;
-    </Markup> 
+    </Markup>
     
 
     <h2>相关开源项目</h2>

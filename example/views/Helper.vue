@@ -84,7 +84,7 @@
 
     <br> 
 
-    <code class="code">
+    <Markup :lang="'html'">
       &lt;p class="mt-1"&gt;margin-top-1&lt;/p&gt;
       &lt;p class="pl-1"&gt;padding-left-1&lt;/p&gt;
       &lt;div class="pa-3"&gt;padding-all-3&lt;/div&gt;
@@ -101,7 +101,7 @@
       &lt;h4&gt;标题 H4&lt;/h4&gt;
       &lt;h5&gt;标题 H5&lt;/h5&gt;
       &lt;h6&gt;标题 H6&lt;/h6&gt;
-    </code>
+    </Markup>
     
   </article>
 </template>

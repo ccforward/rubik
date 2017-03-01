@@ -71,7 +71,7 @@
       </tbody> 
     </table>
 
-    <code>
+    <Markup :lang="'html'">
       &lt;r-btn class="green white-text" v-dropdown:dropdownA&gt;下拉菜单&lt;r-icon&gt;arrow_drop_down&lt;/r-icon&gt;&lt;/r-btn&gt;
       &lt;r-dropdown id="dropdownA" :items="list" hover&gt;&lt;/r-dropdown&gt;
 
@@ -86,7 +86,7 @@
 
       &lt;r-btn class="red white-text" v-dropdown:dropdownC&gt;下拉菜单&lt;r-icon&gt;arrow_drop_down&lt;/r-icon&gt;&lt;/r-btn&gt;
       &lt;r-dropdown id="dropdownC" :items="list"&gt;&lt;/r-dropdown&gt;
-    </code>
+    </Markup>
   </article>
 </template>
 

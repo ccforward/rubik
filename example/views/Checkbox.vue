@@ -86,10 +86,12 @@
       </tbody> 
     </table>
 
-    <code>
+    <Markup :lang="'html'">
       &lt;r-checkbox id="check0" :selected="selected" :val="'red'" label="Red"&gt;&lt;/r-checkbox&gt;
       &lt;r-checkbox id="check1" :selected="selected" :val="'yellow'" label="Yellow 默认选中" checked="checked"&gt;&lt;/r-checkbox&gt;
       &lt;r-checkbox id="check2" :selected="selected" :val="'blue'" label="Blue"&gt;&lt;/r-checkbox&gt;
+    </Markup>
+    <Markup :lang="'js'">
       export default {
         name: 'checkboxes',
         data(){
@@ -98,16 +100,16 @@
           }
         }
       }
+    </Markup>
 
+    <Markup :lang="'html'">
       &lt;r-checkbox id="checkd" label="默认选中" checked="checked"&gt;&lt;/r-checkbox&gt;
       &lt;r-checkbox id="check-f" label="选中为填充效果" filled&gt;&lt;/r-checkbox&gt;
       &lt;r-checkbox id="check-i" label="模糊状态 Indeterminate Style" indeterminate&gt;&lt;/r-checkbox&gt;
       
       &lt;r-checkbox id="check-d1" label="Green" disabled="disabled"&gt;&lt;/r-checkbox&gt;
       &lt;r-checkbox id="check-d2" label="Brown" checked="checked" disabled="disabled"&gt;&lt;/r-checkbox&gt;
-
-
-    </code>
+    <Markup>
 
   </article>
 </template>

@@ -80,11 +80,12 @@
       </tbody> 
     </table>
 
-    <code>
+    <Markup :lang="'html'">
       &lt;r-breadcrumb separator="/" :items="items"&gt;&lt;/r-breadcrumb&gt;
       &lt;r-breadcrumb separator=">" :items="items"&gt;&lt;/r-breadcrumb&gt;
       &lt;r-breadcrumb icon separator="arrow_forward" :items="items"&gt;&lt;/r-breadcrumb&gt;
-
+    </Markup>
+    <Markup :lang="'js'">
       data () {
         return {
           items: [
@@ -104,7 +105,7 @@
           ]
         }
       }
-    </code>
+    </Markup>
   </article>
 </template>
 

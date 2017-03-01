@@ -103,11 +103,11 @@
     </table>
 
 
-    <code>
+    <Markup :lang="'html'">
       &lt;r-file v-model="file" placeholder="选择文件"&gt;&lt;/r-file&gt;
       &lt;r-file v-model="files" placeholder="选择一个或多个文件" multiple&gt;&lt;/r-file&gt;
       &lt;r-file disabled placeholder="不能上传文件"&gt;&lt;/r-file&gt;
-    </code>
+    </Markup>
     
   </article>
 </template>

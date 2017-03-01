@@ -72,7 +72,7 @@
         </tr>
       </tbody> 
     </table>
-    <code>
+    <Markup :lang="'html'">
       &lt;r-icon&gt;call&lt;/r-icon&gt;
 
       &lt;r-icon medium&gt;call&lt;/r-icon&gt;
@@ -80,7 +80,7 @@
       &lt;r-icon large&gt;call&lt;/r-icon&gt;
 
       &lt;r-icon xLarge&gt;call&lt;/r-icon&gt;
-    </code>
+    </Markup>
   </article>
 </template>
 

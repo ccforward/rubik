@@ -207,7 +207,7 @@
       </tbody> 
     </table> 
 
-    <code>
+    <Markup :lang="'html'">
       &lt;r-row&gt;
         &lt;r-col xs6&gt;
           ...
@@ -216,7 +216,7 @@
           ...
         &lt;/r-col&gt;
       &lt;/r-row&gt;
-    </code>
+    </Markup>
     
   </article>
 </template>

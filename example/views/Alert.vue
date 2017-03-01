@@ -79,31 +79,25 @@
       </tbody> 
     </table>
 
-    <pre>
-      <code class="html" ref="markup">
-        <p>1234</p>
-        <div>4567</div>
-        <r-alert info>...</r-alert>
-        &lt;r-alert warning no-icon &gt;...&lt;/r-alert&gt;
-        &lt;r-alert warning icon="local_taxi" &gt;...&lt;/r-alert&gt;
-        &lt;r-alert warning icon="local_taxi" close&gt;...&lt;/r-alert&gt;
-      </code>
+    <Markup :lang="'html'">
+      &lt;p&gt;1234&lt;/p&gt;
+      &lt;div&gt;4567&lt;/div&gt;
+      &lt;r-alert info&gt;...&gt;/r-alert&gt;
+      &lt;r-alert warning no-icon &gt;...&lt;/r-alert&gt;
+      &lt;r-alert warning icon="local_taxi" &gt;...&lt;/r-alert&gt;
+      &lt;r-alert warning icon="local_taxi" close&gt;...&lt;/r-alert&gt;
+    </Markup>
     </pre>
   </article>
 </template>
 
 <script>
-import hljs from 'highlight.js/lib/highlight.js'
-
 export default {
   name: 'alerts',
   data(){
     return {
       txt: '这是一条警告提示'
     }
-  },
-  mounted() {
-    hljs.highlightBlock(this.$refs.markup)
   }
 }
 </script>
