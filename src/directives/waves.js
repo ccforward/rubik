@@ -38,7 +38,7 @@ const waves = {
     style(animation, `translate3d(-50%, -50%, 0) translate3d(${x}px, ${y}px, 0) scale3d(.001, .001, 1)`)
     animation.dataset.activated = Date.now()
 
-    setTimeout(() => {
+    setTimeout(_ => {
       animation.classList.remove('waves-animation-enter')
       style(animation, `translate3d(-50%, -50%, 0) translate3d(${x}px, ${y}px, 0)`)
     }, 0)
@@ -54,10 +54,10 @@ const waves = {
 
     delay = delay < 0 ? 0 : delay
 
-    setTimeout(() => {
+    setTimeout(_ => {
       animation.classList.remove('waves-animation-visible')
 
-      setTimeout(() => {
+      setTimeout(_ => {
         animation.parentNode.remove()
         el.classList.remove('relavive')
       }, 300)
@@ -69,12 +69,12 @@ const directive = (el, binding, v) => {
 
   if ('ontouchstart' in window) {
     // el.addEventListener('touchstart', e => waves.show(e, el, binding), false)
-    el.addEventListener('touchend', () => waves.hide(el), false)
-    el.addEventListener('touchcancel', () => waves.hide(el), false)
+    el.addEventListener('touchend', _ => waves.hide(el), false)
+    el.addEventListener('touchcancel', _ => waves.hide(el), false)
   }
   el.addEventListener('mousedown', e => waves.show(e, el, binding), false)
-  el.addEventListener('mouseup', () => waves.hide(el), false)
-  el.addEventListener('mouseleave', () => waves.hide(el), false)
+  el.addEventListener('mouseup', _ => waves.hide(el), false)
+  el.addEventListener('mouseleave', _ => waves.hide(el), false)
   
 
 }
@@ -82,10 +82,10 @@ const directive = (el, binding, v) => {
 const unbind = (el, binding) => {
   // el.removeEventListener('touchstart', e => waves.show(e, el, binding), false)
   el.removeEventListener('mousedown', e => waves.show(e, el, binding), false)
-  el.removeEventListener('touchend', () => waves.hide(el), false)
-  el.removeEventListener('touchcancel', () => waves.hide(el), false)
-  el.removeEventListener('mouseup', () => waves.hide(el), false)
-  el.removeEventListener('mouseleave', () => waves.hide(el), false)
+  el.removeEventListener('touchend', _ => waves.hide(el), false)
+  el.removeEventListener('touchcancel', _ => waves.hide(el), false)
+  el.removeEventListener('mouseup', _ => waves.hide(el), false)
+  el.removeEventListener('mouseleave', _ => waves.hide(el), false)
 }
 
 export default {
