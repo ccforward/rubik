@@ -9,6 +9,7 @@ import Tabs from './Tabs'
 import Modal from './Modal'
 import Button from './Button'
 import Icon from './Icon'
+import Loader from './Loader'
 import Pagination from './Pagination'
 import Form from './Form'
 
@@ -36,6 +37,7 @@ export default init(
   Modal,
   Button,
   Icon,
+  Loader,
   Pagination,
   Form
 )

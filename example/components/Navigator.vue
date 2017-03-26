@@ -108,6 +108,10 @@ export default {
           icon: 'toys',
           txt: '图标 Icon'
         },{
+          name: 'loader',
+          icon: 'refresh',
+          txt: '加载 Loader'
+        },{
           name: 'button',
           icon: 'credit_card',
           txt: '按钮 Button'

@@ -1,0 +1,141 @@
+.loader {
+  color #fff
+  position fixed
+  box-sizing border-box
+  left -9999px
+  top -9999px
+  width 0
+  height 0
+  overflow hidden
+  z-index 999999
+  &:after,
+  &:before {
+    box-sizing border-box
+    display none
+  }
+
+  &.is-active {
+    background-color rgba(0,0,0,.75)
+    width 100%
+    height 100%
+    left 0
+    top 0
+  }
+  &.is-active:after,
+  &.is-active:before {
+    display block
+  }
+}
+
+
+.loader-normal:after {
+  content ''
+  position fixed
+  width 48px
+  height 48px
+  border solid 8px #fff
+  border-left-color rgba(0, 0, 0, 0)
+  border-radius 50%
+  top calc(50% - 24px)
+  left calc(50% - 24px)
+  animation rotation 1s linear infinite
+}
+.loader-normal.half:after {
+  border-right-color rgba(0, 0, 0, 0)
+}
+.loader-normal.reverse:after {
+  animation-direction reverse
+}
+
+.loader-normal[data-text]:before {
+  top calc(50% - 63px)
+  &:after {
+    content ''
+    position fixed
+    width 48px
+    height 48px
+    border solid 8px #fff
+    border-left-color transparent
+    border-radius 50%
+    top calc(50% - 24px)
+    left calc(50% - 24px)
+    animation rotation 1s linear infinite
+  }
+}
+
+
+.loader-double:after,.loader-double:before {
+  content: '';
+  position: fixed;
+  border-radius: 50%;
+  border: solid 8px;
+  animation: rotation 1s linear infinite
+}
+
+.loader-double:after {
+  width: 48px;
+  height: 48px;
+  border-color: #fff;
+  border-left-color: transparent;
+  top: calc(50% - 24px);
+  left: calc(50% - 24px)
+}
+
+.loader-double:before {
+  width: 64px;
+  height: 64px;
+  border-color: #eb974e;
+  border-right-color: transparent;
+  animation-duration: 2s;
+  top: calc(50% - 32px);
+  left: calc(50% - 32px)
+}
+
+
+
+.loader-bar[data-text]:before {
+  top calc(50% - 40px)
+  color #fff
+}
+
+.loader-bar:after {
+  content ''
+  position fixed
+  top 50%
+  left 50%
+  width 200px
+  height 20px
+  box-shadow inset 0 10px 0 rgba(255,255,255,0.1), 0 0 0 3px rgba(0,0,0,0.05)
+  transform translate(-50%, -50%)
+  background linear-gradient(-45deg, #4183d7 25%, #52b3d9 25%, #52b3d9 50%, #4183d7 50%, #4183d7 75%, #52b3d9 75%, #52b3d9)
+  background-size 20px 20px
+  animation moveBar 1s linear infinite reverse
+}
+
+.loader-bar.round:after {
+  border-radius 15px
+}
+
+.loader-bar.reverse:after {
+  animation-direction normal
+}
+
+@keyframes moveBar {
+  from {
+    background-position 0 0
+  }
+  to {
+    background-position 20px 20px
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform rotate(0)
+  }
+  to {
+    transform rotate(359deg)
+  }
+}
+
+

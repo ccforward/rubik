@@ -28,6 +28,7 @@ import Tooltip from '../views/Tooltip.vue'
 import Toast from '../views/Toast.vue'
 import Waves from '../views/Waves.vue'
 import Lazy from '../views/Lazy.vue'
+import Loader from '../views/Loader.vue'
 
 Vue.use(Router)
 
@@ -61,7 +62,8 @@ const router = new Router({
     { name: 'tooltip', path: '/tooltip', component: Tooltip},
     { name: 'toast', path: '/toast', component: Toast},
     { name: 'waves', path: '/waves', component: Waves},
-    { name: 'img-lazy', path: '/img-lazy', component: Lazy}
+    { name: 'img-lazy', path: '/img-lazy', component: Lazy},
+    { name: 'loader', path: '/Loader', component: Loader}
   ]
 })
 
