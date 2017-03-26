@@ -1,6 +1,6 @@
 {
   "name": "i-rubik",
-  "version": "0.3.3",
+  "version": "0.3.5",
   "description": "A Vue.js 2.0 UI Components Framework",
   "author": "cc <ccking@foxmail.com>",
   "main": "dist/rubik.min.js",

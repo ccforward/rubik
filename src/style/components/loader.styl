@@ -47,22 +47,6 @@
   animation-direction reverse
 }
 
-.loader-normal[data-text]:before {
-  top calc(50% - 63px)
-  &:after {
-    content ''
-    position fixed
-    width 48px
-    height 48px
-    border solid 8px #fff
-    border-left-color transparent
-    border-radius 50%
-    top calc(50% - 24px)
-    left calc(50% - 24px)
-    animation rotation 1s linear infinite
-  }
-}
-
 
 .loader-double:after,.loader-double:before {
   content: '';
@@ -89,13 +73,6 @@
   animation-duration: 2s;
   top: calc(50% - 32px);
   left: calc(50% - 32px)
-}
-
-
-
-.loader-bar[data-text]:before {
-  top calc(50% - 40px)
-  color #fff
 }
 
 .loader-bar:after {
