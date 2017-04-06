@@ -1,13 +1,40 @@
 CACHE MANIFEST
-#ver:2017-3-26 19:22:34
+#ver:2017-4-6 16:04:24
 #plugin:4.6.1
 
 CACHE:
 ./demo/img/rubik-256.png
-./demo/js/app.0719b.js
-./demo/js/vendor.8d6d4.js
-./demo/js/manifest.33204.js
-./demo/css/app.2f33d.css
+./demo/js/0.10d46.js
+./demo/js/1.07623.js
+./demo/js/2.2609e.js
+./demo/js/3.dff29.js
+./demo/js/4.19f8b.js
+./demo/js/5.b19db.js
+./demo/js/6.50ace.js
+./demo/js/7.fc7bf.js
+./demo/js/8.8031b.js
+./demo/js/9.b82fa.js
+./demo/js/10.d82b6.js
+./demo/js/11.cab8d.js
+./demo/js/12.1337c.js
+./demo/js/13.de544.js
+./demo/js/14.b5358.js
+./demo/js/15.cf57c.js
+./demo/js/16.5b438.js
+./demo/js/17.9fae0.js
+./demo/js/18.917cb.js
+./demo/js/19.37df0.js
+./demo/js/20.fdd4c.js
+./demo/js/21.c607f.js
+./demo/js/22.b2a42.js
+./demo/js/23.0abc6.js
+./demo/js/24.a589a.js
+./demo/js/25.24c09.js
+./demo/js/26.3a1aa.js
+./demo/js/app.5d238.js
+./demo/js/vendor.2b299.js
+./demo/js/manifest.de689.js
+./demo/css/app.bc897.css
 ./demo/../
 
 NETWORK:
