@@ -4258,9 +4258,6 @@ h6 {
 }
 .icon {
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 .icon-large {
   padding: 0.6rem;

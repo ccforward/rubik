@@ -100,10 +100,8 @@ export default {
     overflow hidden
   }
   .icon {
-    font-size 40px
     margin 10px
     color #bbb
-    float left
     &:nth-child(1) {
       color #f00
     }

@@ -4,211 +4,211 @@
 
     <h2>Basic</h2>
     <table>
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>默认值</th>
-          </tr>
-        </thead>
+      <thead>
+        <tr>
+          <th>属性</th>
+          <th>说明</th>
+          <th>默认值</th>
+        </tr>
+      </thead>
 
-        <tbody>
-          <tr>
-            <td>width</td>
-            <td>宽度</td>
-            <td>100px</td>
-          </tr>
-          <tr>
-            <td>color</td>
-            <td>颜色</td>
-            <td>#f06</td>
-          </tr>
-          <tr>
-            <td>height</td>
-            <td>高度</td>
-            <td>150px</td>
-          </tr>
-        </tbody>
+      <tbody>
+        <tr>
+          <td>width</td>
+          <td>宽度</td>
+          <td>100px</td>
+        </tr>
+        <tr>
+          <td>color</td>
+          <td>颜色</td>
+          <td>#f06</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>高度</td>
+          <td>150px</td>
+        </tr>
+      </tbody>
     </table>
 
     <h2>边框 Border</h2>
     <p>给 table 元素添加 class bordered</p>
     <table class="bordered">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>默认值</th>
-          </tr>
-        </thead>
+      <thead>
+        <tr>
+          <th>属性</th>
+          <th>说明</th>
+          <th>默认值</th>
+        </tr>
+      </thead>
 
-        <tbody>
-          <tr>
-            <td>width</td>
-            <td>宽度</td>
-            <td>100px</td>
-          </tr>
-          <tr>
-            <td>color</td>
-            <td>颜色</td>
-            <td>#f06</td>
-          </tr>
-          <tr>
-            <td>height</td>
-            <td>高度</td>
-            <td>150px</td>
-          </tr>
-        </tbody>
+      <tbody>
+        <tr>
+          <td>width</td>
+          <td>宽度</td>
+          <td>100px</td>
+        </tr>
+        <tr>
+          <td>color</td>
+          <td>颜色</td>
+          <td>#f06</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>高度</td>
+          <td>150px</td>
+        </tr>
+      </tbody>
     </table>
 
     <h2>条纹 Striped</h2>
     <p>给 table 元素添加 class striped</p>
     <table class="striped">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>默认值</th>
-          </tr>
-        </thead>
+      <thead>
+        <tr>
+          <th>属性</th>
+          <th>说明</th>
+          <th>默认值</th>
+        </tr>
+      </thead>
 
-        <tbody>
-          <tr>
-            <td>width</td>
-            <td>宽度</td>
-            <td>100px</td>
-          </tr>
-          <tr>
-            <td>color</td>
-            <td>颜色</td>
-            <td>#f06</td>
-          </tr>
-          <tr>
-            <td>height</td>
-            <td>高度</td>
-            <td>150px</td>
-          </tr>
-        </tbody>
+      <tbody>
+        <tr>
+          <td>width</td>
+          <td>宽度</td>
+          <td>100px</td>
+        </tr>
+        <tr>
+          <td>color</td>
+          <td>颜色</td>
+          <td>#f06</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>高度</td>
+          <td>150px</td>
+        </tr>
+      </tbody>
     </table>
 
     <h2>高亮 Highlight</h2>
     <p>给 table 元素添加 class highlight</p>
     <table class="highlight">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>默认值</th>
-          </tr>
-        </thead>
+      <thead>
+        <tr>
+          <th>属性</th>
+          <th>说明</th>
+          <th>默认值</th>
+        </tr>
+      </thead>
 
-        <tbody>
-          <tr>
-            <td>width</td>
-            <td>宽度</td>
-            <td>100px</td>
-          </tr>
-          <tr>
-            <td>color</td>
-            <td>颜色</td>
-            <td>#f06</td>
-          </tr>
-          <tr>
-            <td>height</td>
-            <td>高度</td>
-            <td>150px</td>
-          </tr>
-        </tbody>
+      <tbody>
+        <tr>
+          <td>width</td>
+          <td>宽度</td>
+          <td>100px</td>
+        </tr>
+        <tr>
+          <td>color</td>
+          <td>颜色</td>
+          <td>#f06</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>高度</td>
+          <td>150px</td>
+        </tr>
+      </tbody>
     </table>
 
     <h2>窄边距 Narrow</h2>
     <p>给 table 元素添加 class narrow</p>
     <table class="highlight bordered narrow">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>默认值</th>
-          </tr>
-        </thead>
+      <thead>
+        <tr>
+          <th>属性</th>
+          <th>说明</th>
+          <th>默认值</th>
+        </tr>
+      </thead>
 
-        <tbody>
-          <tr>
-            <td>width</td>
-            <td>宽度</td>
-            <td>100px</td>
-          </tr>
-          <tr>
-            <td>color</td>
-            <td>颜色</td>
-            <td>#f06</td>
-          </tr>
-          <tr>
-            <td>height</td>
-            <td>高度</td>
-            <td>150px</td>
-          </tr>
-        </tbody>
+      <tbody>
+        <tr>
+          <td>width</td>
+          <td>宽度</td>
+          <td>100px</td>
+        </tr>
+        <tr>
+          <td>color</td>
+          <td>颜色</td>
+          <td>#f06</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>高度</td>
+          <td>150px</td>
+        </tr>
+      </tbody>
     </table>
 
     <h2>居中 Centered</h2>
     <p>给 table 元素添加 class centered</p>
     <table class="centered">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>默认值</th>
-          </tr>
-        </thead>
+      <thead>
+        <tr>
+          <th>属性</th>
+          <th>说明</th>
+          <th>默认值</th>
+        </tr>
+      </thead>
 
-        <tbody>
-          <tr>
-            <td>width</td>
-            <td>宽度</td>
-            <td>100px</td>
-          </tr>
-          <tr>
-            <td>color</td>
-            <td>颜色</td>
-            <td>#f06</td>
-          </tr>
-          <tr>
-            <td>height</td>
-            <td>高度</td>
-            <td>150px</td>
-          </tr>
-        </tbody>
+      <tbody>
+        <tr>
+          <td>width</td>
+          <td>宽度</td>
+          <td>100px</td>
+        </tr>
+        <tr>
+          <td>color</td>
+          <td>颜色</td>
+          <td>#f06</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>高度</td>
+          <td>150px</td>
+        </tr>
+      </tbody>
     </table>
 
     <h2>响应式 Responsive</h2>
     <p>给 table 元素添加 class responsive-table</p>
     <table class="responsive-table">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>默认值</th>
-          </tr>
-        </thead>
+      <thead>
+        <tr>
+          <th>属性</th>
+          <th>说明</th>
+          <th>默认值</th>
+        </tr>
+      </thead>
 
-        <tbody>
-          <tr>
-            <td>width</td>
-            <td>宽度</td>
-            <td>100px</td>
-          </tr>
-          <tr>
-            <td>color</td>
-            <td>颜色</td>
-            <td>#f06</td>
-          </tr>
-          <tr>
-            <td>height</td>
-            <td>高度</td>
-            <td>150px</td>
-          </tr>
-        </tbody>
+      <tbody>
+        <tr>
+          <td>width</td>
+          <td>宽度</td>
+          <td>100px</td>
+        </tr>
+        <tr>
+          <td>color</td>
+          <td>颜色</td>
+          <td>#f06</td>
+        </tr>
+        <tr>
+          <td>height</td>
+          <td>高度</td>
+          <td>150px</td>
+        </tr>
+      </tbody>
     </table>
 
 
@@ -240,7 +240,3 @@ export default {
   name: 'table'
 }
 </script>
-
-<style lang="stylus" scoped>
-  
-</style>
