@@ -2,9 +2,16 @@
   <article>
     <h1>轮播图 Slider</h1>
     <h2>例子</h2>
-    <r-slider :arrow="true" :auto="true" :interval="1000" :dot="'ac_unit'">
+    <r-slider :arrow="true" :auto="true" :interval="2000" :dot="'ac_unit'">
       <r-slider-item v-for="img in imgs" v-bind:src="img"></r-slider-item>
     </r-slider>
+    <!-- <r-slider :swipe="swipe">
+      <template v-for="img in imgs">
+        <div class="slider-item" >
+          <img :src="img">
+        </div>
+      </template>
+    </r-slider> -->
     <h2>API</h2>
     
     <h3>props</h3>
@@ -60,6 +67,10 @@ export default {
   name: 'slider',
   data () {
     return {
+      // swipe: {
+      //   autoplay: false,
+      //   activeIndex: 0
+      // },
       imgs: [
         'http://7xiblh.com1.z0.glb.clouddn.com/rubikui/img/1.jpg',
         'http://7xiblh.com1.z0.glb.clouddn.com/rubikui/img/2.jpg',
@@ -74,6 +85,10 @@ export default {
 <style lang="stylus" scoped>
 .slider {
   width 500px
-  margin-left 30px
+  height 500px
+  margin 0 0 30px 30px
+}
+img {
+  width 100%
 }
 </style>

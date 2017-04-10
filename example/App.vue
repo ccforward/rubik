@@ -35,9 +35,9 @@ export default {
     Navigator,
     Markup
   },
-  mounted(){
+  mounted() {
     this.$rubik.init()
-    setTimeout(()=>{
+    setTimeout(_ => {
       this.loaded = true
     }, 150)
   }

@@ -6,9 +6,9 @@
     <table>
         <thead>
           <tr>
-              <th>属性</th>
-              <th>说明</th>
-              <th>默认值</th>
+            <th>属性</th>
+            <th>说明</th>
+            <th>默认值</th>
           </tr>
         </thead>
 
@@ -36,9 +36,9 @@
     <table class="bordered">
         <thead>
           <tr>
-              <th>属性</th>
-              <th>说明</th>
-              <th>默认值</th>
+            <th>属性</th>
+            <th>说明</th>
+            <th>默认值</th>
           </tr>
         </thead>
 
@@ -66,9 +66,9 @@
     <table class="striped">
         <thead>
           <tr>
-              <th>属性</th>
-              <th>说明</th>
-              <th>默认值</th>
+            <th>属性</th>
+            <th>说明</th>
+            <th>默认值</th>
           </tr>
         </thead>
 
@@ -96,9 +96,39 @@
     <table class="highlight">
         <thead>
           <tr>
-              <th>属性</th>
-              <th>说明</th>
-              <th>默认值</th>
+            <th>属性</th>
+            <th>说明</th>
+            <th>默认值</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td>width</td>
+            <td>宽度</td>
+            <td>100px</td>
+          </tr>
+          <tr>
+            <td>color</td>
+            <td>颜色</td>
+            <td>#f06</td>
+          </tr>
+          <tr>
+            <td>height</td>
+            <td>高度</td>
+            <td>150px</td>
+          </tr>
+        </tbody>
+    </table>
+
+    <h2>窄边距 Narrow</h2>
+    <p>给 table 元素添加 class narrow</p>
+    <table class="highlight bordered narrow">
+        <thead>
+          <tr>
+            <th>属性</th>
+            <th>说明</th>
+            <th>默认值</th>
           </tr>
         </thead>
 
@@ -126,9 +156,9 @@
     <table class="centered">
         <thead>
           <tr>
-              <th>属性</th>
-              <th>说明</th>
-              <th>默认值</th>
+            <th>属性</th>
+            <th>说明</th>
+            <th>默认值</th>
           </tr>
         </thead>
 
@@ -156,9 +186,9 @@
     <table class="responsive-table">
         <thead>
           <tr>
-              <th>属性</th>
-              <th>说明</th>
-              <th>默认值</th>
+            <th>属性</th>
+            <th>说明</th>
+            <th>默认值</th>
           </tr>
         </thead>
 

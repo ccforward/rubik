@@ -125,8 +125,8 @@ export default {
   },
   methods:{
     modal (id) {
-        this.$rubik.bridge.pub(`modal:close:${id}`)
-      }
+      this.$rubik.bridge.pub(`modal:close:${id}`)
+    }
   }
 }
 </script>

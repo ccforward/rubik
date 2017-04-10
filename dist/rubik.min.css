@@ -222,12 +222,10 @@ video {
 }
 ::-moz-selection {
   background-color: #b3d4fc; /* Required when declaring ::selection */
-  color: #000;
   text-shadow: none;
 }
 ::selection {
   background-color: #b3d4fc; /* Required when declaring ::selection */
-  color: #000;
   text-shadow: none;
 }
 @font-face {
@@ -4567,7 +4565,6 @@ h6 {
 .slider {
   height: 500px;
   width: 100%;
-  background: #000;
   position: relative;
   overflow: hidden;
 }
@@ -4709,9 +4706,9 @@ table {
   display: table;
   border-collapse: collapse;
 }
-table.bordered>thead>tr,
-table.bordered>tbody>tr {
-  border-bottom: 1px solid #d0d0d0;
+table.bordered thead tr th,
+table.bordered tbody tr td {
+  border: 1px solid #d0d0d0;
 }
 table.striped>tbody>tr:nth-child(odd) {
   background-color: #f2f2f2;
@@ -4728,6 +4725,10 @@ table.highlight>tbody>tr:hover {
 table.centered thead tr th,
 table.centered tbody tr td {
   text-align: center;
+}
+table.narrow thead tr th,
+table.narrow tbody tr td {
+  padding: 0.5rem;
 }
 thead {
   border-bottom: 1px solid #d0d0d0;
