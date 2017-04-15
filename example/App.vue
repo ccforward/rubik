@@ -1,7 +1,7 @@
 <template>
   <div id="app" class="wrapper">
     <div class="logo">
-      <img src="./assets/rubik-256.png" :class="loaded && loadClass">
+      <img src="https://raw.githubusercontent.com/ccforward/rubik/master/example/assets/rubik-256.png" :class="loaded && loadClass">
     </div>
     <p class="ui-name">
       <i>R</i><i>U</i><i>B</i><i>I</i><i>K</i> <i>U</i><i>I</i>

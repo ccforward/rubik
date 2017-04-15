@@ -15,7 +15,13 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-90254728-1', 'auto');ga('send', 'pageview');
     </script>
+    <% if(process.env.NODE_ENV === 'production'){ %>
     <script src="lib/bowl.js"></script>
+    <% } %>
+  </head>
+  <body>
+    <a class="github-fork-ribbon right-top" target="_blank" href="https://github.com/ccforward/rubik/" title="Fork me on GitHub">Fork me on GitHub</a>
+    <div id="app"></div>
     <script>
       <%
         var resources = [];
@@ -41,13 +47,11 @@
           });
         }
       %>
-      var b = new Bowl();
-      b.add(<%=JSON.stringify(resources) %>);
-      b.inject();
+      <% if(process.env.NODE_ENV === 'production'){ %>
+        var b = new Bowl();
+        b.add(<%=JSON.stringify(resources) %>);
+        b.inject();
+      <% } %>
     </script>
-  </head>
-  <body>
-    <a class="github-fork-ribbon right-top" target="_blank" href="https://github.com/ccforward/rubik/" title="Fork me on GitHub">Fork me on GitHub</a>
-    <div id="app"></div>
   </body>
 </html>

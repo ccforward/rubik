@@ -7,7 +7,7 @@ module.exports = {
     index: path.resolve(__dirname, '../../index.html'),
     assetsRoot: path.resolve(__dirname, '../../demo'),
     assetsSubDirectory: '',
-    assetsPublicPath: './demo/',
+    assetsPublicPath: '/rubik/demo/',
     productionSourceMap: true,
     // Gzip off by default as many popular static hosts such as
     // Surge or Netlify already gzip all static assets for you.
