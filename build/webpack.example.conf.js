@@ -51,16 +51,18 @@ const webpackConfig = merge(baseWebpackConfig, {
     new HtmlWebpackPlugin({
       filename: config.build.index,
       template: './example/index.html',
-      inject: true,
+      inject: false,
       minify: {
         removeComments: true,
         collapseWhitespace: true,
-        removeAttributeQuotes: true
+        removeAttributeQuotes: true,
+        minifyJS: true
         // more options:
         // https://github.com/kangax/html-minifier#options-quick-reference
       },
       // necessary to consistently work with multiple chunks via CommonsChunkPlugin
-      chunksSortMode: 'dependency'
+      chunksSortMode: 'dependency',
+      environment: process.env.NODE_ENV
     }),
     // split vendor js into its own file
     new webpack.optimize.CommonsChunkPlugin({
@@ -83,7 +85,7 @@ const webpackConfig = merge(baseWebpackConfig, {
       chunks: ['vendor']
     }),
 
-    new OfflinePlugin()
+    // new OfflinePlugin()
   ]
 })
 

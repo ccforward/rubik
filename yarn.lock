@@ -840,6 +840,10 @@ boom@2.x.x:
   dependencies:
     hoek "2.x.x"
 
+bowl.js@^0.1.4:
+  version "0.1.4"
+  resolved "https://registry.yarnpkg.com/bowl.js/-/bowl.js-0.1.4.tgz#79ede06cdab6ba7fde95c72967300b07bf92a8ff"
+
 brace-expansion@^1.0.0:
   version "1.1.6"
   resolved "https://registry.yarnpkg.com/brace-expansion/-/brace-expansion-1.1.6.tgz#7197d7eaa9b87e648390ea61fc66c84427420df9"

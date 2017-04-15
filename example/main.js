@@ -12,7 +12,7 @@ import highlightXML from 'highlight.js/lib/languages/xml'
 highlight.registerLanguage('js', highlightJS)
 highlight.registerLanguage('html', highlightXML)
 
-require('offline-plugin/runtime').install()
+// require('offline-plugin/runtime').install()
 
 Vue.use(Rubik)
 Vue.component('Markup', Markup)

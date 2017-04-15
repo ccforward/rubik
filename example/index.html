@@ -15,6 +15,36 @@
       })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
       ga('create', 'UA-90254728-1', 'auto');ga('send', 'pageview');
     </script>
+    <script src="../lib/bowl.js"></script>
+    <script>
+      <%
+        var resources = [];
+        var keys = ["manifest", "vendor", "app"];
+        var dependencies = [0, [keys[0]],
+          [keys[0], keys[1]]
+        ];
+        // css
+        for (var css in htmlWebpackPlugin.files.css) {
+          resources.push({
+            url: htmlWebpackPlugin.files.css[css],
+            key: "style"
+          });
+        }
+        // js
+        var i = -1;
+        for (var chunk in htmlWebpackPlugin.files.chunks) {
+          i++;
+          resources.push({
+            url: htmlWebpackPlugin.files.chunks[chunk].entry,
+            key: keys[i],
+            dependencies: dependencies[i] || []
+          });
+        }
+      %>
+      var b = new Bowl();
+      b.add(<%=JSON.stringify(resources) %>);
+      b.inject();
+    </script>
   </head>
   <body>
     <a class="github-fork-ribbon right-top" target="_blank" href="https://github.com/ccforward/rubik/" title="Fork me on GitHub">Fork me on GitHub</a>
