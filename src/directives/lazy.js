@@ -1,5 +1,3 @@
-// import Vue from 'vue'
-
 Array.prototype.remove = function(item) {
   if (!this.length) return
   const idx = this.indexOf(item);

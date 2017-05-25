@@ -24,7 +24,7 @@
           return
         }
 
-        let active = window.location.hash.substr(1)
+        const active = window.location.hash.substr(1)
         
         this.$children.forEach(i => {
           if (active === i.$el.id) {
