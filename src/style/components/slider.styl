@@ -1,41 +1,41 @@
 .slider
-  height: 500px
-  width: 100%
-  position: relative
-  overflow: hidden
+  height 500px
+  width 100%
+  position relative
+  overflow hidden
   @extend .z-depth-1
   
   &-item
-    display: flex
-    align-items: center
-    justify-content: center
-    flex: 1 0 100%
-    height: 100%
-    width: 100%
-    background-size: cover
-    background-position: center center
-    transition: .2s ease-out
+    display flex
+    align-items center
+    justify-content center
+    flex 1 0 100%
+    height 100%
+    width 100%
+    background-size cover
+    background-position center center
+    transition .2s ease-out
   
   &-left
-    position: absolute
-    top: calc(50% - 50px)
-    z-index: 2
-    left: 0
+    position absolute
+    top calc(50% - 50px)
+    z-index 2
+    left 0
     
     .btn
-      color: #fff
-      margin: 0 !important
+      color #fff
+      margin 0 !important
       
       i
-        font-size: 4rem
+        font-size 4rem
         
       &:hover
-        background: none
+        background none
       
   &-right
     @extend .slider-left
-    left: initial
-    right: 0
+    left initial
+    right 0
   
   &-controls
     background: rgba(0, 0, 0, .5)
